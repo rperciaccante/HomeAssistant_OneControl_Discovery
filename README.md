@@ -35,7 +35,12 @@ Please note that there are three flows in this config:
   - This flow contains useful tools to help in troubleshooting and enahancements.
 
 Inside the Discovery flow, there is a node named "Process Configuration" and it contains a number of tools available to you.  Please familairize yourself
-with the options before running the tool.
+with the options before running the tool:
+- Save the configurations generated as YAML and JSON, with or without the MQTT Discovery specific content
+- Opt to NOT send to MQTT, to use the tool simply to generate the config files.  NOTE: You will still need the Monitor flows to handle the messages
+- Opt to set MQTT messages to be retained or not, allowing the configs to persist after reboots
+- Generate initial availability messages to bypass the wait for OneControl to send the initial message (which can take up to 30 mins)
+- Delete all configs from MQTT (good for testing and upgrades)
 
 ### Limitations:
 - Physical devices such as slides and awnings are NOT currently supported due to the complexity of the integration and the risks associated with the potential for damage.
