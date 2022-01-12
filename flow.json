@@ -40,7 +40,8 @@
             "d09b9caaec852cd8",
             "b23c13901877037e",
             "2922576c28af4198",
-            "e111d42dfd960038"
+            "e111d42dfd960038",
+            "f74ffe03f0a7f874"
         ],
         "x": 54,
         "y": 59,
@@ -129,6 +130,32 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
+    },
+    {
+        "id": "1e55e4dbb993b5af",
+        "type": "mqtt-broker",
+        "name": "RV - Remote",
+        "broker": "192.168.191.10",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
     },
     {
         "id": "821eea9a8aee56e3",
@@ -444,24 +471,6 @@
         ]
     },
     {
-        "id": "4f129ea4784fa29a",
-        "type": "mqtt out",
-        "z": "37cd53309e7f43c7",
-        "name": "",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "4410210f.6939c",
-        "x": 1230,
-        "y": 120,
-        "wires": []
-    },
-    {
         "id": "1377a02e8a1fc1c7",
         "type": "debug",
         "z": "37cd53309e7f43c7",
@@ -620,28 +629,6 @@
         ]
     },
     {
-        "id": "2a15af7196862eb0",
-        "type": "http request",
-        "z": "37cd53309e7f43c7",
-        "name": "Get OneControl Components",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "http://192.168.1.4:8080/rest/things/",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 200,
-        "y": 140,
-        "wires": [
-            [
-                "821eea9a8aee56e3"
-            ]
-        ]
-    },
-    {
         "id": "488f3907e399b279",
         "type": "function",
         "z": "37cd53309e7f43c7",
@@ -656,7 +643,7 @@
         "y": 100,
         "wires": [
             [
-                "2a15af7196862eb0"
+                "50a0e89383d137ce"
             ]
         ]
     },
@@ -676,7 +663,7 @@
         "wires": [
             [
                 "b17b354fe9701c18",
-                "4f129ea4784fa29a"
+                "66397e4f63b32e67"
             ]
         ]
     },
@@ -685,7 +672,7 @@
         "type": "debug",
         "z": "37cd53309e7f43c7",
         "name": "Debug",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -822,7 +809,7 @@
         "type": "debug",
         "z": "37cd53309e7f43c7",
         "name": "Debug",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -839,7 +826,7 @@
         "type": "function",
         "z": "37cd53309e7f43c7",
         "name": "Value Cleanup",
-        "func": "\nreturn msg;",
+        "func": "function capitolizeFirst(string) {\n var output = string.replace(/\\w\\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});\n return output;\n}\n\nif (typeof msg.payload.name !== 'undefined') {\n    if (msg.payload.name.includes(\"-\") === true ){\n        msg.payload.name = msg.payload.name.replace(\"-\",\" \")\n         msg.payload.name = capitolizeFirst(msg.payload.name)\n    }\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -849,9 +836,92 @@
         "y": 420,
         "wires": [
             [
-                "d8b59c5d76ea73f1"
+                "d8b59c5d76ea73f1",
+                "6bafa0ab0dcb970e"
             ]
         ]
+    },
+    {
+        "id": "50a0e89383d137ce",
+        "type": "http request",
+        "z": "37cd53309e7f43c7",
+        "name": "Get OneControl Components",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://192.168.1.4:8080/rest/things/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "821eea9a8aee56e3"
+            ]
+        ]
+    },
+    {
+        "id": "8d25414e4f139e1a",
+        "type": "debug",
+        "z": "37cd53309e7f43c7",
+        "name": "Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "6bafa0ab0dcb970e",
+        "type": "switch",
+        "z": "37cd53309e7f43c7",
+        "name": "",
+        "property": "payload.name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "emperature",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 950,
+        "y": 460,
+        "wires": [
+            [
+                "8d25414e4f139e1a"
+            ]
+        ]
+    },
+    {
+        "id": "66397e4f63b32e67",
+        "type": "mqtt out",
+        "z": "37cd53309e7f43c7",
+        "name": "RV Localhost",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4410210f.6939c",
+        "x": 1260,
+        "y": 120,
+        "wires": []
     },
     {
         "id": "e91c30e34e1fe486",
@@ -1362,8 +1432,8 @@
         "y": 140,
         "wires": [
             [
-                "2922576c28af4198",
-                "d09b9caaec852cd8"
+                "d09b9caaec852cd8",
+                "f74ffe03f0a7f874"
             ]
         ]
     },
@@ -1441,5 +1511,22 @@
         "x": 310,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "f74ffe03f0a7f874",
+        "type": "json",
+        "z": "4418d768475a0c18",
+        "g": "212bd7a164888fc9",
+        "name": "Format JSON Output",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 480,
+        "y": 180,
+        "wires": [
+            [
+                "2922576c28af4198"
+            ]
+        ]
     }
 ]
