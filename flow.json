@@ -646,7 +646,7 @@
         "type": "debug",
         "z": "37cd53309e7f43c7",
         "name": "Debug",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -792,7 +792,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 320,
+        "y": 340,
         "wires": []
     },
     {
@@ -810,8 +810,7 @@
         "y": 420,
         "wires": [
             [
-                "d8b59c5d76ea73f1",
-                "6bafa0ab0dcb970e"
+                "d8b59c5d76ea73f1"
             ]
         ]
     },
@@ -834,48 +833,6 @@
         "wires": [
             [
                 "821eea9a8aee56e3"
-            ]
-        ]
-    },
-    {
-        "id": "8d25414e4f139e1a",
-        "type": "debug",
-        "z": "37cd53309e7f43c7",
-        "name": "Debug",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1070,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "6bafa0ab0dcb970e",
-        "type": "switch",
-        "z": "37cd53309e7f43c7",
-        "name": "",
-        "property": "payload.name",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "emperature",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 950,
-        "y": 460,
-        "wires": [
-            [
-                "8d25414e4f139e1a"
             ]
         ]
     },
