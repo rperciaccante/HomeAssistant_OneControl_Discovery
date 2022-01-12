@@ -1,0 +1,12 @@
+{
+    "name": "GITHUB_HomeAssistant_OneControl_Discovery",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flow.json",
+            "credentialsFile": "flow_cred.json"
+        }
+    }
+}
