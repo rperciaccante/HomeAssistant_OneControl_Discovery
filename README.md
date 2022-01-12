@@ -1,5 +1,5 @@
-HomeAssistant_OneControl_Discovery
-=========================================
+Lippert OneControl and Home Assistant Integration
+=================================================
 
 ### About
 
@@ -44,3 +44,6 @@ with the options before running the tool:
 
 ### Limitations:
 - Physical devices such as slides and awnings are NOT currently supported due to the complexity of the integration and the risks associated with the potential for damage.
+
+
+OneControl is a registered trademark of Lippert Components, Inc.
