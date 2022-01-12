@@ -21,7 +21,7 @@ This has been tested on my 2021 Grand Design Momentum 397TH-R.  Additional sampl
 Download the "flows.json" file.  In your Node Red instance, from the hanburger menu, select "Import" and then "Select a file to import".  Select the "flows.json" file you downloaded, and import.
 
 #### About the Discovery process
-Please note that there are three flows in this config:
+Please note that there are three tabs in this config:
 - OneControl - Improved Discovery
   - Referred to hereafter as "Discovery" flow
   - This is used to connect to your OneControl system and create the necessary Home Assistant entities
@@ -32,7 +32,7 @@ Please note that there are three flows in this config:
   - State information is transformed as necessary and published to the appropriate MQTT topics
   - MQTT is also monitored for commands from Home Assistant that are then sent to OneControl via HTTP
 - Tools
-  - This flow contains useful tools to help in troubleshooting and enahancements.
+  - This flow contains useful tools to help in troubleshooting and enhancements.
 
 Inside the Discovery flow, there is a node named "Process Configuration" and it contains a number of tools available to you.  Please familairize yourself
 with the options before running the tool:
@@ -40,7 +40,9 @@ with the options before running the tool:
 - Opt to NOT send to MQTT, to use the tool simply to generate the config files.  NOTE: You will still need the Monitor flows to handle the messages
 - Opt to set MQTT messages to be retained or not, allowing the configs to persist after reboots
 - Generate initial availability messages to bypass the wait for OneControl to send the initial message (which can take up to 30 mins)
-- Delete all configs from MQTT (good for testing and upgrades)
+- Delete all configs from MQTT in HomeAssistant (good for testing and upgrades)
+- Enable/disable automatic connection to OneControl event feed
+- Enable/disable automatic sending updates to OneControl
 
 ### Limitations:
 - Physical devices such as slides and awnings are NOT currently supported due to the complexity of the integration and the risks associated with the potential for damage.
