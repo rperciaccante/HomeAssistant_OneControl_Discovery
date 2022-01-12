@@ -15,6 +15,39 @@
         "info": ""
     },
     {
+        "id": "4418d768475a0c18",
+        "type": "tab",
+        "label": "Tools",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "212bd7a164888fc9",
+        "type": "group",
+        "z": "4418d768475a0c18",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "bfc63f02edebb78f",
+            "d09b9caaec852cd8",
+            "b23c13901877037e",
+            "2922576c28af4198",
+            "e111d42dfd960038"
+        ],
+        "x": 54,
+        "y": 59,
+        "w": 812,
+        "h": 202
+    },
+    {
         "id": "4410210f.6939c",
         "type": "mqtt-broker",
         "name": "localhost",
@@ -226,8 +259,8 @@
         "links": [
             "2028c9e47a75c7b0"
         ],
-        "x": 835,
-        "y": 480,
+        "x": 815,
+        "y": 420,
         "wires": []
     },
     {
@@ -1191,6 +1224,105 @@
         "statusType": "auto",
         "x": 1410,
         "y": 280,
+        "wires": []
+    },
+    {
+        "id": "bfc63f02edebb78f",
+        "type": "http request",
+        "z": "4418d768475a0c18",
+        "g": "212bd7a164888fc9",
+        "name": "Get List of Things",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://192.168.1.4:8080/rest/things/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "2922576c28af4198",
+                "d09b9caaec852cd8"
+            ]
+        ]
+    },
+    {
+        "id": "d09b9caaec852cd8",
+        "type": "debug",
+        "z": "4418d768475a0c18",
+        "g": "212bd7a164888fc9",
+        "name": "Debug Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "b23c13901877037e",
+        "type": "inject",
+        "z": "4418d768475a0c18",
+        "g": "212bd7a164888fc9",
+        "name": "Trigger Get",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "bfc63f02edebb78f"
+            ]
+        ]
+    },
+    {
+        "id": "2922576c28af4198",
+        "type": "file",
+        "z": "4418d768475a0c18",
+        "g": "212bd7a164888fc9",
+        "name": "Write to /config/OneControl_things.json",
+        "filename": "/config/OneControl_things.json",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 680,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e111d42dfd960038",
+        "type": "comment",
+        "z": "4418d768475a0c18",
+        "g": "212bd7a164888fc9",
+        "name": "This group will export your OneControl nodes to a file",
+        "info": "",
+        "x": 280,
+        "y": 100,
         "wires": []
     }
 ]
