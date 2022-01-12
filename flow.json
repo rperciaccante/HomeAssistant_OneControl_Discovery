@@ -48,6 +48,65 @@
         "h": 202
     },
     {
+        "id": "9a3a7dd04b6af8f4",
+        "type": "group",
+        "z": "17ba2a746cf7e369",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "e91c30e34e1fe486",
+            "c1a7550861894abb",
+            "a713247b712ee1df",
+            "160663450809ec7a",
+            "ecfe9abd98cef9e9",
+            "a42110339b45529b",
+            "c22aac79125f9da6",
+            "15417e6acce9c0e9",
+            "fefd79b1e9a18b2d",
+            "9bba184e244a373e",
+            "43e8acec3e9084c8"
+        ],
+        "x": 34,
+        "y": 119,
+        "w": 1532,
+        "h": 222
+    },
+    {
+        "id": "7caa96536b059b0e",
+        "type": "group",
+        "z": "17ba2a746cf7e369",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "675f55b4ae255e90",
+            "53391f39994a7976",
+            "0a884113eff4a715",
+            "563a87513e2984b8",
+            "4697d94ef4c22dcc",
+            "fc1cc23d58757da7",
+            "0cf94585e73abb7d",
+            "709111e298a55a36"
+        ],
+        "x": 34,
+        "y": 419,
+        "w": 1272,
+        "h": 182
+    },
+    {
         "id": "4410210f.6939c",
         "type": "mqtt-broker",
         "name": "localhost",
@@ -585,7 +644,7 @@
         "type": "function",
         "z": "37cd53309e7f43c7",
         "name": "Process Configuration",
-        "func": "/**\n OneControl Auto Discovery into Home Assistant\n \n This process will integrate your Lippert OneControl components into Home Assistance\n\t(http://www.home-assistant.io)\n \n Use this file to set the bahavior of the process of pulling devices from the OneControl system\n*/\n\n\n// When the information is pulled from the OneControl system, you have the option to write the information\n//   to files on the local system, as both YAML and JSON.  These can be used to help troubleshoot, or you can \n//   us the YAML output as the config files for Home Assistant. Set to \"true\" to have the output files written\n//   to disk.  If files exist, they will be overwritten.\n// ** NOTE ** These files are NOT needed for this process to work, and are for troubleshooting/stand alone use.\n//     default:\n//          saveFiles = false\nsaveFiles = false;\n\n// When files are saved, they are saved as YAML and JSON, but include the attributes needed for Discovery, and\n//   cannot be used for static YAML configuration without certain sections removed. Set this to true to remove\n//   the discovery-related sections.\n// ** NOTE ** \n// You will still need to use the \"OneControl - Command and Event Stream\" flow to process events to align with the \n//   MQTT topics that are part of the configuration files\n//     default:\n//          filesNoDiscovery = false\nfilesNoDiscovery = false;\n\n// This is where you define the destination for the files if you are using the tool \n//     default: \n//          saveFilesTo = '/config/OneControl/'\nsaveFilesTo = '/config/OneControl/';\n\n// If you do not want to send the configuration to the MQTT server, set this to \"false\"\n//     default: \n//          sendToMQTT = true\nsendToMQTT = true;\n\n// If you want to have MQTT discovery messages retained between restarts, set this option to \"true\"\n// If you do not set this to true, your Home Assistant OneControl entities will be in an error state until you\n//   run the discovery script again.  This is due to how Home Assistant stores entity information.\n//     default: \n//          retainMQTT = true\nretainMQTT = true;\n\n// When you initially create the entities in Home Assistant, it can take a long\n//   time before an availability message is published from OneControl, sometimes \n//   upwards of 30 minutes.  This is because OneControl publishes changes in real\n//   time, but non-change status messages much less frequently.  This can be frustrating\n//   when initially creating the entities.\n// Enable this setting to generate an \"online\" message when you do the initial \n//   installation, which will show the entitied as \"online\" immediately.  If the\n//   entities are truly offline, you will not be able to run the discovery process\n//   without an error, so enabling this is low (but not no) risk.  Please note\n//   that this will only occur once at the time the discovery process is run.\n// If you enable this, the device's \"Online Status Details\" sensor value will be\n//   'Initial Discovery' until OneControl publishes an official message.  It is not uncommon\n//   to see the online entity listed as \"Disconnected\" until this first message is received.\n//     default: \n//          startupAvailMsg = true\nstartupAvailMsg = true;\n\n// Often when you make changes, you may need to remove all the entities created.\n//   This option will enable the process to remove all entities created in previous\n//   run AS LONG AS NO OTHER SETTINGS HAVE CHANGED (this depends on the deiscovery\n//   topic to be the same).\n//   Note: sendToMQTT must also be enabled\n//     default:\n//          deleteAll = false;\ndeleteAll = false;\n\n// Home Assistant requires the definition of the topic used for discovery.  \n// For more info on what is needed, review the Home Assistant documentation here:\n//    https://www.home-assistant.io/docs/mqtt/discovery/\n// This value needs to match what is entered into your configuration.yaml file\n// configuration.yaml example:\n//     mqtt:\n//          discovery:          true\n//          discovery_prefix:   'homeassistant'\n//\n//     default:\n//          MQTTDiscoveryTopic = 'homeassistant'\nMQTTDiscoveryTopic = 'homeassistant';\n\n// Part of the discovery output is the definition of the manufacturer the component.\n//     default: \n//          manufacturer = 'Lippert Components'\nmanufacturer = 'Lippert Components';\n\n// Part of the discovery output is the definition of the device that is used to \n//   connect to the individual nodes.\n//     default:\n//          via_device = 'OneControl Gateway';\nvia_device = 'OneControl Gateway';\n\n// Part of the discovery output is the definition of the model the component.\n//     default:\n//          model = 'OneControl';\nmodel = 'OneControl';\n\n// when the Home Assistant entity is created, you can prepend this string to the\n//   entityID: 'sensor.example' would become 'sensor.namePresursor_example'\n//     default:\n//          namePrecursor= 'OneControl '\nnamePrecursor = 'OneControl ';\n\n\n\n/* ############ Do not change anything below this line ############ */\nRelease_Version = '2022.01.12a'\n\nflow.set(\"saveFiles\",saveFiles);\nflow.set(\"saveFilesTo\",saveFilesTo);\nflow.set(\"sendToMQTT\",sendToMQTT);\nflow.set(\"startupAvailMsg\",startupAvailMsg);\n\nglobal.set(\"MQTTDiscoveryTopic\",MQTTDiscoveryTopic);\nglobal.set(\"sw_version\",Release_Version);\nglobal.set(\"manufacturer\",manufacturer);\nglobal.set(\"via_device\",via_device);\nglobal.set(\"model\",model);\nglobal.set(\"namePrecursor\",namePrecursor);\nglobal.set(\"deleteAll\",deleteAll);\nglobal.set(\"retainMQTT\",retainMQTT);\nglobal.set(\"filesNoDiscovery\",filesNoDiscovery);\nreturn msg;\n/*\n * Copyright Robert Perciaccante\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n\n * http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n *\n**/",
+        "func": "/**\n OneControl Auto Discovery into Home Assistant\n \n This process will integrate your Lippert OneControl components into Home Assistance\n\t(http://www.home-assistant.io)\n \n Use this file to set the bahavior of the process of pulling devices from the OneControl system\n*/\n\n\n// You can use this tool for many purposes, and if you are conservative in your approach, you would like to review \n//   the code before connecting it to your environment.\n// By default, the monitoring flow connects to the OneControl cloud gateway as soon as the flow is deployed.  This ensures\n//   that every time a change is made and deployed the connection to the event feed is re-established automatically.  A trigger\n//   node is available for manually kicking off the connection for manual control.\n//     default:\n//          autoStartMonitoring = false\nautoStartMonitoring = false;\n\n// When the information is pulled from the OneControl system, you have the option to write the information\n//   to files on the local system, as both YAML and JSON.  These can be used to help troubleshoot, or you can \n//   us the YAML output as the config files for Home Assistant. Set to \"true\" to have the output files written\n//   to disk.  If files exist, they will be overwritten.\n// ** NOTE ** These files are NOT needed for this process to work, and are for troubleshooting/stand alone use.\n//     default:\n//          saveFiles = false\nsaveFiles = false;\n\n// When files are saved, they are saved as YAML and JSON, but include the attributes needed for Discovery, and\n//   cannot be used for static YAML configuration without certain sections removed. Set this to true to remove\n//   the discovery-related sections.\n// ** NOTE ** \n// You will still need to use the \"OneControl - Command and Event Stream\" flow to process events to align with the \n//   MQTT topics that are part of the configuration files\n//     default:\n//          filesNoDiscovery = false\nfilesNoDiscovery = false;\n\n// This is where you define the destination for the files if you are using the tool \n//     default: \n//          saveFilesTo = '/config/OneControl/'\nsaveFilesTo = '/config/OneControl/';\n\n// If you do not want to send the configuration to the MQTT server, set this to \"false\"\n//     default: \n//          sendToMQTT = true\nsendToMQTT = true;\n\n// If you want to have MQTT discovery messages retained between restarts, set this option to \"true\"\n// If you do not set this to true, your Home Assistant OneControl entities will be in an error state until you\n//   run the discovery script again.  This is due to how Home Assistant stores entity information.\n//     default: \n//          retainMQTT = true\nretainMQTT = true;\n\n// When you initially create the entities in Home Assistant, it can take a long\n//   time before an availability message is published from OneControl, sometimes \n//   upwards of 30 minutes.  This is because OneControl publishes changes in real\n//   time, but non-change status messages much less frequently.  This can be frustrating\n//   when initially creating the entities.\n// Enable this setting to generate an \"online\" message when you do the initial \n//   installation, which will show the entitied as \"online\" immediately.  If the\n//   entities are truly offline, you will not be able to run the discovery process\n//   without an error, so enabling this is low (but not no) risk.  Please note\n//   that this will only occur once at the time the discovery process is run.\n// If you enable this, the device's \"Online Status Details\" sensor value will be\n//   'Initial Discovery' until OneControl publishes an official message.  It is not uncommon\n//   to see the online entity listed as \"Disconnected\" until this first message is received.\n//     default: \n//          startupAvailMsg = true\nstartupAvailMsg = true;\n\n// Often when you make changes, you may need to remove all the entities created.\n//   This option will enable the process to remove all entities created in previous\n//   run AS LONG AS NO OTHER SETTINGS HAVE CHANGED (this depends on the deiscovery\n//   topic to be the same).\n//   Note: sendToMQTT must also be enabled\n//     default:\n//          deleteAll = false;\ndeleteAll = false;\n\n// Home Assistant requires the definition of the topic used for discovery.  \n// For more info on what is needed, review the Home Assistant documentation here:\n//    https://www.home-assistant.io/docs/mqtt/discovery/\n// This value needs to match what is entered into your configuration.yaml file\n// configuration.yaml example:\n//     mqtt:\n//          discovery:          true\n//          discovery_prefix:   'homeassistant'\n//\n//     default:\n//          MQTTDiscoveryTopic = 'homeassistant'\nMQTTDiscoveryTopic = 'homeassistant';\n\n// Part of the discovery output is the definition of the manufacturer the component.\n//     default: \n//          manufacturer = 'Lippert Components'\nmanufacturer = 'Lippert Components';\n\n// Part of the discovery output is the definition of the device that is used to \n//   connect to the individual nodes.\n//     default:\n//          via_device = 'OneControl Gateway';\nvia_device = 'OneControl Gateway';\n\n// Part of the discovery output is the definition of the model the component.\n//     default:\n//          model = 'OneControl';\nmodel = 'OneControl';\n\n// when the Home Assistant entity is created, you can prepend this string to the\n//   entityID: 'sensor.example' would become 'sensor.namePresursor_example'\n//     default:\n//          namePrecursor= 'OneControl '\nnamePrecursor = 'OneControl ';\n\n\n\n/* ############ Do not change anything below this line ############ */\nRelease_Version = '2022.01.12a'\n\nflow.set(\"saveFiles\",saveFiles);\nflow.set(\"saveFilesTo\",saveFilesTo);\nflow.set(\"sendToMQTT\",sendToMQTT);\nflow.set(\"startupAvailMsg\",startupAvailMsg);\n\nglobal.set(\"autoStartMonitoring\",autoStartMonitoring);\nglobal.set(\"MQTTDiscoveryTopic\",MQTTDiscoveryTopic);\nglobal.set(\"sw_version\",Release_Version);\nglobal.set(\"manufacturer\",manufacturer);\nglobal.set(\"via_device\",via_device);\nglobal.set(\"model\",model);\nglobal.set(\"namePrecursor\",namePrecursor);\nglobal.set(\"deleteAll\",deleteAll);\nglobal.set(\"retainMQTT\",retainMQTT);\nglobal.set(\"filesNoDiscovery\",filesNoDiscovery);\nreturn msg;\n/*\n * Copyright Robert Perciaccante\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n\n * http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n *\n**/",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -777,7 +836,8 @@
         "id": "e91c30e34e1fe486",
         "type": "inject",
         "z": "17ba2a746cf7e369",
-        "name": "",
+        "g": "9a3a7dd04b6af8f4",
+        "name": "Automatic Events Connection",
         "props": [
             {
                 "p": "payload"
@@ -794,11 +854,11 @@
         "topic": "",
         "payload": "START",
         "payloadType": "str",
-        "x": 200,
-        "y": 200,
+        "x": 210,
+        "y": 220,
         "wires": [
             [
-                "a713247b712ee1df"
+                "9bba184e244a373e"
             ]
         ]
     },
@@ -839,6 +899,7 @@
         "id": "c1a7550861894abb",
         "type": "rbe",
         "z": "17ba2a746cf7e369",
+        "g": "9a3a7dd04b6af8f4",
         "name": "Block Repeat Messages",
         "func": "rbe",
         "gap": "",
@@ -847,8 +908,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 850,
-        "y": 200,
+        "x": 1030,
+        "y": 220,
         "wires": [
             [
                 "15417e6acce9c0e9"
@@ -859,6 +920,7 @@
         "id": "a713247b712ee1df",
         "type": "sse-client",
         "z": "17ba2a746cf7e369",
+        "g": "9a3a7dd04b6af8f4",
         "name": "Start Event Flow",
         "url": "http://192.168.1.4:8080/rest/events",
         "events": [],
@@ -868,8 +930,8 @@
         "rejectUnauthorized": false,
         "withCredentials": false,
         "timeout": "30",
-        "x": 280,
-        "y": 240,
+        "x": 480,
+        "y": 260,
         "wires": [
             [
                 "ecfe9abd98cef9e9"
@@ -880,6 +942,7 @@
         "id": "160663450809ec7a",
         "type": "mqtt out",
         "z": "17ba2a746cf7e369",
+        "g": "9a3a7dd04b6af8f4",
         "name": "",
         "topic": "",
         "qos": "",
@@ -890,14 +953,15 @@
         "correl": "",
         "expiry": "",
         "broker": "4410210f.6939c",
-        "x": 1270,
-        "y": 200,
+        "x": 1470,
+        "y": 240,
         "wires": []
     },
     {
         "id": "ecfe9abd98cef9e9",
         "type": "function",
         "z": "17ba2a746cf7e369",
+        "g": "9a3a7dd04b6af8f4",
         "name": "Format Event Message",
         "func": "msg.payload = JSON.parse(msg.payload)\n//msg.payload.payload = JSON.parse(msg.payload.payload)\n\nmsg1 = {}\nmsg1.payload = JSON.parse(msg.payload.payload)\nmsg1.topic = msg.payload.topic\nmsg1.event = msg.event\nswitch(msg1.payload.type) {\n    case \"String\":\n        msg1.payload.value = msg1.payload.value.toLowerCase()\n        break;\n}\nreturn msg1;",
         "outputs": 1,
@@ -905,8 +969,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 200,
+        "x": 630,
+        "y": 220,
         "wires": [
             [
                 "fefd79b1e9a18b2d"
@@ -917,10 +981,11 @@
         "id": "a42110339b45529b",
         "type": "comment",
         "z": "17ba2a746cf7e369",
+        "g": "9a3a7dd04b6af8f4",
         "name": "This section connects to the OneControl system and pulls down event and state change info and writes it to MQTT",
         "info": "",
-        "x": 420,
-        "y": 40,
+        "x": 730,
+        "y": 160,
         "wires": []
     },
     {
@@ -944,6 +1009,7 @@
         "id": "c22aac79125f9da6",
         "type": "debug",
         "z": "17ba2a746cf7e369",
+        "g": "9a3a7dd04b6af8f4",
         "name": "Debug",
         "active": false,
         "tosidebar": true,
@@ -953,14 +1019,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 260,
+        "x": 1470,
+        "y": 280,
         "wires": []
     },
     {
         "id": "15417e6acce9c0e9",
         "type": "function",
         "z": "17ba2a746cf7e369",
+        "g": "9a3a7dd04b6af8f4",
         "name": "Data Format Conversions *",
         "func": "\n\n// ***** Reformat hvac_mode.  Openhab uses \"heatcool\", and Home Assistant uses \"heat_cool\"\nif (msg.topic.includes(\"idsmyrv_hvac_thing_\")  === true &&\n        msg.topic.includes(\"_hvac_mode/state\")  === true && \n        msg.payload.value.includes(\"heatcool\")  === true){\n        msg.payload.value = \"heat_cool\"\n}\n/*\n// OneControl uses HSV color codes for RGB light objects, but HA only knows HS.  This will get the \n//  brightness from OneControl, and save it as a flow variable.  When it is up dated by either HA or OneControl,\n//  it is appended to the HS value from HomeAssistant before being sent to OneControl\n if (msg.topic.includes(\"idsmyrv_rgb_light_thing_\")  === true &&\n        msg.topic.includes(\"_hsvcolor/state\")  === true && \n        msg.topic.includes(\"_hsvcolor/statechanged\")  === false && \n        msg.payload.type.includes(\"HSB\")  === true){\n            i = msg.topic.split(\"/\")\n            j = i[2].split(\"_\")\n            msg1 = {}\n            values = msg.payload.value.split(\",\")\n            msg1.payload = values[0]+\",\"+ values[1]\n            msg1.topic = msg.topic\n            msg1.i = j\n            node.send(msg1)\n            msg1.topic = \"smarthome/items/\" + j[0] +\"_\"+ j[1] +\"_\"+ j[2] +\"_\"+j[3] +\"_\"+j[4] +\"_dimmer/ha_state\"\n            msg1.payload = values[2]\n            node.send(msg1)\n            msg = null\n    }\n    */\nif (msg.topic.includes(\"smarthome/things/idsmyrv:\")  === true) {\n    msg.retain = true\n}\n\n// OneControl uses the same topic for the ON/OFF and brightness values for dimmable lights.  To make things cleaner \n//   on our interface, we will split the inbound values and copy them to separate state topics - brightness and switch.\n//   Home Assistant will read the values from these two topics but write to the topic expected by OneControl - dimmer.\n//     Example:\n//       1) Inbound message comes to 'smarthome/items/idsmyrv_light_thing_0000000DA6BB1407_dimmer/state'\n//          Typical payload looks like '{\"type\":\"Percent\",\"value\":\"61\"}' or '{\"type\":\"OnOff\",\"value\":\"off\"}''\n//       2) Node Red splits the contents based on whether the value is a \"type\" is \"Percent\" or \"OnOff\n//       3) \"Percent\" is sent to 'smarthome/items/idsmyrv_light_thing_0000000DA6BB1407_brightness/state'\n//       4) \"OnOff\" is sent to 'smarthome/items/idsmyrv_light_thing_0000000DA6BB1407_switch/state'\nif (msg.topic.includes(\"_dimmer/state\") === true ) {\n    msg1 = {}\n    msg1.payload = msg.payload.value\n    switch (msg.payload.type) {\n        case \"Percent\":\n            msg1.topic = msg.topic.replace(\"_dimmer\",\"_brightness\")\n            node.send(msg1)\n            break;\n        case \"OnOff\":\n            msg1.topic = msg.topic.replace(\"_dimmer\",\"_switch\")\n            node.send(msg1)\n            break;\n        }\n}\n\nreturn msg\n",
         "outputs": 1,
@@ -968,8 +1035,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1040,
-        "y": 240,
+        "x": 1220,
+        "y": 260,
         "wires": [
             [
                 "160663450809ec7a",
@@ -982,6 +1049,7 @@
         "id": "fefd79b1e9a18b2d",
         "type": "function",
         "z": "17ba2a746cf7e369",
+        "g": "9a3a7dd04b6af8f4",
         "name": "Raw Data Format Conversions *",
         "func": "function roundNum0(i) {\n    i = Number(i)\n    i = i.toFixed(0)\n    i = Number(i)\n    return i\n}\n\nfunction roundNum1(i) {\n    i = Number(i)\n    i = i.toFixed(1)\n    i = Number(i)\n    return i\n}\n\n// Round amperage to .1\nif (msg.topic.includes(\"smarthome/items/idsmyrv_\")  === true &&\n        msg.topic.includes(\"_current/state\")  === true && \n        msg.payload.type.includes(\"Decimal\")  === true){\n    msg.payload.value = roundNum1(msg.payload.value)\n}\n\nif (msg.topic.includes(\"smarthome/items/idsmyrv_\")  === true &&\n        msg.topic.includes(\"statechanged\")  === true ) {\n            switch(msg.payload.type) {\n                case \"Decimal\":\n                    msg.payload.value = roundNum0(msg.payload.value)\n                    break;\n                case \"String\":\n                    msg.payload.value = msg.payload.value.toLowerCase()\n                    break;\n            }\n            switch(msg.payload.oldType) {\n                case \"Decimal\":\n                    msg.payload.oldValue = roundNum0(msg.payload.oldValue)\n                    break;\n                case \"String\":\n                    msg.payload.oldValue = msg.payload.oldValue.toLowerCase()\n                    break;\n            }\n        }\n\n\n\n// Round temperature to .0\nif (msg.topic.includes(\"smarthome/items/idsmyrv_\")  === true &&\n        msg.topic.includes(\"_temperature/state\")  === true && \n        msg.payload.type.includes(\"Decimal\")  === true){\n    msg.payload.value = roundNum0(msg.payload.value)\n}\n\n// Round HS values from HA\n\n\n// Force lowercase status modes\nif (msg.topic.includes(\"smarthome/things/idsmyrv:\")  === true &&\n        msg.topic.includes(\"/status\")  === true &&\n        msg.topic.includes(\"/statuschanged\")  === false) {\n    msg.payload.status = msg.payload.status.toLowerCase()\n    msg.payload.statusDetail = msg.payload.statusDetail.toLowerCase()\n}\n\nif (typeof(msg.payload.value) == \"string\") {\n    msg.payload.value = msg.payload.value.toLowerCase()\n}\n\n\nreturn msg;\n\n/*\n// Force lowercase statuschanged modes\nif (msg.topic.includes(\"smarthome/things/idsmyrv:\")  === true &&\n        msg.topic.includes(\"/statuschanged\")  === true &&\n        msg.payload.type.includes(\"String\")  === true ) {\n    msg.payload.value = msg.payload.value.toLowerCase()\n    if (msg.payload.oldType === \"String\") {\n       msg.payload.oldValue = msg.payload.oldValue.toLowerCase()\n }\n\nsmarthome/items/idsmyrv_hvac_thing_0000000DA7271001_hvac_mode/state\n\n\n*/",
         "outputs": 1,
@@ -989,8 +1057,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 240,
+        "x": 830,
+        "y": 260,
         "wires": [
             [
                 "c1a7550861894abb"
@@ -1002,6 +1070,7 @@
         "id": "675f55b4ae255e90",
         "type": "mqtt in",
         "z": "17ba2a746cf7e369",
+        "g": "7caa96536b059b0e",
         "name": "OneControl MQTT SET messages",
         "topic": "smarthome/items/+/set",
         "qos": "2",
@@ -1012,7 +1081,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 200,
-        "y": 380,
+        "y": 520,
         "wires": [
             [
                 "4697d94ef4c22dcc"
@@ -1023,6 +1092,7 @@
         "id": "53391f39994a7976",
         "type": "http request",
         "z": "17ba2a746cf7e369",
+        "g": "7caa96536b059b0e",
         "name": "OneControl API Call",
         "method": "POST",
         "ret": "txt",
@@ -1034,7 +1104,7 @@
         "authType": "",
         "senderr": false,
         "x": 800,
-        "y": 420,
+        "y": 560,
         "wires": [
             [
                 "fc1cc23d58757da7"
@@ -1045,6 +1115,7 @@
         "id": "0a884113eff4a715",
         "type": "debug",
         "z": "17ba2a746cf7e369",
+        "g": "7caa96536b059b0e",
         "name": "200 Success",
         "active": false,
         "tosidebar": true,
@@ -1055,13 +1126,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1190,
-        "y": 340,
+        "y": 500,
         "wires": []
     },
     {
         "id": "563a87513e2984b8",
         "type": "function",
         "z": "17ba2a746cf7e369",
+        "g": "7caa96536b059b0e",
         "name": "Format Message",
         "func": "function roundNum0(i) {\n    i = Number(i)\n    i = i.toFixed(0)\n    i = Number(i)\n    return i\n}\n\nvar msg1 = {}\n\nmsg1.item = msg.topic.split(\"/\")\nmsg1.foo = typeof(msg.payload)\nmsg1.headers = {\"Content-Type\": \"text/plain\", \"Accept\": \"application/json\"}\nif (typeof(msg.payload) == \"string\") {\n    msg1.payload = msg.payload.toUpperCase()\n}\n\nif (typeof(msg.payload) == \"number\") {\n    msg1.payload = roundNum0(msg.payload)\n}\nmsg1.url = \"http://192.168.1.4:8080/rest/items/\"+ msg1.item[2]\nreturn msg1;",
         "outputs": 1,
@@ -1070,7 +1142,7 @@
         "finalize": "",
         "libs": [],
         "x": 650,
-        "y": 380,
+        "y": 520,
         "wires": [
             [
                 "53391f39994a7976"
@@ -1081,6 +1153,7 @@
         "id": "4697d94ef4c22dcc",
         "type": "function",
         "z": "17ba2a746cf7e369",
+        "g": "7caa96536b059b0e",
         "name": "Outbound Data Format Conversions *",
         "func": "function roundNum0(i) {\n    i = Number(i)\n    i = i.toFixed(0)\n    i = Number(i)\n    return i\n}\n\n// ***** Reformat hvac_mode.  Openhab uses \"heatcool\", and Home Assistant uses \"heat_cool\"\nif (msg.topic.includes(\"/idsmyrv_hvac_thing_\")  === true &&\n        msg.topic.includes(\"_hvac_mode/state\")  === true && \n        msg.payload.includes(\"heat_cool\")  === true){\n    msg.payload= \"heatcool\"\n}\n\n// ***** Remove trailing zero from temp setting\nif (msg.topic.includes(\"/idsmyrv_hvac_thing_\")  === true &&\n        msg.topic.includes(\"_temperature/set\")  === true ){\n    msg.payload= roundNum0(msg.payload)\n}\n\nreturn msg;\n/*\n\n\nsmarthome/items/idsmyrv_hvac_thing_0000000DA7271001_hvac_mode/state\n\n\n*/",
         "outputs": 1,
@@ -1089,7 +1162,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 420,
+        "y": 560,
         "wires": [
             [
                 "563a87513e2984b8"
@@ -1101,6 +1174,7 @@
         "id": "fc1cc23d58757da7",
         "type": "switch",
         "z": "17ba2a746cf7e369",
+        "g": "7caa96536b059b0e",
         "name": "HTTP Status Code",
         "property": "statusCode",
         "propertyType": "msg",
@@ -1118,7 +1192,7 @@
         "repair": false,
         "outputs": 2,
         "x": 950,
-        "y": 380,
+        "y": 520,
         "wires": [
             [
                 "0a884113eff4a715"
@@ -1132,6 +1206,7 @@
         "id": "0cf94585e73abb7d",
         "type": "debug",
         "z": "17ba2a746cf7e369",
+        "g": "7caa96536b059b0e",
         "name": "Others",
         "active": false,
         "tosidebar": true,
@@ -1142,7 +1217,68 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1170,
-        "y": 400,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "9bba184e244a373e",
+        "type": "function",
+        "z": "17ba2a746cf7e369",
+        "g": "9a3a7dd04b6af8f4",
+        "name": "Is Auto Connect enabled?",
+        "func": "if (global.get(\"autoStartMonitoring\") == true )\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "a713247b712ee1df"
+            ]
+        ]
+    },
+    {
+        "id": "43e8acec3e9084c8",
+        "type": "inject",
+        "z": "17ba2a746cf7e369",
+        "g": "9a3a7dd04b6af8f4",
+        "name": "Manual Events Connection",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "START",
+        "payloadType": "str",
+        "x": 230,
+        "y": 300,
+        "wires": [
+            [
+                "a713247b712ee1df"
+            ]
+        ]
+    },
+    {
+        "id": "709111e298a55a36",
+        "type": "comment",
+        "z": "17ba2a746cf7e369",
+        "g": "7caa96536b059b0e",
+        "name": "This section connects to the local MQTT server and converts messages to commands and updates to OneControl",
+        "info": "",
+        "x": 630,
+        "y": 460,
         "wires": []
     },
     {
