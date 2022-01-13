@@ -13,7 +13,7 @@ This has been tested on my 2021 Grand Design Momentum 397TH-R.  Additional sampl
 - MQTT Discovery must be enabled on your Home Assistant instance: https://www.home-assistant.io/docs/mqtt/discovery/
 - MQTT broker 
 - Node Red installed as a service on same device as your Home Assistant instance (recommend the official Home Assistant add-on)
-- "SSE-Client" node must be installed from the hamburger menu -> Manage Pallette -> Install.  Details can be found here - https://flows.nodered.org/node/node-red-contrib-sse-client
+- "node-red-contrib-sse-client" node must be installed in Node Red from the hamburger menu -> Manage Pallette -> Install.  Details can be found here - https://flows.nodered.org/node/node-red-contrib-sse-client
 
 ### How it Works
 
