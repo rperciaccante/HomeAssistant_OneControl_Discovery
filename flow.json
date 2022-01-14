@@ -44,9 +44,7 @@
             "f74ffe03f0a7f874"
         ],
         "x": 54,
-        "y": 59,
-        "w": 812,
-        "h": 202
+        "y": 59
     },
     {
         "id": "9a3a7dd04b6af8f4",
@@ -108,6 +106,29 @@
         "y": 419,
         "w": 1472,
         "h": 202
+    },
+    {
+        "id": "8d70c90ceefa24e5",
+        "type": "group",
+        "z": "37cd53309e7f43c7",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "dd3d61ef8f68b827",
+            "e069cdd5f5f8c46b",
+            "a710740bb8a508dc"
+        ],
+        "x": 1534,
+        "y": 19,
+        "w": 492,
+        "h": 122
     },
     {
         "id": "4410210f.6939c",
@@ -281,10 +302,10 @@
         "topic": "",
         "payloadType": "date",
         "x": 210,
-        "y": 60,
+        "y": 100,
         "wires": [
             [
-                "488f3907e399b279"
+                "a61146d5cbecc42e"
             ]
         ]
     },
@@ -294,8 +315,8 @@
         "z": "37cd53309e7f43c7",
         "name": "PLEASE READ ME BEFORE RUNNING",
         "info": "Make sure you read and understand the settings in the \"Process Configuration\" before you run.\n\nNodes with an * at the end of their name include node-specific information in the Description tab of those nodes.  Please review.",
-        "x": 220,
-        "y": 20,
+        "x": 210,
+        "y": 60,
         "wires": []
     },
     {
@@ -606,25 +627,6 @@
         ]
     },
     {
-        "id": "488f3907e399b279",
-        "type": "function",
-        "z": "37cd53309e7f43c7",
-        "name": "Process Configuration",
-        "func": "/**\n OneControl Auto Discovery into Home Assistant\n \n This process will integrate your Lippert OneControl components into Home Assistance\n\t(http://www.home-assistant.io)\n \n Use this file to set the bahavior of the process of pulling devices from the OneControl system\n*/\n\n\n// You can use this tool for many purposes, and if you are conservative in your approach, you would like to review \n//   the code before connecting it to your environment.\n// By default, the monitoring flow connects to the OneControl cloud gateway as soon as the flow is deployed.  This ensures\n//   that every time a change is made and deployed the connection to the event feed is re-established automatically.  A trigger\n//   node is available for manually kicking off the connection for manual control.\n//     default:\n//          autoStartEventGet = false\nautoStartEventGet = false;\n\n// As this tool starts, it subscribes to the MQTT topics that are used for the processing of commands and events, \n//   and if a command is meant to be sent to OneControl, it will do so automatically.  If you are working to troubleshoot \n//   or review what is happening before sending it to OneControl, you will likely want to prevent this from occuring until you\n//   prepared for it to be done.\n// Note: This will disable the actual transmission to OneControl, but NOT the event processing.  This will allow you to see what would\n//   be sent if/once it is enabled.\n//     default:\n//          autoStartEventSend = false\nautoStartEventSend = false;\n\n\n// When the information is pulled from the OneControl system, you have the option to write the information\n//   to files on the local system, as both YAML and JSON.  These can be used to help troubleshoot, or you can \n//   us the YAML output as the config files for Home Assistant. Set to \"true\" to have the output files written\n//   to disk.  If files exist, they will be overwritten.\n// ** NOTE ** These files are NOT needed for this process to work, and are for troubleshooting/stand alone use.\n//     default:\n//          saveFiles = false\nsaveFiles = false;\n\n// When files are saved, they are saved as YAML and JSON, but include the attributes needed for Discovery, and\n//   cannot be used for static YAML configuration without certain sections removed. Set this to true to remove\n//   the discovery-related sections.\n// ** NOTE ** \n// You will still need to use the \"OneControl - Command and Event Stream\" flow to process events to align with the \n//   MQTT topics that are part of the configuration files\n//     default:\n//          filesNoDiscovery = false\nfilesNoDiscovery = false;\n\n// This is where you define the destination for the files if you are using the tool \n//     default: \n//          saveFilesTo = '/config/OneControl/'\nsaveFilesTo = '/config/OneControl/';\n\n// If you do not want to send the configuration to the MQTT server, set this to \"false\"\n//     default: \n//          sendToMQTT = false\nsendToMQTT = false;\n\n// If you want to have MQTT discovery messages retained between restarts, set this option to \"true\"\n// If you do not set this to true, your Home Assistant OneControl entities will be in an error state until you\n//   run the discovery script again.  This is due to how Home Assistant stores entity information.\n//     default: \n//          retainMQTT = true\nretainMQTT = true;\n\n// When you initially create the entities in Home Assistant, it can take a long\n//   time before an availability message is published from OneControl, sometimes \n//   upwards of 30 minutes.  This is because OneControl publishes changes in real\n//   time, but non-change status messages much less frequently.  This can be frustrating\n//   when initially creating the entities.\n// Enable this setting to generate an \"online\" message when you do the initial \n//   installation, which will show the entitied as \"online\" immediately.  If the\n//   entities are truly offline, you will not be able to run the discovery process\n//   without an error, so enabling this is low (but not no) risk.  Please note\n//   that this will only occur once at the time the discovery process is run.\n// If you enable this, the device's \"Online Status Details\" sensor value will be\n//   'Initial Discovery' until OneControl publishes an official message.  It is not uncommon\n//   to see the online entity listed as \"Disconnected\" until this first message is received.\n//     default: \n//          startupAvailMsg = true\nstartupAvailMsg = true;\n\n// Often when you make changes, you may need to remove all the entities created.\n//   This option will enable the process to remove all entities created in previous\n//   run AS LONG AS NO OTHER SETTINGS HAVE CHANGED (this depends on the deiscovery\n//   topic to be the same).\n//   Note: sendToMQTT must also be enabled\n//     default:\n//          deleteAll = false;\ndeleteAll = false;\n\n// Home Assistant requires the definition of the topic used for discovery.  \n// For more info on what is needed, review the Home Assistant documentation here:\n//    https://www.home-assistant.io/docs/mqtt/discovery/\n// This value needs to match what is entered into your configuration.yaml file\n// configuration.yaml example:\n//     mqtt:\n//          discovery:          true\n//          discovery_prefix:   'homeassistant'\n//\n//     default:\n//          MQTTDiscoveryTopic = 'homeassistant'\nMQTTDiscoveryTopic = 'homeassistant';\n\n// Part of the discovery output is the definition of the manufacturer the component.\n//     default: \n//          manufacturer = 'Lippert Components'\nmanufacturer = 'Lippert Components';\n\n// Part of the discovery output is the definition of the device that is used to \n//   connect to the individual nodes.\n//     default:\n//          via_device = 'OneControl Gateway';\nvia_device = 'OneControl Gateway';\n\n// Part of the discovery output is the definition of the model the component.\n//     default:\n//          model = 'OneControl';\nmodel = 'OneControl';\n\n// when the Home Assistant entity is created, you can prepend this string to the\n//   entityID: 'sensor.example' would become 'sensor.namePresursor_example'\n//     default:\n//          namePrecursor= 'OneControl '\nnamePrecursor = 'OneControl ';\n\n\n\n/* ############ Do not change anything below this line ############ */\nRelease_Version = '2022.01.12a'\n\nflow.set(\"saveFiles\",saveFiles);\nflow.set(\"saveFilesTo\",saveFilesTo);\nflow.set(\"sendToMQTT\",sendToMQTT);\nflow.set(\"startupAvailMsg\",startupAvailMsg);\n\nglobal.set(\"autoStartEventGet\",autoStartEventGet);\nglobal.set(\"autoStartEventSend\",autoStartEventSend);\nglobal.set(\"MQTTDiscoveryTopic\",MQTTDiscoveryTopic);\nglobal.set(\"sw_version\",Release_Version);\nglobal.set(\"manufacturer\",manufacturer);\nglobal.set(\"via_device\",via_device);\nglobal.set(\"model\",model);\nglobal.set(\"namePrecursor\",namePrecursor);\nglobal.set(\"deleteAll\",deleteAll);\nglobal.set(\"retainMQTT\",retainMQTT);\nglobal.set(\"filesNoDiscovery\",filesNoDiscovery);\nreturn msg;\n/*\n * Copyright Robert Perciaccante\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n\n * http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n *\n**/",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 220,
-        "y": 100,
-        "wires": [
-            [
-                "a61146d5cbecc42e"
-            ]
-        ]
-    },
-    {
         "id": "f54d3c4ab81f3b8f",
         "type": "function",
         "z": "37cd53309e7f43c7",
@@ -684,11 +686,12 @@
         "id": "dd3d61ef8f68b827",
         "type": "catch",
         "z": "37cd53309e7f43c7",
+        "g": "8d70c90ceefa24e5",
         "name": "Capture Errors",
         "scope": null,
         "uncaught": false,
-        "x": 560,
-        "y": 40,
+        "x": 1640,
+        "y": 60,
         "wires": [
             [
                 "e069cdd5f5f8c46b",
@@ -700,6 +703,7 @@
         "id": "e069cdd5f5f8c46b",
         "type": "debug",
         "z": "37cd53309e7f43c7",
+        "g": "8d70c90ceefa24e5",
         "name": "Errors - Full Payload",
         "active": true,
         "tosidebar": true,
@@ -709,14 +713,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 40,
+        "x": 1880,
+        "y": 60,
         "wires": []
     },
     {
         "id": "a710740bb8a508dc",
         "type": "debug",
         "z": "37cd53309e7f43c7",
+        "g": "8d70c90ceefa24e5",
         "name": "Errors - Just message",
         "active": false,
         "tosidebar": true,
@@ -726,8 +731,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 80,
+        "x": 1880,
+        "y": 100,
         "wires": []
     },
     {
@@ -824,6 +829,70 @@
         ]
     },
     {
+        "id": "e22dd514fecf4036",
+        "type": "function",
+        "z": "37cd53309e7f43c7",
+        "name": "Process Configuration",
+        "func": "/**\n OneControl Auto Discovery into Home Assistant\n \n This process will integrate your Lippert OneControl components into Home Assistance\n\t(http://www.home-assistant.io)\n \n Use this file to set the bahavior of the process of pulling devices from the OneControl system\n*/\n\n\n// You can use this tool for many purposes, and if you are conservative in your approach, you would like to review \n//   the code before connecting it to your environment.\n// By default, the monitoring flow connects to the OneControl cloud gateway as soon as the flow is deployed.  This ensures\n//   that every time a change is made and deployed the connection to the event feed is re-established automatically.  A trigger\n//   node is available for manually kicking off the connection for manual control.\n//     default:\n//          autoStartEventGet = false\nautoStartEventGet = false;\n\n// As this tool starts, it subscribes to the MQTT topics that are used for the processing of commands and events, \n//   and if a command is meant to be sent to OneControl, it will do so automatically.  If you are working to troubleshoot \n//   or review what is happening before sending it to OneControl, you will likely want to prevent this from occuring until you\n//   prepared for it to be done.\n// Note: This will disable the actual transmission to OneControl, but NOT the event processing.  This will allow you to see what would\n//   be sent if/once it is enabled.\n//     default:\n//          autoStartEventSend = false\nautoStartEventSend = false;\n\n\n// When the information is pulled from the OneControl system, you have the option to write the information\n//   to files on the local system, as both YAML and JSON.  These can be used to help troubleshoot, or you can \n//   us the YAML output as the config files for Home Assistant. Set to \"true\" to have the output files written\n//   to disk.  If files exist, they will be overwritten.\n// ** NOTE ** These files are NOT needed for this process to work, and are for troubleshooting/stand alone use.\n//     default:\n//          saveFiles = false\nsaveFiles = false;\n\n// When files are saved, they are saved as YAML and JSON, but include the attributes needed for Discovery, and\n//   cannot be used for static YAML configuration without certain sections removed. Set this to true to remove\n//   the discovery-related sections.\n// ** NOTE ** \n// You will still need to use the \"OneControl - Command and Event Stream\" flow to process events to align with the \n//   MQTT topics that are part of the configuration files\n//     default:\n//          filesNoDiscovery = false\nfilesNoDiscovery = false;\n\n// This is where you define the destination for the files if you are using the tool \n//     default: \n//          saveFilesTo = '/config/OneControl/'\nsaveFilesTo = '/config/OneControl/';\n\n// If you do not want to send the configuration to the MQTT server, set this to \"false\"\n//     default: \n//          sendToMQTT = false\nsendToMQTT = false;\n\n// If you want to have MQTT discovery messages retained between restarts, set this option to \"true\"\n// If you do not set this to true, your Home Assistant OneControl entities will be in an error state until you\n//   run the discovery script again.  This is due to how Home Assistant stores entity information.\n//     default: \n//          retainMQTT = true\nretainMQTT = true;\n\n// When you initially create the entities in Home Assistant, it can take a long\n//   time before an availability message is published from OneControl, sometimes \n//   upwards of 30 minutes.  This is because OneControl publishes changes in real\n//   time, but non-change status messages much less frequently.  This can be frustrating\n//   when initially creating the entities.\n// Enable this setting to generate an \"online\" message when you do the initial \n//   installation, which will show the entitied as \"online\" immediately.  If the\n//   entities are truly offline, you will not be able to run the discovery process\n//   without an error, so enabling this is low (but not no) risk.  Please note\n//   that this will only occur once at the time the discovery process is run.\n// If you enable this, the device's \"Online Status Details\" sensor value will be\n//   'Initial Discovery' until OneControl publishes an official message.  It is not uncommon\n//   to see the online entity listed as \"Disconnected\" until this first message is received.\n//     default: \n//          startupAvailMsg = true\nstartupAvailMsg = true;\n\n// Often when you make changes, you may need to remove all the entities created.\n//   This option will enable the process to remove all entities created in previous\n//   run AS LONG AS NO OTHER SETTINGS HAVE CHANGED (this depends on the deiscovery\n//   topic to be the same).\n//   Note: sendToMQTT must also be enabled\n//     default:\n//          deleteAll = false;\ndeleteAll = false;\n\n// Home Assistant requires the definition of the topic used for discovery.  \n// For more info on what is needed, review the Home Assistant documentation here:\n//    https://www.home-assistant.io/docs/mqtt/discovery/\n// This value needs to match what is entered into your configuration.yaml file\n// configuration.yaml example:\n//     mqtt:\n//          discovery:          true\n//          discovery_prefix:   'homeassistant'\n//\n//     default:\n//          MQTTDiscoveryTopic = 'homeassistant'\nMQTTDiscoveryTopic = 'homeassistant';\n\n// Part of the discovery output is the definition of the manufacturer the component.\n//     default: \n//          manufacturer = 'Lippert Components'\nmanufacturer = 'Lippert Components';\n\n// Part of the discovery output is the definition of the device that is used to \n//   connect to the individual nodes.\n//     default:\n//          via_device = 'OneControl Gateway';\nvia_device = 'OneControl Gateway';\n\n// Part of the discovery output is the definition of the model the component.\n//     default:\n//          model = 'OneControl';\nmodel = 'OneControl';\n\n// when the Home Assistant entity is created, you can prepend this string to the\n//   entityID: 'sensor.example' would become 'sensor.namePresursor_example'\n//     default:\n//          namePrecursor= 'OneControl '\nnamePrecursor = 'OneControl ';\n\n\n\n/* ############ Do not change anything below this line ############ */\nRelease_Version = '2022.01.12a'\n\nflow.set(\"saveFiles\",saveFiles);\nflow.set(\"saveFilesTo\",saveFilesTo);\nflow.set(\"sendToMQTT\",sendToMQTT);\nflow.set(\"startupAvailMsg\",startupAvailMsg);\n\nglobal.set(\"autoStartEventGet\",autoStartEventGet);\nglobal.set(\"autoStartEventSend\",autoStartEventSend);\nglobal.set(\"MQTTDiscoveryTopic\",MQTTDiscoveryTopic);\nglobal.set(\"sw_version\",Release_Version);\nglobal.set(\"manufacturer\",manufacturer);\nglobal.set(\"via_device\",via_device);\nglobal.set(\"model\",model);\nglobal.set(\"namePrecursor\",namePrecursor);\nglobal.set(\"deleteAll\",deleteAll);\nglobal.set(\"retainMQTT\",retainMQTT);\nglobal.set(\"filesNoDiscovery\",filesNoDiscovery);\nreturn msg;\n/*\n * Copyright Robert Perciaccante\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n\n * http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n *\n**/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 60,
+        "wires": [
+            [
+                "54cf092f8c29cbca"
+            ]
+        ]
+    },
+    {
+        "id": "d537cca8ab39b6d3",
+        "type": "inject",
+        "z": "37cd53309e7f43c7",
+        "name": "Load Config",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 570,
+        "y": 60,
+        "wires": [
+            [
+                "e22dd514fecf4036"
+            ]
+        ]
+    },
+    {
+        "id": "54cf092f8c29cbca",
+        "type": "debug",
+        "z": "37cd53309e7f43c7",
+        "name": "Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 60,
+        "wires": []
+    },
+    {
         "id": "e91c30e34e1fe486",
         "type": "inject",
         "z": "17ba2a746cf7e369",
@@ -841,7 +910,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "1",
         "topic": "",
         "payload": "START",
         "payloadType": "str",
@@ -1478,5 +1547,70 @@
         "x": 1260,
         "y": 80,
         "wires": []
+    },
+    {
+        "id": "93a03206ea9941b4",
+        "type": "sse-client",
+        "z": "4418d768475a0c18",
+        "name": "Start Event Flow",
+        "url": "http://127.0.0.1:8080/rest/events",
+        "events": [],
+        "headers": {},
+        "proxy": "",
+        "restart": true,
+        "rejectUnauthorized": false,
+        "withCredentials": false,
+        "timeout": "30",
+        "x": 620,
+        "y": 460,
+        "wires": [
+            [
+                "0d265238b85248b1"
+            ]
+        ]
+    },
+    {
+        "id": "0d265238b85248b1",
+        "type": "debug",
+        "z": "4418d768475a0c18",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "51b86f70d62b094a",
+        "type": "inject",
+        "z": "4418d768475a0c18",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 440,
+        "y": 420,
+        "wires": [
+            []
+        ]
     }
 ]
