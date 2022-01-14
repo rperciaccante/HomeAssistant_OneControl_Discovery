@@ -221,45 +221,17 @@
         "type": "function",
         "z": "37cd53309e7f43c7",
         "name": "Normalize Node Records",
-        "func": "var msg1 = {}\n\nmsg1.payload = {}\n/* Loop through incoming payload to rename the individual things so they can be better processed later */\n\nfor (var i = 0; i < msg.payload.length; i++) {\n    var thing = {}\n    \n    thingTypeUID = msg.payload[i].thingTypeUID.replace(\"idsmyrv:\",\"\")\n    thingTypeUID = thingTypeUID.replace(\"-thing\",\"\")\n    \n    thingUID = msg.payload[i].UID.replace(\"-thing:\",\"_\")\n    thingUID = thingUID.replace(\"idsmyrv:\",\"\")\n    thingUID = thingUID.replace(/:/g,\"_\")\n    thingUID = thingUID.replace(/-/g,\"_\")\n    \n    /*\n    // This uses the _online channel as source of availability\n    availTopic =        msg.payload[i].UID.replace(/:/g,\"_\")\n    availTopic =        availTopic.replace(/-/g,\"_\") + \"_online\"\n    availTopic =        \"smarthome/items/\" + availTopic + \"/state\"\n    availTopicOn =      \"on\"\n    availTopicOff =     \"off\"\n    availAttr =         \"value\"\n    */\n    \n    // This uses the device online state for availability\n    availTopic =        \"smarthome/things/\" + msg.payload[i].UID + \"/status\"\n    availTopicOn =      \"online\"\n    availTopicOff =     \"offline\"\n    availAttr =         \"status\"\n    \n    \n    label = msg.payload[i].label.replace(\" Thing\",\"\")\n    label = label.replace(\"OneControl \",\"\")\n\n    //thing.hass = {}\n    msg1.thing  =                   msg.payload[i]\n    msg1.thing.hass =                {\"label\":                  label,\n                                    \"thingConfig_OC\":           msg.payload[i].configuration,\n                                    \"UID_oc\":                   msg.payload[i].UID,\n                                    \"UID_ha\":                   thingUID,\n                                    \"thingTypeUID_oc\":          msg.payload[i].thingTypeUID,\n                                    \"thingTypeUID_ha\":          thingTypeUID,\n                                    \"thingChannelCount\":        msg.payload[i].channels.length,\n                                    \"availabilityTopic\":        availTopic,\n                                    \"availabilityTopicOn\":      availTopicOn,\n                                    \"availabilityTopicOff\":     availTopicOff,\n                                    \"availabilityTopicAttr\":    availAttr,\n                                    \"stateTopic\":               global.get(\"MQTTDiscoveryTopic\") +\"/binary_sensor/\" + thingUID + \"/status\"\n                                }\n    \n    //msg1.payload = thing\n    /* Send each thing record as a new message to split up the array and process the things individually */\n    \n    node.send(msg1)\n}",
+        "func": "var msg1 = {}\n\nmsg1.payload = {}\n/* Loop through incoming payload to rename the individual things so they can be better processed later */\n\nfor (var i = 0; i < msg.payload.length; i++) {\n    var thing = {}\n    \n    thingTypeUID = msg.payload[i].thingTypeUID.replace(\"idsmyrv:\",\"\")\n    thingTypeUID = thingTypeUID.replace(\"-thing\",\"\")\n    \n    thingUID = msg.payload[i].UID.replace(\"-thing:\",\"_\")\n    thingUID = thingUID.replace(\"idsmyrv:\",\"\")\n    thingUID = thingUID.replace(/:/g,\"_\")\n    thingUID = thingUID.replace(/-/g,\"_\")\n    \n    /*\n    // This uses the _online channel as source of availability\n    availTopic =        msg.payload[i].UID.replace(/:/g,\"_\")\n    availTopic =        availTopic.replace(/-/g,\"_\") + \"_online\"\n    availTopic =        \"smarthome/items/\" + availTopic + \"/state\"\n    availTopicOn =      \"on\"\n    availTopicOff =     \"off\"\n    availAttr =         \"value\"\n    */\n    \n    // This uses the device online state for availability\n    availTopic =        \"smarthome/things/\" + msg.payload[i].UID + \"/status\"\n    availTopicOn =      \"online\"\n    availTopicOff =     \"offline\"\n    availAttr =         \"status\"\n    \n    \n    label = msg.payload[i].label.replace(\" Thing\",\"\")\n    label = label.replace(\"OneControl \",\"\")\n\n    //thing.hass = {}\n    msg1.thing  =                   msg.payload[i]\n    msg1.thing.hass =                {\"label\":                  label,\n                                    \"thingConfig_OC\":           msg.payload[i].configuration,\n                                    \"UID_oc\":                   msg.payload[i].UID,\n                                    \"UID_ha\":                   thingUID,\n                                    \"thingTypeUID_oc\":          msg.payload[i].thingTypeUID,\n                                    \"thingTypeUID_ha\":          thingTypeUID,\n                                    \"thingChannelCount\":        msg.payload[i].channels.length,\n                                    \"availabilityTopic\":        availTopic,\n                                    \"availabilityTopicOn\":      availTopicOn,\n                                    \"availabilityTopicOff\":     availTopicOff,\n                                    \"availabilityTopicAttr\":    availAttr,\n                                    \"stateTopic\":               global.get(\"MQTTDiscoveryTopic\") +\"/binary_sensor/\" + thingUID + \"/status\"\n                                }\n    \n    // reorder in preparation for splitting channels for processing\n    msg1.payload = msg1.thing.channels\n    node.send(msg1)\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 210,
-        "y": 180,
-        "wires": [
-            [
-                "804b7ea9d646f078",
-                "2e15ae3df57ccf24"
-            ]
-        ]
-    },
-    {
-        "id": "804b7ea9d646f078",
-        "type": "change",
-        "z": "37cd53309e7f43c7",
-        "name": "Re-order for Splitting Channels",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "thing.channels",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 190,
         "y": 220,
         "wires": [
             [
-                "fbf9f821bc1fedae"
+                "2e15ae3df57ccf24"
             ]
         ]
     },
@@ -267,14 +239,14 @@
         "id": "fbf9f821bc1fedae",
         "type": "split",
         "z": "37cd53309e7f43c7",
-        "name": "Split Channels",
+        "name": "Split Individual Channels",
         "splt": "\\n",
         "spltType": "str",
         "arraySplt": 1,
         "arraySpltType": "len",
         "stream": false,
         "addname": "foo",
-        "x": 240,
+        "x": 210,
         "y": 260,
         "wires": [
             [
@@ -361,7 +333,7 @@
         "topic": "",
         "payloadType": "date",
         "x": 210,
-        "y": 100,
+        "y": 140,
         "wires": [
             [
                 "a61146d5cbecc42e"
@@ -375,7 +347,7 @@
         "name": "PLEASE READ ME BEFORE RUNNING",
         "info": "Make sure you read and understand the settings in the \"Process Configuration\" before you run.\n\nNodes with an * at the end of their name include node-specific information in the Description tab of those nodes.  Please review.",
         "x": 210,
-        "y": 60,
+        "y": 100,
         "wires": []
     },
     {
@@ -655,7 +627,7 @@
         "authType": "",
         "senderr": false,
         "x": 190,
-        "y": 140,
+        "y": 180,
         "wires": [
             [
                 "821eea9a8aee56e3"
