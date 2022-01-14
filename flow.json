@@ -2,7 +2,7 @@
     {
         "id": "37cd53309e7f43c7",
         "type": "tab",
-        "label": "One Control - Improved Discovery",
+        "label": "OneControl Discovery",
         "disabled": false,
         "info": "",
         "env": []
@@ -10,7 +10,7 @@
     {
         "id": "17ba2a746cf7e369",
         "type": "tab",
-        "label": "OneControl - Command and Event Stream",
+        "label": "OneControl Monitoring",
         "disabled": false,
         "info": ""
     },
@@ -110,7 +110,7 @@
         "h": 202
     },
     {
-        "id": "8d70c90ceefa24e5",
+        "id": "fae5083eebcc787b",
         "type": "group",
         "z": "37cd53309e7f43c7",
         "style": {
@@ -125,17 +125,74 @@
         "nodes": [
             "dd3d61ef8f68b827",
             "e069cdd5f5f8c46b",
-            "a710740bb8a508dc"
+            "a710740bb8a508dc",
+            "093fef06c3da2cff"
         ],
-        "x": 1534,
+        "x": 994,
+        "y": 539,
+        "w": 592,
+        "h": 182
+    },
+    {
+        "id": "d16968d513e73b23",
+        "type": "group",
+        "z": "37cd53309e7f43c7",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "1377a02e8a1fc1c7",
+            "51683dae441fdcae",
+            "3fcf0a9639995831",
+            "024d6825b87c72ac",
+            "64e470b0221a0bfa",
+            "d8c4032429c482e3",
+            "0836c773e397e053",
+            "6fc4064a3b787b13",
+            "f54d3c4ab81f3b8f",
+            "b17b354fe9701c18",
+            "66397e4f63b32e67",
+            "96e5db1f83e15c85"
+        ],
+        "x": 994,
+        "y": 179,
+        "w": 592,
+        "h": 342
+    },
+    {
+        "id": "f7c5fd1841ca962d",
+        "type": "group",
+        "z": "37cd53309e7f43c7",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "e22dd514fecf4036",
+            "d537cca8ab39b6d3",
+            "54cf092f8c29cbca",
+            "e37720c0faa465f6"
+        ],
+        "x": 994,
         "y": 19,
-        "w": 492,
-        "h": 122
+        "w": 592,
+        "h": 142
     },
     {
         "id": "4410210f.6939c",
         "type": "mqtt-broker",
-        "name": "RV - Local",
+        "name": "Localhost",
         "broker": "localhost",
         "port": "1883",
         "clientid": "",
@@ -341,19 +398,6 @@
         ]
     },
     {
-        "id": "d8b59c5d76ea73f1",
-        "type": "link out",
-        "z": "37cd53309e7f43c7",
-        "name": "",
-        "mode": "link",
-        "links": [
-            "2028c9e47a75c7b0"
-        ],
-        "x": 895,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "2ba610ca88330d4c",
         "type": "switch",
         "z": "37cd53309e7f43c7",
@@ -471,201 +515,6 @@
         ]
     },
     {
-        "id": "1377a02e8a1fc1c7",
-        "type": "debug",
-        "z": "37cd53309e7f43c7",
-        "name": "Debug",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1390,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "51683dae441fdcae",
-        "type": "yaml",
-        "z": "37cd53309e7f43c7",
-        "property": "payload",
-        "name": "",
-        "x": 1230,
-        "y": 200,
-        "wires": [
-            [
-                "0836c773e397e053"
-            ]
-        ]
-    },
-    {
-        "id": "3fcf0a9639995831",
-        "type": "file",
-        "z": "37cd53309e7f43c7",
-        "name": "",
-        "filename": "",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1240,
-        "y": 320,
-        "wires": [
-            [
-                "1377a02e8a1fc1c7"
-            ]
-        ]
-    },
-    {
-        "id": "024d6825b87c72ac",
-        "type": "function",
-        "z": "37cd53309e7f43c7",
-        "name": "JSON Filename",
-        "func": "msg.filename = msg.filename +\".json\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1380,
-        "y": 240,
-        "wires": [
-            [
-                "3fcf0a9639995831"
-            ]
-        ]
-    },
-    {
-        "id": "64e470b0221a0bfa",
-        "type": "json",
-        "z": "37cd53309e7f43c7",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": true,
-        "x": 1230,
-        "y": 240,
-        "wires": [
-            [
-                "024d6825b87c72ac"
-            ]
-        ]
-    },
-    {
-        "id": "d8c4032429c482e3",
-        "type": "function",
-        "z": "37cd53309e7f43c7",
-        "name": "File Options",
-        "func": "// Must be enable in the \"Set Flow Variables\" node\nif(msg.topic.includes(\"/config\") === true) {\n    if (flow.get(\"saveFiles\") === true ) {\n        i = msg.topic.split(\"/\")\n        name = msg.payload.object_id.replace(/ /g,\"_\")\n        msg.filename = flow.get(\"saveFilesTo\") + msg.payload.device.name + \"/\" + i[1] + \"/\" + msg.payload.name\n        if (global.get(\"filesNoDiscovery\") == true) {\n            delete msg.payload.device\n            delete msg.payload.enabled_by_default\n            }\n        return msg;\n        }\n    }",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1050,
-        "y": 200,
-        "wires": [
-            [
-                "51683dae441fdcae",
-                "64e470b0221a0bfa",
-                "6fc4064a3b787b13"
-            ]
-        ]
-    },
-    {
-        "id": "0836c773e397e053",
-        "type": "function",
-        "z": "37cd53309e7f43c7",
-        "name": "YAML Filename",
-        "func": "msg.filename = msg.filename +\".yaml\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1380,
-        "y": 200,
-        "wires": [
-            [
-                "3fcf0a9639995831"
-            ]
-        ]
-    },
-    {
-        "id": "6fc4064a3b787b13",
-        "type": "debug",
-        "z": "37cd53309e7f43c7",
-        "name": "Debug",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1230,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "2028c9e47a75c7b0",
-        "type": "link in",
-        "z": "37cd53309e7f43c7",
-        "name": "",
-        "links": [
-            "d8b59c5d76ea73f1"
-        ],
-        "x": 895,
-        "y": 180,
-        "wires": [
-            [
-                "d8c4032429c482e3",
-                "f54d3c4ab81f3b8f"
-            ]
-        ]
-    },
-    {
-        "id": "f54d3c4ab81f3b8f",
-        "type": "function",
-        "z": "37cd53309e7f43c7",
-        "name": "MQTT Options",
-        "func": "if (flow.get(\"sendToMQTT\") == true) {\n    if (global.get(\"deleteAll\") == true) {\n        msg.payload = null\n        msg.retain = true;\n        }\n    if (global.get(\"retainMQTT\") == true) {\n        msg.retain = true;\n        }\n    return msg;\n    }\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1060,
-        "y": 120,
-        "wires": [
-            [
-                "b17b354fe9701c18",
-                "66397e4f63b32e67"
-            ]
-        ]
-    },
-    {
-        "id": "b17b354fe9701c18",
-        "type": "debug",
-        "z": "37cd53309e7f43c7",
-        "name": "Debug",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1230,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "b17f6bae850dcd47",
         "type": "function",
         "z": "37cd53309e7f43c7",
@@ -688,12 +537,12 @@
         "id": "dd3d61ef8f68b827",
         "type": "catch",
         "z": "37cd53309e7f43c7",
-        "g": "8d70c90ceefa24e5",
+        "g": "fae5083eebcc787b",
         "name": "Capture Errors",
         "scope": null,
         "uncaught": false,
-        "x": 1640,
-        "y": 60,
+        "x": 1100,
+        "y": 640,
         "wires": [
             [
                 "e069cdd5f5f8c46b",
@@ -705,7 +554,7 @@
         "id": "e069cdd5f5f8c46b",
         "type": "debug",
         "z": "37cd53309e7f43c7",
-        "g": "8d70c90ceefa24e5",
+        "g": "fae5083eebcc787b",
         "name": "Errors - Full Payload",
         "active": true,
         "tosidebar": true,
@@ -715,15 +564,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1880,
-        "y": 60,
+        "x": 1440,
+        "y": 640,
         "wires": []
     },
     {
         "id": "a710740bb8a508dc",
         "type": "debug",
         "z": "37cd53309e7f43c7",
-        "g": "8d70c90ceefa24e5",
+        "g": "fae5083eebcc787b",
         "name": "Errors - Just message",
         "active": false,
         "tosidebar": true,
@@ -733,8 +582,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1880,
-        "y": 100,
+        "x": 1440,
+        "y": 680,
         "wires": []
     },
     {
@@ -786,27 +635,10 @@
         "y": 420,
         "wires": [
             [
-                "d8b59c5d76ea73f1"
+                "f54d3c4ab81f3b8f",
+                "d8c4032429c482e3"
             ]
         ]
-    },
-    {
-        "id": "66397e4f63b32e67",
-        "type": "mqtt out",
-        "z": "37cd53309e7f43c7",
-        "name": "RV Localhost",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "4410210f.6939c",
-        "x": 1260,
-        "y": 120,
-        "wires": []
     },
     {
         "id": "a61146d5cbecc42e",
@@ -834,6 +666,7 @@
         "id": "e22dd514fecf4036",
         "type": "function",
         "z": "37cd53309e7f43c7",
+        "g": "f7c5fd1841ca962d",
         "name": "Process Configuration",
         "func": "/**\n OneControl Auto Discovery into Home Assistant\n \n This process will integrate your Lippert OneControl components into Home Assistance\n\t(http://www.home-assistant.io)\n \n Use this file to set the bahavior of the process of pulling devices from the OneControl system\n*/\n\n\n// You can use this tool for many purposes, and if you are conservative in your approach, you would like to review \n//   the code before connecting it to your environment.\n// By default, the monitoring flow connects to the OneControl cloud gateway as soon as the flow is deployed.  This ensures\n//   that every time a change is made and deployed the connection to the event feed is re-established automatically.  A trigger\n//   node is available for manually kicking off the connection for manual control.\n//     default:\n//          autoStartEventGet = false\nautoStartEventGet = false;\n\n// As this tool starts, it subscribes to the MQTT topics that are used for the processing of commands and events, \n//   and if a command is meant to be sent to OneControl, it will do so automatically.  If you are working to troubleshoot \n//   or review what is happening before sending it to OneControl, you will likely want to prevent this from occuring until you\n//   prepared for it to be done.\n// Note: This will disable the actual transmission to OneControl, but NOT the event processing.  This will allow you to see what would\n//   be sent if/once it is enabled.\n//     default:\n//          autoStartEventSend = false\nautoStartEventSend = false;\n\n\n// When the information is pulled from the OneControl system, you have the option to write the information\n//   to files on the local system, as both YAML and JSON.  These can be used to help troubleshoot, or you can \n//   us the YAML output as the config files for Home Assistant. Set to \"true\" to have the output files written\n//   to disk.  If files exist, they will be overwritten.\n// ** NOTE ** These files are NOT needed for this process to work, and are for troubleshooting/stand alone use.\n//     default:\n//          saveFiles = false\nsaveFiles = false;\n\n// When files are saved, they are saved as YAML and JSON, but include the attributes needed for Discovery, and\n//   cannot be used for static YAML configuration without certain sections removed. Set this to true to remove\n//   the discovery-related sections.\n// ** NOTE ** \n// You will still need to use the \"OneControl - Command and Event Stream\" flow to process events to align with the \n//   MQTT topics that are part of the configuration files\n//     default:\n//          filesNoDiscovery = false\nfilesNoDiscovery = false;\n\n// This is where you define the destination for the files if you are using the tool \n//     default: \n//          saveFilesTo = '/config/OneControl/'\nsaveFilesTo = '/config/OneControl/';\n\n// If you do not want to send the configuration to the MQTT server, set this to \"false\"\n//     default: \n//          sendToMQTT = false\nsendToMQTT = false;\n\n// If you want to have MQTT discovery messages retained between restarts, set this option to \"true\"\n// If you do not set this to true, your Home Assistant OneControl entities will be in an error state until you\n//   run the discovery script again.  This is due to how Home Assistant stores entity information.\n//     default: \n//          retainMQTT = true\nretainMQTT = true;\n\n// When you initially create the entities in Home Assistant, it can take a long\n//   time before an availability message is published from OneControl, sometimes \n//   upwards of 30 minutes.  This is because OneControl publishes changes in real\n//   time, but non-change status messages much less frequently.  This can be frustrating\n//   when initially creating the entities.\n// Enable this setting to generate an \"online\" message when you do the initial \n//   installation, which will show the entitied as \"online\" immediately.  If the\n//   entities are truly offline, you will not be able to run the discovery process\n//   without an error, so enabling this is low (but not no) risk.  Please note\n//   that this will only occur once at the time the discovery process is run.\n// If you enable this, the device's \"Online Status Details\" sensor value will be\n//   'Initial Discovery' until OneControl publishes an official message.  It is not uncommon\n//   to see the online entity listed as \"Disconnected\" until this first message is received.\n//     default: \n//          startupAvailMsg = true\nstartupAvailMsg = true;\n\n// Often when you make changes, you may need to remove all the entities created.\n//   This option will enable the process to remove all entities created in previous\n//   run AS LONG AS NO OTHER SETTINGS HAVE CHANGED (this depends on the deiscovery\n//   topic to be the same).\n//   Note: sendToMQTT must also be enabled\n//     default:\n//          deleteAll = false;\ndeleteAll = false;\n\n// Home Assistant requires the definition of the topic used for discovery.  \n// For more info on what is needed, review the Home Assistant documentation here:\n//    https://www.home-assistant.io/docs/mqtt/discovery/\n// This value needs to match what is entered into your configuration.yaml file\n// configuration.yaml example:\n//     mqtt:\n//          discovery:          true\n//          discovery_prefix:   'homeassistant'\n//\n//     default:\n//          MQTTDiscoveryTopic = 'homeassistant'\nMQTTDiscoveryTopic = 'homeassistant';\n\n// Part of the discovery output is the definition of the manufacturer the component.\n//     default: \n//          manufacturer = 'Lippert Components'\nmanufacturer = 'Lippert Components';\n\n// Part of the discovery output is the definition of the device that is used to \n//   connect to the individual nodes.\n//     default:\n//          via_device = 'OneControl Gateway';\nvia_device = 'OneControl Gateway';\n\n// Part of the discovery output is the definition of the model the component.\n//     default:\n//          model = 'OneControl';\nmodel = 'OneControl';\n\n// when the Home Assistant entity is created, you can prepend this string to the\n//   entityID: 'sensor.example' would become 'sensor.namePresursor_example'\n//     default:\n//          namePrecursor= 'OneControl '\nnamePrecursor = 'OneControl ';\n\n\n\n/* ############ Do not change anything below this line ############ */\nRelease_Version = '2022.01.12a'\n\nflow.set(\"saveFiles\",saveFiles);\nflow.set(\"saveFilesTo\",saveFilesTo);\nflow.set(\"sendToMQTT\",sendToMQTT);\nflow.set(\"startupAvailMsg\",startupAvailMsg);\n\nglobal.set(\"autoStartEventGet\",autoStartEventGet);\nglobal.set(\"autoStartEventSend\",autoStartEventSend);\nglobal.set(\"MQTTDiscoveryTopic\",MQTTDiscoveryTopic);\nglobal.set(\"sw_version\",Release_Version);\nglobal.set(\"manufacturer\",manufacturer);\nglobal.set(\"via_device\",via_device);\nglobal.set(\"model\",model);\nglobal.set(\"namePrecursor\",namePrecursor);\nglobal.set(\"deleteAll\",deleteAll);\nglobal.set(\"retainMQTT\",retainMQTT);\nglobal.set(\"filesNoDiscovery\",filesNoDiscovery);\nreturn msg;\n/*\n * Copyright Robert Perciaccante\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n\n * http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n *\n**/",
         "outputs": 1,
@@ -841,8 +674,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 60,
+        "x": 1300,
+        "y": 120,
         "wires": [
             [
                 "54cf092f8c29cbca"
@@ -853,6 +686,7 @@
         "id": "d537cca8ab39b6d3",
         "type": "inject",
         "z": "37cd53309e7f43c7",
+        "g": "f7c5fd1841ca962d",
         "name": "Load Config",
         "props": [
             {
@@ -869,8 +703,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 570,
-        "y": 60,
+        "x": 1110,
+        "y": 120,
         "wires": [
             [
                 "e22dd514fecf4036"
@@ -881,6 +715,7 @@
         "id": "54cf092f8c29cbca",
         "type": "debug",
         "z": "37cd53309e7f43c7",
+        "g": "f7c5fd1841ca962d",
         "name": "Debug",
         "active": false,
         "tosidebar": true,
@@ -890,7 +725,247 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
+        "x": 1490,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "093fef06c3da2cff",
+        "type": "comment",
+        "z": "37cd53309e7f43c7",
+        "g": "fae5083eebcc787b",
+        "name": " Enable to see errors in the Degub pane",
+        "info": "",
+        "x": 1290,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1377a02e8a1fc1c7",
+        "type": "debug",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "name": "Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1490,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "51683dae441fdcae",
+        "type": "yaml",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "property": "payload",
+        "name": "",
+        "x": 1270,
+        "y": 360,
+        "wires": [
+            [
+                "0836c773e397e053"
+            ]
+        ]
+    },
+    {
+        "id": "3fcf0a9639995831",
+        "type": "file",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1480,
+        "y": 440,
+        "wires": [
+            [
+                "1377a02e8a1fc1c7"
+            ]
+        ]
+    },
+    {
+        "id": "024d6825b87c72ac",
+        "type": "function",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "name": "JSON Filename",
+        "func": "msg.filename = msg.filename +\".json\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 400,
+        "wires": [
+            [
+                "3fcf0a9639995831"
+            ]
+        ]
+    },
+    {
+        "id": "64e470b0221a0bfa",
+        "type": "json",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 1270,
+        "y": 400,
+        "wires": [
+            [
+                "024d6825b87c72ac"
+            ]
+        ]
+    },
+    {
+        "id": "d8c4032429c482e3",
+        "type": "function",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "name": "File Options",
+        "func": "// Must be enable in the \"Set Flow Variables\" node\nif(msg.topic.includes(\"/config\") === true) {\n    if (flow.get(\"saveFiles\") === true ) {\n        i = msg.topic.split(\"/\")\n        name = msg.payload.object_id.replace(/ /g,\"_\")\n        msg.filename = flow.get(\"saveFilesTo\") + msg.payload.device.name + \"/\" + i[1] + \"/\" + msg.payload.name\n        if (global.get(\"filesNoDiscovery\") == true) {\n            delete msg.payload.device\n            delete msg.payload.enabled_by_default\n            }\n        return msg;\n        }\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 360,
+        "wires": [
+            [
+                "51683dae441fdcae",
+                "64e470b0221a0bfa",
+                "6fc4064a3b787b13"
+            ]
+        ]
+    },
+    {
+        "id": "0836c773e397e053",
+        "type": "function",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "name": "YAML Filename",
+        "func": "msg.filename = msg.filename +\".yaml\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 360,
+        "wires": [
+            [
+                "3fcf0a9639995831"
+            ]
+        ]
+    },
+    {
+        "id": "6fc4064a3b787b13",
+        "type": "debug",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "name": "Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f54d3c4ab81f3b8f",
+        "type": "function",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "name": "MQTT Options",
+        "func": "if (flow.get(\"sendToMQTT\") == true) {\n    if (global.get(\"deleteAll\") == true) {\n        msg.payload = null\n        msg.retain = true;\n        }\n    if (global.get(\"retainMQTT\") == true) {\n        msg.retain = true;\n        }\n    return msg;\n    }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 280,
+        "wires": [
+            [
+                "b17b354fe9701c18",
+                "66397e4f63b32e67"
+            ]
+        ]
+    },
+    {
+        "id": "b17b354fe9701c18",
+        "type": "debug",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "name": "Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "66397e4f63b32e67",
+        "type": "mqtt out",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "name": "Localhost",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4410210f.6939c",
+        "x": 1280,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "96e5db1f83e15c85",
+        "type": "comment",
+        "z": "37cd53309e7f43c7",
+        "g": "d16968d513e73b23",
+        "name": "Data Publishing",
+        "info": "",
+        "x": 1280,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e37720c0faa465f6",
+        "type": "comment",
+        "z": "37cd53309e7f43c7",
+        "g": "f7c5fd1841ca962d",
+        "name": "Load Configuration Options for Process",
+        "info": "",
+        "x": 1270,
         "y": 60,
         "wires": []
     },
