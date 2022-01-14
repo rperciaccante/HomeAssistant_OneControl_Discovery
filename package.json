@@ -2,7 +2,10 @@
     "name": "GITHUB_HomeAssistant_OneControl_Discovery",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-sse-client": "0.2.2",
+        "node-red-node-rbe": "0.2.9"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flow.json",
