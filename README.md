@@ -14,6 +14,7 @@ This has been tested on my 2021 Grand Design Momentum 397TH-R.  Additional sampl
 - MQTT broker 
 - Node Red installed as a service on same device as your Home Assistant instance (recommend the official Home Assistant add-on)
 - "node-red-contrib-sse-client" node must be installed in Node Red from the hamburger menu -> Manage Pallette -> Install.  Details can be found here - https://flows.nodered.org/node/node-red-contrib-sse-client
+- Once installed, make sure that the credentials for your MQTT server are correct in the MQTT Out nodes.
 
 ### How it Works
 
@@ -22,12 +23,10 @@ Download the "flows.json" file.  In your Node Red instance, from the hanburger m
 
 #### About the Discovery process
 Please note that there are three tabs in this config:
-- OneControl - Improved Discovery
-  - Referred to hereafter as "Discovery" flow
+- OneControl Discovery
   - This is used to connect to your OneControl system and create the necessary Home Assistant entities
   - This created the needed entities and inserts them into Home Assistant via MQTT discovery
-- OneControl - Command and Event Stream
-  - Referred to hereafter as "Monitor" flow
+- OneControl Monitor
   - This flow connects to the OneControl event stream to download state information via SSE-Client
   - State information is transformed as necessary and published to the appropriate MQTT topics
   - MQTT is also monitored for commands from Home Assistant that are then sent to OneControl via HTTP
