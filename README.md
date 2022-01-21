@@ -42,10 +42,22 @@ with the options before running the tool:
 - Delete all configs from MQTT in HomeAssistant (good for testing and upgrades)
 - Enable/disable automatic connection to OneControl event feed
 - Enable/disable automatic sending updates to OneControl
+After the initial run, you will be able to control most features from within the Home Assistant interface.
 
 ### Limitations:
 - Physical devices such as slides and awnings are NOT currently supported due to the complexity of the integration and the risks associated with the potential for damage.
 - RGB Lights (Accent Lights) are not yet supported due to differences in how data is handled between the two platforms.  This is under development.
+
+### Update log:
+2022-01-22:
+- Updated to version 2022-01-21b
+  - Visual cleanup across all nodes
+  - Improving comments in code (more work to come)
+  - Creation of Home Assistant entities that can be used to manage the integration from the HA environment, including automations, etc.  Found under the MQTT integration entities list
+  - Initial values for entities at time of creation are pulled from OneControl and populated to speed state updates
+  - Initial values for availability topics pre-populated to speed installation
+  - Initial stages of diagnostic feedback in place
+
 
 
 OneControl is a registered trademark of Lippert Components, Inc.
