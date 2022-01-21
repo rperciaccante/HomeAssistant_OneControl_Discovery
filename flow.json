@@ -1,6 +1,6 @@
 [
     {
-        "id": "8e6abf387a414b8b",
+        "id": "c5bf60a40630c5e3",
         "type": "tab",
         "label": "OneControl Discovery",
         "disabled": false,
@@ -8,7 +8,7 @@
         "env": []
     },
     {
-        "id": "bebd174e6f36feb7",
+        "id": "43b59d10c7fbb603",
         "type": "tab",
         "label": "OneControl Monitoring",
         "disabled": false,
@@ -49,95 +49,208 @@
         "h": 202
     },
     {
-        "id": "a6fd6df29feedd1a",
+        "id": "2ec83346dffc7d94",
         "type": "group",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
         "name": "Data Publishing",
         "style": {
             "fill": "#e3f3d3",
             "label": true
         },
         "nodes": [
-            "8ab71add093f5fed",
-            "36f69bf5658c30c8",
-            "0c95c75056e37dd7",
-            "dff71ee4dc87cd32",
-            "ddf11174e516b265",
-            "77f0d26867bff9b6",
-            "1dee6757fed39be7",
-            "1df02167e886d8de",
-            "da8a3cd2eedeb6da",
-            "7249e717b509d346",
-            "5708ec51f06c4fda",
-            "0272529bbfc670ef",
-            "3a718b6e0ace0463"
+            "888e1201759d2203",
+            "273da8d4173943bb",
+            "11af832c02c64601",
+            "9be463bbf9a8f997",
+            "99f937e3894a08b8",
+            "dffd7703ab060e9f",
+            "6a2e6e770864cdd0",
+            "f11ec4beb8586b8f",
+            "3e2a20b42543032b",
+            "4a241eecd05a027a",
+            "6fc28ef47b87f702",
+            "670878733f3ed1be"
         ],
-        "x": 1014,
+        "x": 954,
         "y": 179,
-        "w": 612,
-        "h": 322
+        "w": 592,
+        "h": 342
     },
     {
-        "id": "18b8fc1c658c9cb9",
+        "id": "6858fb2384f7f246",
         "type": "group",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
         "name": "Processing Options",
         "style": {
-            "fill": "#e3f3d3",
-            "label": true
+            "label": true,
+            "fill": "#e3f3d3"
         },
         "nodes": [
-            "f03cdaa19db73a7e",
-            "82d6b5a3388e1811",
-            "f6f8f7cbc6aaa4d0",
-            "dcd71d68d5aa19da"
+            "e0aac92236e32259",
+            "a80200c65e78f34a",
+            "aa1ffe397c27678d",
+            "45a56438708b01c9"
         ],
-        "x": 1014,
+        "x": 954,
         "y": 19,
-        "w": 612,
+        "w": 592,
         "h": 142
     },
     {
-        "id": "7b7ab0b9bcb6bedd",
+        "id": "90c01626219c9b6e",
         "type": "group",
-        "z": "8e6abf387a414b8b",
-        "name": "Get Current State",
+        "z": "c5bf60a40630c5e3",
+        "name": "Get current state of entities",
         "style": {
             "fill": "#e3f3d3",
             "label": true
         },
         "nodes": [
-            "a931a9cc1d4dd65c",
-            "41b9ecfb1292c496",
-            "8b9ad6fcb31bc399"
+            "2246a7b0e41df251",
+            "5534c824af950556",
+            "ddd5b4ca9b2214d1"
         ],
-        "x": 474,
-        "y": 259,
-        "w": 212,
+        "x": 614,
+        "y": 319,
+        "w": 292,
         "h": 162
     },
     {
-        "id": "ecee9f73a6c7eaeb",
+        "id": "b07fe501c3da07e1",
         "type": "group",
-        "z": "bebd174e6f36feb7",
+        "z": "c5bf60a40630c5e3",
+        "name": "Create Control Entities",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "8efc57e27bef52e5",
+            "d25248e6a91d7fea"
+        ],
+        "x": 614,
+        "y": 179,
+        "w": 292,
+        "h": 122
+    },
+    {
+        "id": "4979df7953c906ee",
+        "type": "group",
+        "z": "c5bf60a40630c5e3",
+        "name": "Enable Debugging",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true
+        },
+        "nodes": [
+            "66b533eb7bb555b6",
+            "879a7280e4ff88f2"
+        ],
+        "x": 614,
+        "y": 19,
+        "w": 292,
+        "h": 142
+    },
+    {
+        "id": "b786722f1abebf90",
+        "type": "group",
+        "z": "c5bf60a40630c5e3",
+        "name": "Build HVAC Entities",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "098e7e902113652b"
+        ],
+        "x": 614,
+        "y": 499,
+        "w": 292,
+        "h": 82
+    },
+    {
+        "id": "09ec6382357415d1",
+        "type": "group",
+        "z": "c5bf60a40630c5e3",
+        "name": "Collect devices from OneControl",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "98f4ba26adf91fe6",
+            "ef9ad8391578af6e"
+        ],
+        "x": 254,
+        "y": 19,
+        "w": 312,
+        "h": 122
+    },
+    {
+        "id": "11cee4e8082393f2",
+        "type": "group",
+        "z": "c5bf60a40630c5e3",
+        "name": "Gather and process individual control channels",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "f5a3506e1a122e6b",
+            "1baacf69c1df92ac",
+            "0b7b92b04bceb755",
+            "02c44407100b5dfe",
+            "25ecfdaf34edb547",
+            "0fb7b59456f85d4b"
+        ],
+        "x": 254,
+        "y": 159,
+        "w": 305,
+        "h": 282
+    },
+    {
+        "id": "4514be5227808dc1",
+        "type": "group",
+        "z": "c5bf60a40630c5e3",
+        "name": "Generate Supplemental Entities",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "af180c05203f3bf8",
+            "f3dc76e8144ad4bd",
+            "d445b1bb9cd4ab81",
+            "4efa180cc4812cc4",
+            "7c688006afafe03e"
+        ],
+        "x": 254,
+        "y": 459,
+        "w": 312,
+        "h": 242
+    },
+    {
+        "id": "6aae06d09c613fad",
+        "type": "group",
+        "z": "43b59d10c7fbb603",
         "name": "OneControl Event Stream",
         "style": {
             "fill": "#e3f3d3",
             "label": true
         },
         "nodes": [
-            "9635476ec67bc324",
-            "2bf90924dcc792b4",
-            "4dfe5443277609b7",
-            "ab8b0a6e8938748a",
-            "e6e3670e590acbd3",
-            "f291cfaf4d71c8ed",
-            "7f9c7ff8385d79cd",
-            "086c508192ef9f36",
-            "47931a79bdf8169a",
-            "07726f4e3fcaf47e",
-            "2f4948d4802358cf",
-            "c3c21463a0689e90"
+            "affcfc4989bec16b",
+            "ca6fbeb5c26fcf8c",
+            "aa5f06d40fe8cb5a",
+            "c858ec7c0b44668c",
+            "73638f0d908217b1",
+            "b8221c75079a0d4c",
+            "a7a4976dfe29fe86",
+            "86020bb309d0ae86",
+            "e3142aa105a58b6f",
+            "5c0b50257b9bbe74",
+            "4f9578a7eba52f1d",
+            "9f8f72780fcd08cd"
         ],
         "x": 34,
         "y": 19,
@@ -145,24 +258,24 @@
         "h": 202
     },
     {
-        "id": "a3e8794105f63343",
+        "id": "c2cef54b587f0bcb",
         "type": "group",
-        "z": "bebd174e6f36feb7",
+        "z": "43b59d10c7fbb603",
         "name": "OneControl Event Send",
         "style": {
             "fill": "#e3f3d3",
             "label": true
         },
         "nodes": [
-            "d723dcb978780f8d",
-            "34bb5230fe4e0d90",
-            "54a5a5059c138cc8",
-            "ada20a47b29e954b",
-            "9fbcf034be79bec2",
-            "0414cb77ee04517b",
-            "133d6059c5e1534c",
-            "c54df022cab3b975",
-            "78455e86850fcafe"
+            "8f14976b64bb3146",
+            "391a9569a63dcb2a",
+            "d798d4fbbc01f36d",
+            "3e7e3125a5625d70",
+            "f2bdd5e747c58fb2",
+            "2b59b7ebf7f8c64f",
+            "97ebd9ec3e8a6fde",
+            "948bd492828276bc",
+            "5dfeec5f086a1a5d"
         ],
         "x": 34,
         "y": 239,
@@ -170,66 +283,33 @@
         "h": 182
     },
     {
-        "id": "3de1fe3c28c62622",
+        "id": "b81fcae9f8b73e0b",
         "type": "group",
-        "z": "bebd174e6f36feb7",
-        "name": "Process Commands from Home Assistant Integration Controls",
+        "z": "43b59d10c7fbb603",
+        "name": "Entities in Home Assistant that control this integration",
         "style": {
             "fill": "#e3f3d3",
             "label": true
         },
         "nodes": [
-            "88b43101190731ae",
-            "32102edfeb7cde8b",
-            "614bf5c2c9d0fae4",
-            "6b1cffdd1ac3a644",
-            "9f58ea0869cd3b72",
-            "303e38879a37d5c8",
-            "043e2510a61bec56",
-            "4f9894e7349a9c51",
-            "82998e91a0e08186",
-            "3889bfcac8465872",
-            "6483a41a450e5313",
-            "ff6a1f6ca24038cd"
+            "285a06fd6b523577",
+            "c5a20be305249658",
+            "0d6b1468c7e8402c",
+            "30a5d1b17151aadd",
+            "68e445fc2b0a42c7",
+            "d6d1322b9d745884",
+            "9d3f4ffa65c1772b",
+            "94ae0ec5e36d0e7b",
+            "93753410a1771126",
+            "8d475c51d06f4ba7",
+            "00417d306bc2e61c",
+            "3b970ff7deaf8436",
+            "1cf20926d2520c98"
         ],
         "x": 34,
         "y": 439,
         "w": 1572,
-        "h": 302
-    },
-    {
-        "id": "a87da9b0e0f65281",
-        "type": "group",
-        "z": "8e6abf387a414b8b",
-        "name": "Create entities in HA to control this process",
-        "style": {
-            "fill": "#e3f3d3",
-            "label": true
-        },
-        "nodes": [
-            "db4059ce45011314"
-        ],
-        "x": 474,
-        "y": 159,
-        "w": 292,
-        "h": 82
-    },
-    {
-        "id": "be95693b0f94b7ec",
-        "type": "group",
-        "z": "8e6abf387a414b8b",
-        "name": "Build custom HVAC entities",
-        "style": {
-            "label": true,
-            "fill": "#e3f3d3"
-        },
-        "nodes": [
-            "94d8c491eb0d01e7"
-        ],
-        "x": 474,
-        "y": 499,
-        "w": 252,
-        "h": 82
+        "h": 282
     },
     {
         "id": "4410210f.6939c",
@@ -259,9 +339,10 @@
         "sessionExpiry": ""
     },
     {
-        "id": "ad4d398839076b38",
+        "id": "f5a3506e1a122e6b",
         "type": "split",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "11cee4e8082393f2",
         "name": "Split Individual Channels",
         "splt": "\\n",
         "spltType": "str",
@@ -269,18 +350,19 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "foo",
-        "x": 270,
-        "y": 240,
+        "x": 410,
+        "y": 200,
         "wires": [
             [
-                "526aa5fa789725fa"
+                "0fb7b59456f85d4b"
             ]
         ]
     },
     {
-        "id": "383233bb6c7129b2",
+        "id": "1baacf69c1df92ac",
         "type": "join",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "11cee4e8082393f2",
         "name": "Consolidate Channels",
         "mode": "auto",
         "build": "object",
@@ -297,18 +379,19 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 280,
-        "y": 400,
+        "x": 420,
+        "y": 360,
         "wires": [
             [
-                "cb59da7fd0da1366"
+                "0b7b92b04bceb755"
             ]
         ]
     },
     {
-        "id": "cb59da7fd0da1366",
+        "id": "0b7b92b04bceb755",
         "type": "change",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "11cee4e8082393f2",
         "name": "Reorganize Message",
         "rules": [
             {
@@ -329,19 +412,19 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 280,
-        "y": 440,
+        "x": 420,
+        "y": 400,
         "wires": [
             [
-                "9b739e0d3091ac3e"
+                "af180c05203f3bf8"
             ]
         ]
     },
     {
-        "id": "f844ef505c9e68d5",
+        "id": "ea1e858d19760df3",
         "type": "inject",
-        "z": "8e6abf387a414b8b",
-        "name": "Click here to start process",
+        "z": "c5bf60a40630c5e3",
+        "name": "Click here to start",
         "props": [
             {
                 "p": "payload"
@@ -352,51 +435,44 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "",
         "payloadType": "date",
-        "x": 270,
-        "y": 120,
+        "x": 110,
+        "y": 40,
         "wires": [
             [
-                "e11a0cb9204d7e90"
+                "ef9ad8391578af6e"
             ]
         ]
     },
     {
-        "id": "bf25cb02884e9ff5",
-        "type": "comment",
-        "z": "8e6abf387a414b8b",
-        "name": "PLEASE READ ME BEFORE RUNNING",
-        "info": "Make sure you read and understand the settings in the \"Process Configuration\" before you run.\n\nNodes with an * at the end of their name include node-specific information in the Description tab of those nodes.  Please review.",
-        "x": 230,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "9b739e0d3091ac3e",
+        "id": "af180c05203f3bf8",
         "type": "function",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "4514be5227808dc1",
         "name": "Build Node Diagnostic Entities",
-        "func": "// This node generates sensors that contain the diagnostic values for the device (not the individual sensors)\n\nfunction capitolizeFirst(string) {\n var output = string.replace(/\\w\\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});\n return output;\n}\nmsg.payload = \"\"\n    for (const property in msg.thing.configuration) {\n        baseTopic  =                    global.get(\"mqttDiscoveryTopic\") + \"/sensor/\" + msg.thing.hass.UID_ha + \"/\" + property\n        msg.topic =  baseTopic + \"/config\"\n        \n        switch(property){\n            case \"deviceType\":\n                name = msg.thing.label + \" Device Type\"\n                break;\n            case \"deviceInstance\":\n                name = msg.thing.label + \" Device Instance\"\n                break;\n            case \"capability\":\n                name = msg.thing.label + \" Capability\"\n                break;\n            case \"productID\":\n                name = msg.thing.label + \" Product ID\"\n                break;\n            case \"functionName\":\n                name = msg.thing.label + \" Function Name\"\n                break;\n            case \"functionInstance\":\n                name = msg.thing.label + \" Function Instance\"\n                break;\n            case \"mac\":\n                name = msg.thing.label + \" MAC Address\"\n                break;\n            default:\n                name = property\n                break;\n        }\n    \n        msg.payload = {\n            \"name\":                 name,\n            \"object_id\":            global.get(\"namePrecursor\") + name,\n            \"unique_id\":            msg.thing.hass.UID_ha + \"_\" + property,\n            \"entity_category\":      \"diagnostic\",\n            \"state_topic\":          baseTopic + \"/state\",\n            \"availability\":         {\"topic\":                       msg.thing.hass.availabilityTopic,\n                                    \t\"payload_available\":        msg.thing.hass.availabilityTopicOn,\n                                    \t\"payload_not_available\":    msg.thing.hass.availabilityTopicOff,\n                                    \t\"value_template\":           \"{{ value_json.\" + msg.thing.hass.availabilityTopicAttr + \" }}\", \n                                        },\n            \"device\":               {\"manufacturer\":       global.get(\"manufacturer\"), \n                                        \"via_device\":       global.get(\"via_device\"),\n                                        \"identifiers\":      msg.thing.hass.UID_ha, \n                                        \"name\":             msg.thing.label, \n                                        \"model\":            global.get(\"model\") + \": \" + msg.thing.hass.UID_ha,\n                                        \"sw_version\":       global.get(\"sw_version\")\n                                    },\n\n            \"enabled_by_default\":   true\n            \n        } \n        msg.type = \"entity\"\n        node.send(msg)\n        \n        \n        // Send the default values from the config to the MQTT topic for the attribute above\n        msg1 = {}\n        msg1.topic = baseTopic + \"/state\"\n        msg1.payload = msg.thing.configuration[property]\n        msg1.type = \"record\"\n        msg1.retain = true\n        node.send(msg1)\n}\n\nreturn [null,msg]",
+        "func": "// This node generates sensors that contain the diagnostic values for the device (not the individual sensors)\n\nfunction capitolizeFirst(string) {\n var output = string.replace(/\\w\\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});\n return output;\n}\n\n\nmsg.payload = \"\"\n    for (const property in msg.thing.configuration) {\n        baseTopic  =                global.get(\"mqttDiscoveryTopic\") + \"/sensor/\" + msg.thing.hass.UID_ha + \"/\" + property\n        msg.topic =                 baseTopic + \"/config\"\n        \n        switch(property){\n            case \"deviceType\":\n                name =              msg.thing.label + \" Device Type\"\n                break;\n            case \"deviceInstance\":\n                name =              msg.thing.label + \" Device Instance\"\n                break;\n            case \"capability\":\n                name =              msg.thing.label + \" Capability\"\n                break;\n            case \"productID\":\n                name =              msg.thing.label + \" Product ID\"\n                break;\n            case \"functionName\":\n                name =              msg.thing.label + \" Function Name\"\n                break;\n            case \"functionInstance\":\n                name =              msg.thing.label + \" Function Instance\"\n                break;\n            case \"mac\":\n                name =              msg.thing.label + \" MAC Address\"\n                break;\n            default:\n                name =              property\n                break;\n            }\n\n    \n        msg.payload = {\n            \"name\":                 name,\n            \"object_id\":            global.get(\"namePrecursor\") + name,\n            \"unique_id\":            msg.thing.hass.UID_ha + \"_\" + property,\n            \"entity_category\":      \"diagnostic\",\n            \"state_topic\":          baseTopic + \"/state\",\n            \"availability\":         {\"topic\":                       msg.thing.hass.availabilityTopic,\n                                    \t\"payload_available\":        msg.thing.hass.availabilityTopicOn,\n                                    \t\"payload_not_available\":    msg.thing.hass.availabilityTopicOff,\n                                    \t\"value_template\":           \"{{ value_json.\" + msg.thing.hass.availabilityTopicAttr + \" }}\", \n                                        },\n            \"device\":               {\"manufacturer\":       global.get(\"deviceManufacturer\"), \n                                        \"via_device\":       global.get(\"deviceViaDevice\"),\n                                        \"identifiers\":      msg.thing.hass.UID_ha, \n                                        \"name\":             msg.thing.label, \n                                        \"model\":            global.get(\"deviceModel\") + \": \" + msg.thing.hass.UID_ha,\n                                        \"sw_version\":       global.get(\"deviceSWVversion\")\n                                    },\n\n            \"enabled_by_default\":   true\n            \n        } \n    msg.type = \"entity\"\n    node.send(msg)\n    \n    \n    // Send the default values from the config to the MQTT topic for the attribute above\n    msg1 = {}\n    msg1.topic = baseTopic + \"/state\"\n    value = msg.thing.configuration[property]\n  /*  \n\n    */\n    if (property == \"deviceType\") {\n            switch(value) {\n                case 10:\n                    value = \"(\" + value + \") Tank Sensor (Relay Control)\"\n                    break;\n                case 16:\n                    value = \"(\" + value + \") HVAC Control (HVAC Control)\"\n                    break;\n                case 20:\n                    value = \"(\" + value + \") Dimmable Light (Lighting Control)\"\n                    break;\n                case 24:\n                    value = \"(\" + value + \") Generator Genie (HVAC Control)\"\n                    break;\n                case 30:\n                    value = \"(\" + value + \") Latching Relay (type 2), (Relay Control)\"\n                    break;\n                }\n            }\n    //msg1.value = value\n    //msg1.property = property\n    msg1.payload = value\n    msg1.type = \"record\"\n    msg1.retain = true\n    node.send(msg1)\n}\n\nreturn [null,msg]",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 250,
-        "y": 480,
+        "x": 410,
+        "y": 500,
         "wires": [
             [
-                "76cb4e96636a4978"
+                "eedd8594c925dbf3"
             ],
             [
-                "204ffb4911de0ea3"
+                "f3dc76e8144ad4bd"
             ]
         ]
     },
     {
-        "id": "204ffb4911de0ea3",
+        "id": "f3dc76e8144ad4bd",
         "type": "switch",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "4514be5227808dc1",
         "name": "Process Special Device Types",
         "property": "thing.hass.thingTypeUID_ha",
         "propertyType": "msg",
@@ -413,62 +489,64 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 250,
-        "y": 520,
+        "x": 410,
+        "y": 540,
         "wires": [
             [
-                "94d8c491eb0d01e7",
-                "f27b7e5d610684b8"
+                "098e7e902113652b",
+                "d445b1bb9cd4ab81"
             ],
             [
-                "f27b7e5d610684b8"
+                "d445b1bb9cd4ab81"
             ]
         ]
     },
     {
-        "id": "94d8c491eb0d01e7",
+        "id": "098e7e902113652b",
         "type": "function",
-        "z": "8e6abf387a414b8b",
-        "g": "be95693b0f94b7ec",
-        "name": "Build HVAC Devices",
-        "func": "// ####################### Begin HVAC Device Configuration #######################\n// Home Assistant can use MQTT Discovery to create a HVAC (referred to as a climate entity).\n//   https://www.home-assistant.io/integrations/climate.mqtt/\n// Unlike the other entities, this entity will utilize several different mqtt topics from individual channels\n//   to form the Climate entity.\ni = msg.thing.UID.replace(/:/g,\"_\")\ni = i.replace(\"-\",\"_\")\n\ndiscoveryBaseTopic = global.get(\"mqttDiscoveryTopic\") + \"/climate/\" + msg.thing.hass.UID_ha + \"/hvac\"\nmsg.topic = discoveryBaseTopic + \"/config\"\n\nmsg.payload =   {\n                \"name\":                             msg.thing.label,\n                \"object_id\":                        global.get(\"namePrecursor\") + msg.thing.label,\n                \"unique_id\":                        i,\n                \"enabled_by_default\":               \"true\",\n                \"availability\":                     {   \n                                                        \"topic\":                    msg.thing.hass.availabilityTopic,\n                                                        \"payload_available\":        msg.thing.hass.availabilityTopicOn,\n                                            \t        \"payload_not_available\":    msg.thing.hass.availabilityTopicOff,\n                                            \t        \"value_template\":           \"{{ value_json.\" + msg.thing.hass.availabilityTopicAttr + \" }}\", \n                                                    },\n                \"device\": {\n                    \"manufacturer\":                 global.get(\"manufacturer\"),\n                    \"via_device\":                   global.get(\"via_device\"),\n                    \"identifiers\":                  msg.thing.hass.UID_ha,\n                    \"name\":                         msg.thing.hass.label,\n                    \"model\":                        \"OneControl: \"+ msg.thing.hass.UID_ha,\n                    \"sw_version\":                   \"1.0\"\n                    },\n                \"action_topic\":                     \"smarthome/items/\"+i+\"_status/state\",\n                \"action_template\":                  \"{{ value_json.value }}\",\n                \"current_temperature_topic\":        \"smarthome/items/\"+i+\"_inside_temperature/state\",\n                \"current_temperature_template\":     \"{{ value_json.value }}\",\n                \"fan_mode_command_topic\":           \"smarthome/items/\"+i+\"_fan_mode/set\",\n                \"fan_mode_state_topic\":             \"smarthome/items/\"+i+\"_fan_mode/state\",\n                \"fan_mode_state_template\":          \"{{ value_json.value }}\",\n                \"fan_modes\":                        [\"auto\", \n        \t                                            \"low\", \n        \t                                            \"high\"],\n                \"hold_command_topic\":               \"smarthome/items/\"+i+\"_heat-source/set\",\n                \"hold_state_topic\":                 \"smarthome/items/\"+i+\"_heat-source/state\",\n                \"hold_state_template\":              \"{{ value_json.value }}\",\n                \"hold_modes\":                       [\"Prefer Heatpump\",\n                                                        \"Prefer Gas\"],\n        \t    \"mode_command_topic\":               \"smarthome/items/\"+i+\"_hvac_mode/set\",\n                \"mode_state_topic\":                 \"smarthome/items/\"+i+\"_hvac_mode/state\",\n            \t\"mode_state_template\":              \"{{ value_json.value }}\",\n            \t\"modes\":                            [\"heat\", \n            \t                                        \"cool\",\n            \t                                        \"heat_cool\",\n            \t                                        \"off\"],\n            \t\"min_temp\":                         45,\n            \t\"max_temp\":                         100,\n            \t\"precision\":                        1,\n            \t\"retain\":                           true,\n            \t\"temperature_high_command_topic\":   \"smarthome/items/\"+i+\"_high_temperature/set\",\n            \t\"temperature_high_state_topic\":     \"smarthome/items/\"+i+\"_high_temperature/state\",\n            \t\"temperature_high_state_template\":  \"{{ value_json.value }}\",\n            \t\"temperature_low_command_topic\":    \"smarthome/items/\"+i+\"_low_temperature/set\",\n            \t\"temperature_low_state_topic\":      \"smarthome/items/\"+i+\"_low_temperature/state\",\n            \t\"temperature_low_state_template\":   \"{{ value_json.value }}\",\n            \t\"temp_step\":                        1,\n    }\nmsg.type = \"entity\"\nnode.send(msg)\n\ndiscoveryBaseTopic = global.get(\"mqttDiscoveryTopic\") + \"/sensor/\" + msg.thing.hass.UID_ha + \"/device_mode\"\nmsg.topic = discoveryBaseTopic + \"/config\"\nmsg.payload =   {\n                \"name\":                             msg.thing.label + \" Device State\",\n                \"object_id\":                        global.get(\"namePrecursor\") + msg.thing.label + \" Device State\",\n                \"unique_id\":                        i + \"_device_state\",\n                \"enabled_by_default\":               \"true\",\n                \"availability\":                     {\n                                                    \t\"topic\":                    msg.thing.hass.availabilityTopic,\n                                                    \t\"payload_available\":        \"online\",\n                                                    \t\"payload_not_available\":    \"offline\",\n                                                    \t\"value_template\":           \"{{ value_json.status }}\", \n                                                    },\n                \"device\": {\n                    \"manufacturer\":                 global.get(\"manufacturer\"),\n                    \"via_device\":                   global.get(\"via_device\"),\n                    \"identifiers\":                  msg.thing.hass.UID_ha,\n                    \"name\":                         msg.thing.hass.label,\n                    \"model\":                        \"OneControl: \"+ msg.thing.hass.UID_ha,\n                    \"sw_version\":                   \"1.0\"\n                    },\n                \"entity_category\":                  \"diagnostic\",\n                \"state_topic\":                     \"smarthome/items/\"+i+\"_status/state\",\n                \"value_template\":                  \"{{ value_json.value }}\"\n}\nmsg.type = \"entity\"\nnode.send(msg)\n\ndiscoveryBaseTopic = global.get(\"mqttDiscoveryTopic\") + \"/select/\" + msg.thing.hass.UID_ha + \"/device_mode\"\nmsg.topic = discoveryBaseTopic + \"/config\"\nmsg.payload =   {\n                \"name\":                             msg.thing.label + \" Heat Source Select\",\n                \"object_id\":                        global.get(\"namePrecursor\") + msg.thing.label + \" Heat Source Select\",\n                \"unique_id\":                        i + \"_heat_source_select\",\n                \"enabled_by_default\":               \"true\",\n                \"availability\":                     {\n                                                    \t\"topic\":                    msg.thing.hass.availabilityTopic,\n                                                    \t\"payload_available\":        \"online\",\n                                                    \t\"payload_not_available\":    \"offline\",\n                                                    \t\"value_template\":           \"{{ value_json.status }}\", \n                                                    },\n                \"device\": {\n                    \"manufacturer\":                 global.get(\"manufacturer\"),\n                    \"via_device\":                   global.get(\"via_device\"),\n                    \"identifiers\":                  msg.thing.hass.UID_ha,\n                    \"name\":                         msg.thing.hass.label,\n                    \"model\":                        \"OneControl: \"+ msg.thing.hass.UID_ha,\n                    \"sw_version\":                   \"1.0\"\n                    },\n                \"entity_category\":                  \"diagnostic\",\n                \"state_topic\":                      \"smarthome/items/\"+i+\"_heat-source/state\",\n                \"command_topic\":                    \"smarthome/items/\"+i+\"_heat-source/set\",\n                \"options\":                          [\n                                                        \"Prefer Heatpump\", \n            \t                                        \"Prefer Gas\"\n            \t                                    ],\n}\nmsg.type = \"entity\"\nnode.send(msg)\n\n",
+        "z": "c5bf60a40630c5e3",
+        "g": "b786722f1abebf90",
+        "name": "Build HVAC complex entities     ",
+        "func": "// ####################### Begin HVAC Device Configuration #######################\n// Home Assistant can use MQTT Discovery to create a HVAC (referred to as a climate entity).\n//   https://www.home-assistant.io/integrations/climate.mqtt/\n// Unlike the other entities, this entity will utilize several different mqtt topics from individual channels\n//   to form the Climate entity.\ni = msg.thing.UID.replace(/:/g,\"_\")\ni = i.replace(\"-\",\"_\")\n\ndiscoveryBaseTopic = global.get(\"mqttDiscoveryTopic\") + \"/climate/\" + msg.thing.hass.UID_ha + \"/hvac\"\nmsg.topic = discoveryBaseTopic + \"/config\"\n\nmsg.payload =   {\n                \"name\":                             msg.thing.label,\n                \"object_id\":                        global.get(\"namePrecursor\") + msg.thing.label,\n                \"unique_id\":                        i,\n                \"enabled_by_default\":               \"true\",\n                \"availability\":                     {   \n                                                        \"topic\":                    msg.thing.hass.availabilityTopic,\n                                                        \"payload_available\":        msg.thing.hass.availabilityTopicOn,\n                                            \t        \"payload_not_available\":    msg.thing.hass.availabilityTopicOff,\n                                            \t        \"value_template\":           \"{{ value_json.\" + msg.thing.hass.availabilityTopicAttr + \" }}\", \n                                                    },\n                \"device\": {\n                    \"manufacturer\":                 global.get(\"deviceManufacturer\"),\n                    \"via_device\":                   global.get(\"via_device\"),\n                    \"identifiers\":                  msg.thing.hass.UID_ha,\n                    \"name\":                         msg.thing.hass.label,\n                    \"model\":                        \"OneControl: \"+ msg.thing.hass.UID_ha,\n                    \"sw_version\":                   \"1.0\"\n                    },\n                \"action_topic\":                     \"smarthome/items/\"+i+\"_status/state\",\n                \"action_template\":                  \"{{ value_json.value }}\",\n                \"current_temperature_topic\":        \"smarthome/items/\"+i+\"_inside_temperature/state\",\n                \"current_temperature_template\":     \"{{ value_json.value }}\",\n                \"fan_mode_command_topic\":           \"smarthome/items/\"+i+\"_fan_mode/set\",\n                \"fan_mode_state_topic\":             \"smarthome/items/\"+i+\"_fan_mode/state\",\n                \"fan_mode_state_template\":          \"{{ value_json.value }}\",\n                \"fan_modes\":                        [\"auto\", \n        \t                                            \"low\", \n        \t                                            \"high\"],\n                \"hold_command_topic\":               \"smarthome/items/\"+i+\"_heat-source/set\",\n                \"hold_state_topic\":                 \"smarthome/items/\"+i+\"_heat-source/state\",\n                \"hold_state_template\":              \"{{ value_json.value }}\",\n                \"hold_modes\":                       [\"Prefer Heatpump\",\n                                                        \"Prefer Gas\"],\n        \t    \"mode_command_topic\":               \"smarthome/items/\"+i+\"_hvac_mode/set\",\n                \"mode_state_topic\":                 \"smarthome/items/\"+i+\"_hvac_mode/state\",\n            \t\"mode_state_template\":              \"{{ value_json.value }}\",\n            \t\"modes\":                            [\"heat\", \n            \t                                        \"cool\",\n            \t                                        \"heat_cool\",\n            \t                                        \"off\"],\n            \t\"min_temp\":                         45,\n            \t\"max_temp\":                         100,\n            \t\"precision\":                        1,\n            \t\"retain\":                           true,\n            \t\"temperature_high_command_topic\":   \"smarthome/items/\"+i+\"_high_temperature/set\",\n            \t\"temperature_high_state_topic\":     \"smarthome/items/\"+i+\"_high_temperature/state\",\n            \t\"temperature_high_state_template\":  \"{{ value_json.value }}\",\n            \t\"temperature_low_command_topic\":    \"smarthome/items/\"+i+\"_low_temperature/set\",\n            \t\"temperature_low_state_topic\":      \"smarthome/items/\"+i+\"_low_temperature/state\",\n            \t\"temperature_low_state_template\":   \"{{ value_json.value }}\",\n            \t\"temp_step\":                        1,\n    }\nmsg.type = \"entity\"\nnode.send(msg)\n\ndiscoveryBaseTopic = global.get(\"mqttDiscoveryTopic\") + \"/sensor/\" + msg.thing.hass.UID_ha + \"/device_mode\"\nmsg.topic = discoveryBaseTopic + \"/config\"\nmsg.payload =   {\n                \"name\":                             msg.thing.label + \" Device State\",\n                \"object_id\":                        global.get(\"namePrecursor\") + msg.thing.label + \" Device State\",\n                \"unique_id\":                        i + \"_device_state\",\n                \"enabled_by_default\":               \"true\",\n                \"availability\":                     {\n                                                    \t\"topic\":                    msg.thing.hass.availabilityTopic,\n                                                    \t\"payload_available\":        \"online\",\n                                                    \t\"payload_not_available\":    \"offline\",\n                                                    \t\"value_template\":           \"{{ value_json.status }}\", \n                                                    },\n                \"device\": {\n                    \"manufacturer\":                 global.get(\"deviceManufacturer\"),\n                    \"via_device\":                   global.get(\"deviceViaDevice\"),\n                    \"identifiers\":                  msg.thing.hass.UID_ha,\n                    \"name\":                         msg.thing.hass.label,\n                    \"model\":                        global.get(\"deviceModel\"),\n                    \"sw_version\":                   global.get(\"deviceSWVersion\"),\n                    },\n                \"entity_category\":                  \"diagnostic\",\n                \"state_topic\":                     \"smarthome/items/\"+i+\"_status/state\",\n                \"value_template\":                  \"{{ value_json.value }}\"\n}\nmsg.type = \"entity\"\nnode.send(msg)\n\ndiscoveryBaseTopic = global.get(\"mqttDiscoveryTopic\") + \"/select/\" + msg.thing.hass.UID_ha + \"/device_mode\"\nmsg.topic = discoveryBaseTopic + \"/config\"\nmsg.payload =   {\n                \"name\":                             msg.thing.label + \" Heat Source Select\",\n                \"object_id\":                        global.get(\"namePrecursor\") + msg.thing.label + \" Heat Source Select\",\n                \"unique_id\":                        i + \"_heat_source_select\",\n                \"enabled_by_default\":               \"true\",\n                \"availability\":                     {\n                                                    \t\"topic\":                    msg.thing.hass.availabilityTopic,\n                                                    \t\"payload_available\":        \"online\",\n                                                    \t\"payload_not_available\":    \"offline\",\n                                                    \t\"value_template\":           \"{{ value_json.status }}\", \n                                                    },\n                \"device\": {\n                    \"manufacturer\":                 global.get(\"deviceManufacturer\"),\n                    \"via_device\":                   global.get(\"deviceViaDevice\"),\n                    \"identifiers\":                  msg.thing.hass.UID_ha,\n                    \"name\":                         msg.thing.hass.label,\n                    \"model\":                        global.get(\"deviceModel\"),\n                    \"sw_version\":                   global.get(\"deviceSWVersion\"),\n                    },\n                \"entity_category\":                  \"diagnostic\",\n                \"state_topic\":                      \"smarthome/items/\"+i+\"_heat-source/state\",\n                \"command_topic\":                    \"smarthome/items/\"+i+\"_heat-source/set\",\n                \"options\":                          [\n                                                        \"Prefer Heatpump\", \n            \t                                        \"Prefer Gas\"\n            \t                                    ],\n}\nmsg.type = \"entity\"\nnode.send(msg)\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
+        "x": 760,
         "y": 540,
         "wires": [
             [
-                "27c90a3f24e1b42a"
+                "6fc28ef47b87f702"
             ]
         ]
     },
     {
-        "id": "526aa5fa789725fa",
+        "id": "0fb7b59456f85d4b",
         "type": "function",
-        "z": "8e6abf387a414b8b",
-        "name": "Pre-Process Individual Channels",
-        "func": "function capitolizeFirst(string) {\n var output = string.replace(/\\w\\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});\n return output;\n}\nvar msg1 = {}\nmsg1.debug = {}\nvar channel = {}\n\nchannelRaw =                msg.payload\n//msg.payload =               {}\nchannelUID =                channelRaw.uid.replace(\"idsmyrv:\",\"\")\nchannelUID =                channelUID.replace(\"-thing:\",\"_\")\nchannelUID =                channelUID.replace(/-/g,\"_\")\nchannelTypeUID =            channelRaw.channelTypeUID.replace(\"idsmyrv:\",\"\")\nchannelUID_ha =             channelRaw.uid.replace(/:/g,\"_\")\nchannelUID_ha =             channelUID_ha.replace(/-/g,\"_\")\n\nmsg.payload.hass = {}\n\nmsg.payload.hass = {\n    \"label_ha\":                     msg.thing.hass.label + \" \" + capitolizeFirst(channelRaw.id),\n    \"channelUID_oc\":                channelRaw.uid,\n    \"channelUID_ha\":                channelUID_ha,\n    \"id_oc\":                        channelRaw.id,\n    \"valueType_oc\":                 channelRaw.itemType.toLowerCase(),\n    \"channelType_ha\":               msg.thing.hass.thingTypeUID_ha +\":\"+channelRaw.id,\n    \"kind\":                         channelRaw.kind.toLowerCase(),\n    \"topicItemStateEvent\":          \"smarthome/items/\" + channelUID_ha + \"/state\",\n    \"topicThingStatusInfoEvent\":    \"smarthome/things/\" + msg.thing.UID + \"/status\",\n    \"topicItemStateChangedEvent\":   \"smarthome/items/\" + channelUID_ha + \"/statechanged\",\n    \"topicItemCommandEvent\":        \"smarthome/items/\" + channelUID_ha + \"/command\",\n    \"topicItemCommandSend\":         \"smarthome/items/\" + channelUID_ha + \"/set\"\n                            }  \n\n// Build base discovery content \n\n\nbasePayload =                       {\"name\":                    msg.payload.hass.label_ha,\n                                    \"object_id\":                global.get(\"namePrecursor\") + msg.payload.hass.label_ha,\n                                    \"unique_id\":                msg.payload.hass.channelUID_ha,\n                                    \"state_topic\":              msg.payload.hass.topicItemStateEvent,\n                                    \"value_template\":           \"{{ value_json.value }}\", \n                                    \"availability\": {\n                                    \t\"topic\":                    msg.thing.hass.availabilityTopic,\n                                    \t\"payload_available\":        msg.thing.hass.availabilityTopicOn,\n                                    \t\"payload_not_available\":    msg.thing.hass.availabilityTopicOff,\n                                    \t\"value_template\":           \"{{ value_json.\" + msg.thing.hass.availabilityTopicAttr + \" }}\", \n                                        },\n                                    \"device\": {\n                                        \"manufacturer\":         global.get(\"manufacturer\"),\n                                        \"via_device\":           global.get(\"via_device\"),\n                                        \"identifiers\":          msg.thing.hass.UID_ha,\n                                        \"name\":                 msg.thing.hass.label,\n                                        //\"connections\":          [[\"mac\", msg.thing.configuration.mac],[\"foo\",\"bar\"]],\n                                        \"model\":                global.get(\"model\") + \": \" + msg.thing.hass.UID_ha,\n                                        \"sw_version\":           global.get(\"sw_version\")\n                                        }\n    }\n\n\n//var channel = {} // Used to add entity-specific attributes to the payload\n\n//Set generic entity types based on OpenHab channel itemTypes \nswitch(msg.payload.hass.channelType_ha){\n    case \"light:dimmer\":\n        msg.payload.hass.entityType_ha = \"light\"\n        break;\n    case \"switched-light:switch\":\n        msg.payload.hass.entityType_ha = \"light\"\n        break;\n    default:\n        msg.payload.hass.entityType_ha = \"sensor\"\n        break;\n}\n\nmsg.payload.hass.discovery = {}\nmsg.payload.hass.attributes = {}\nmsg.payload.hass.discovery.payload = basePayload\nmsg.payload.hass.attributes.payload = msg.thing.configuration\nreturn [msg,msg]\n",
+        "z": "c5bf60a40630c5e3",
+        "g": "11cee4e8082393f2",
+        "name": "Pre-Process Channels",
+        "func": "function capitolizeFirst(string) {\n var output = string.replace(/\\w\\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});\n return output;\n}\nvar msg1 = {}\nmsg1.debug = {}\nvar channel = {}\n\nchannelRaw =                msg.payload\n//msg.payload =               {}\nchannelUID =                channelRaw.uid.replace(\"idsmyrv:\",\"\")\nchannelUID =                channelUID.replace(\"-thing:\",\"_\")\nchannelUID =                channelUID.replace(/-/g,\"_\")\nchannelTypeUID =            channelRaw.channelTypeUID.replace(\"idsmyrv:\",\"\")\nchannelUID_ha =             channelRaw.uid.replace(/:/g,\"_\")\nchannelUID_ha =             channelUID_ha.replace(/-/g,\"_\")\n\nmsg.payload.hass = {}\n\nmsg.payload.hass = {\n    \"label_ha\":                     msg.thing.hass.label + \" \" + capitolizeFirst(channelRaw.id),\n    \"channelUID_oc\":                channelRaw.uid,\n    \"channelUID_ha\":                channelUID_ha,\n    \"id_oc\":                        channelRaw.id,\n    \"valueType_oc\":                 channelRaw.itemType.toLowerCase(),\n    \"channelType_ha\":               msg.thing.hass.thingTypeUID_ha +\":\"+channelRaw.id,\n    \"kind\":                         channelRaw.kind.toLowerCase(),\n    \"topicItemStateEvent\":          \"smarthome/items/\" + channelUID_ha + \"/state\",\n    \"topicThingStatusInfoEvent\":    \"smarthome/things/\" + msg.thing.UID + \"/status\",\n    \"topicItemStateChangedEvent\":   \"smarthome/items/\" + channelUID_ha + \"/statechanged\",\n    \"topicItemCommandEvent\":        \"smarthome/items/\" + channelUID_ha + \"/command\",\n    \"topicItemCommandSend\":         \"smarthome/items/\" + channelUID_ha + \"/set\"\n                            }  \n\n// Build base discovery content \n\n\nbasePayload =                       {\"name\":                    msg.payload.hass.label_ha,\n                                    \"object_id\":                global.get(\"namePrecursor\") + msg.payload.hass.label_ha,\n                                    \"unique_id\":                msg.payload.hass.channelUID_ha,\n                                    \"state_topic\":              msg.payload.hass.topicItemStateEvent,\n                                    \"value_template\":           \"{{ value_json.value }}\", \n                                    \"availability\": {\n                                    \t\"topic\":                    msg.thing.hass.availabilityTopic,\n                                    \t\"payload_available\":        msg.thing.hass.availabilityTopicOn,\n                                    \t\"payload_not_available\":    msg.thing.hass.availabilityTopicOff,\n                                    \t\"value_template\":           \"{{ value_json.\" + msg.thing.hass.availabilityTopicAttr + \" }}\", \n                                        },\n                                    \"device\": {\n                                        \"manufacturer\":         global.get(\"deviceManufacturer\"),\n                                        \"via_device\":           global.get(\"deviceViaDevice\"),\n                                        \"identifiers\":          msg.thing.hass.UID_ha,\n                                        \"name\":                 msg.thing.hass.label,\n                                        //\"connections\":          [[\"mac\", msg.thing.configuration.mac],[\"foo\",\"bar\"]],\n                                        \"model\":                global.get(\"deviceModel\") + \": \" + msg.thing.hass.UID_ha,\n                                        \"sw_version\":           global.get(\"deviceSWVersion\")\n                                        }\n    }\n\n\n//var channel = {} // Used to add entity-specific attributes to the payload\n\n//Set generic entity types based on OpenHab channel itemTypes \nswitch(msg.payload.hass.channelType_ha){\n    case \"light:dimmer\":\n        msg.payload.hass.entityType_ha = \"light\"\n        break;\n    case \"switched-light:switch\":\n        msg.payload.hass.entityType_ha = \"light\"\n        break;\n    default:\n        msg.payload.hass.entityType_ha = \"sensor\"\n        break;\n}\n\nmsg.payload.hass.discovery = {}\nmsg.payload.hass.attributes = {}\nmsg.payload.hass.discovery.payload = basePayload\nmsg.payload.hass.attributes.payload = msg.thing.configuration\nreturn [msg,msg]\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
-        "y": 280,
+        "x": 420,
+        "y": 240,
         "wires": [
             [],
             [
-                "054bd7f7051d798d"
+                "02c44407100b5dfe"
             ]
         ]
     },
     {
-        "id": "054bd7f7051d798d",
+        "id": "02c44407100b5dfe",
         "type": "switch",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "11cee4e8082393f2",
         "name": "Exclude Special Devices",
         "property": "thing.hass.thingTypeUID_ha",
         "propertyType": "msg",
@@ -485,105 +563,145 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 270,
-        "y": 320,
+        "x": 410,
+        "y": 280,
         "wires": [
             [],
             [
-                "85fc94fa1c1c6435"
+                "25ecfdaf34edb547"
             ]
         ]
     },
     {
-        "id": "85fc94fa1c1c6435",
+        "id": "25ecfdaf34edb547",
         "type": "function",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "11cee4e8082393f2",
         "name": "Process Individual Channels",
-        "func": "addPayload = {}\n\nif (msg.payload.hass.channelType_ha.includes(\":\") === true ) {\n    channel = msg.payload.hass.channelType_ha.split(\":\")\n    channelType = channel[1]\n} else {\n    channel = msg.payload.hass.channelType_ha\n}\n\ndiscoveryPayload = msg.payload.hass.discovery.payload\n\n// Add device additional details as needed based on channel types\nif (channelType.includes(\"voltage\") === true ) {\n        addPayload = {\n            \"device_class\":                 \"voltage\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"current\") === true ) {\n        addPayload = {\n            \"device_class\":                 \"current\",\n            \"unit_of_measurement\":          \"A\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"dimmer\") === true ) {\n        baseTopic_oc = \"smarthome/items/\" + msg.payload.hass.channelUID_ha\n        baseName = msg.thing.hass.UID_oc.replace(/:/g,\"_\")\n        baseName = \"smarthome/items/\" + baseName.replace(/-/,\"_\")\n        delete msg.payload.hass.discovery.payload.value_template\n        \n        addPayload = {\n            \"state_topic\":                  baseName + \"_switch/state\",\n            \"command_topic\":                baseTopic_oc + \"/set\",\n            \"brightness_state_topic\":       baseName + \"_brightness/state\",\n            \"brightness_command_topic\":     baseTopic_oc + \"/set\",\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"brightness_scale\":             100,\n            \"on_command_type\":              \"last\",\n            \"qos\":                          0,\n            \"effect_state_topic\":           baseName + \"_mode/state\",\n            \"effect_command_topic\":         baseName + \"_mode/set\",\n            \"effect_list\":                  [\"off\",\"dimmer\",\"blink\",\"swell\"],\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"fault\") === true) {\n        msg.payload.hass.entityType_ha = \"binary_sensor\"\n        addPayload = {\n            \"device_class\":                 \"problem\",\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"entity_category\":              \"diagnostic\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\n\nif (msg.payload.hass.channelType_ha.includes(\"generator:command\") === true) {\n        msg.payload.hass.entityType_ha =    \"switch\"\n        msg.payload.hass.discovery.payload.name = \"Generator Switch\"\n        msg.payload.hass.discovery.payload.object_id = global.get(\"namePrecursor\") + msg.payload.hass.discovery.payload.name\n        addPayload = {\n            \"command_topic\":                msg.payload.hass.topicItemCommandSend,\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"state_on\":                     \"on\",\n            \"state_off\":                    \"off\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"output-disable\") === true) {\n        msg.payload.hass.entityType_ha = \"sensor\"\n        addPayload = {\n            \"entity_category\":              \"diagnostic\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\n\nif (channelType.includes(\"online\") === true ) {\n        msg.payload.hass.entityType_ha =        \"binary_sensor\"\n        addPayload = {\n            \"device_class\":                 \"connectivity\",\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"entity_category\":              \"diagnostic\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n    \nif (channelType.includes(\"output-disable-cause\") === true ) {\n        addPayload = {\n            \"entity_category\":              \"diagnostic\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n    \nif (channelType.includes(\"percent\") === true ) {\n    if (msg.payload.hass.id_oc == \"position\") {\n            addPayload = {\n                \"unit_of_measurement\":          '%',\n                \"value_template\":               '{{ (((value_json |float)/255)*100)|round(0) }}',\n                \"enabled_by_default\":           \"true\"\n                }\n            } else {\n                addPayload = {\n                \"enabled_by_default\":           \"true\"\n                }\n            }\n    }\n\nif (channelType.includes(\"sleep\") === true) {\n        msg.payload.hass.entityType_ha =        \"number\"\n        addPayload = {\n            \"command_topic\":                msg.payload.hass.topicItemCommandSend,\n            \"qos\":                          0,\n            \"unit_of_measurement\":          \"mins.\",\n            \"step\":                         1,\n            \"min\":                          0,\n            \"max\":                          120,\n            \"icon\":                         \"mdi:timer\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"switch\") === true &&\n    channelType.includes(\"switched-light\") != true) {\n        msg.payload.hass.entityType_ha =    \"switch\"\n        addPayload = {\n            \"command_topic\":                msg.payload.hass.topicItemCommandSend,\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"state_on\":                     \"on\",\n            \"state_off\":                    \"off\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"switched-light\") === true) {\n        msg.payload.hass.entityType_ha =        \"light\"\n        addPayload = {\n            \"command_topic\":                msg.payload.hass.topicItemCommandSend,\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"state_on\":                     \"on\",\n            \"state_off\":                    \"off\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n    \nif (channelType.includes(\"tank-level\") === true ) {\n        addPayload = {\n            \"icon\":                         \"mdi:water-percent\",\n            \"unit_of_measurement\":          \"%\",\n            \"enabled_by_default\":           \"true\"\n                }\n    }\n\n\nif (channelType.includes(\"temperature\") === true && \n    channelType.includes(\"temperature-setpoints\") === false) {\n        addPayload = {\n            \"device_class\":                 \"temperature\",\n            \"unit_of_measurement\":          \"°F\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n    \nif (channelType.includes(\"temperature-setpoints\") === true) {\n        addPayload = {\n            \"enabled_by_default\":           \"false\"\n            }\n    }\n    \n// These sensors are unknown in their purpose, so we create them, but do not enable them unless we want to.\nif (channelType.includes(\"time1\") === true || channelType.includes(\"time2\") === true ) {\n        addPayload = {\n            \"enabled_by_default\":           \"false\"\n                }\n    }\n\n    \ndiscoveryBaseTopic = global.get(\"mqttDiscoveryTopic\") + \"/\" + msg.payload.hass.entityType_ha + \"/\" + msg.thing.hass.UID_ha + \"/\" + msg.payload.hass.id_oc\nmsg.payload.hass.discovery.topic = discoveryBaseTopic + \"/config\"\nmsg.payload.hass.attributes.topic = discoveryBaseTopic + \"/attributes\"\nmsg.payload.hass.discovery.payload = {...discoveryPayload,...addPayload }\n\nmsg1 = {}\nmsg1.topic = msg.payload.hass.discovery.topic\nmsg1.payload = msg.payload.hass.discovery.payload\nmsg1.type = \"entity\"\nreturn [msg1,msg];\n",
+        "func": "addPayload = {}\n\nif (msg.payload.hass.channelType_ha.includes(\":\") === true ) {\n    channel = msg.payload.hass.channelType_ha.split(\":\")\n    channelType = channel[1]\n} else {\n    channel = msg.payload.hass.channelType_ha\n}\n\ndiscoveryPayload = msg.payload.hass.discovery.payload\n\n// Add device additional details as needed based on channel types\nif (channelType.includes(\"voltage\") === true ) {\n        addPayload = {\n            \"device_class\":                 \"voltage\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"current\") === true ) {\n        addPayload = {\n            \"device_class\":                 \"current\",\n            \"unit_of_measurement\":          \"A\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"dimmer\") === true ) {\n        baseTopic_oc = \"smarthome/items/\" + msg.payload.hass.channelUID_ha\n        baseName = msg.thing.hass.UID_oc.replace(/:/g,\"_\")\n        baseName = \"smarthome/items/\" + baseName.replace(/-/,\"_\")\n        delete msg.payload.hass.discovery.payload.value_template\n        \n        addPayload = {\n            \"state_topic\":                  baseName + \"_switch/state\",\n            \"command_topic\":                baseTopic_oc + \"/set\",\n            \"brightness_state_topic\":       baseName + \"_brightness/state\",\n            \"brightness_command_topic\":     baseTopic_oc + \"/set\",\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"brightness_scale\":             100,\n            \"on_command_type\":              \"last\",\n            \"qos\":                          0,\n            \"effect_state_topic\":           baseName + \"_mode/state\",\n            \"effect_command_topic\":         baseName + \"_mode/set\",\n            \"effect_list\":                  [\"Off\",\"Dimmer\",\"Blink\",\"Swell\"],\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"fault\") === true) {\n        msg.payload.hass.entityType_ha = \"binary_sensor\"\n        addPayload = {\n            \"device_class\":                 \"problem\",\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"entity_category\":              \"diagnostic\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\n\nif (msg.payload.hass.channelType_ha.includes(\"generator:command\") === true) {\n        msg.payload.hass.entityType_ha =    \"switch\"\n        msg.payload.hass.discovery.payload.name = \"Generator Switch\"\n        msg.payload.hass.discovery.payload.object_id = global.get(\"namePrecursor\") + msg.payload.hass.discovery.payload.name\n        addPayload = {\n            \"command_topic\":                msg.payload.hass.topicItemCommandSend,\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"state_on\":                     \"on\",\n            \"state_off\":                    \"off\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"output-disable\") === true) {\n        msg.payload.hass.entityType_ha = \"sensor\"\n        addPayload = {\n            \"entity_category\":              \"diagnostic\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\n\nif (channelType.includes(\"online\") === true ) {\n        msg.payload.hass.entityType_ha =        \"binary_sensor\"\n        addPayload = {\n            \"device_class\":                 \"connectivity\",\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"entity_category\":              \"diagnostic\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n    \nif (channelType.includes(\"output-disable-cause\") === true ) {\n        addPayload = {\n            \"entity_category\":              \"diagnostic\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n    \nif (channelType.includes(\"percent\") === true ) {\n    if (msg.payload.hass.id_oc == \"position\") {\n            addPayload = {\n                \"unit_of_measurement\":          '%',\n                \"value_template\":               '{{ (((value_json |float)/255)*100)|round(0) }}',\n                \"enabled_by_default\":           \"true\"\n                }\n            } else {\n                addPayload = {\n                \"enabled_by_default\":           \"true\"\n                }\n            }\n    }\n\nif (channelType.includes(\"sleep\") === true) {\n        msg.payload.hass.entityType_ha =        \"number\"\n        addPayload = {\n            \"command_topic\":                msg.payload.hass.topicItemCommandSend,\n            \"qos\":                          0,\n            \"unit_of_measurement\":          \"mins.\",\n            \"step\":                         1,\n            \"min\":                          0,\n            \"max\":                          120,\n            \"icon\":                         \"mdi:timer\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"switch\") === true &&\n    channelType.includes(\"switched-light\") != true) {\n        msg.payload.hass.entityType_ha =    \"switch\"\n        addPayload = {\n            \"command_topic\":                msg.payload.hass.topicItemCommandSend,\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"state_on\":                     \"on\",\n            \"state_off\":                    \"off\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n\nif (channelType.includes(\"switched-light\") === true) {\n        msg.payload.hass.entityType_ha =        \"light\"\n        addPayload = {\n            \"command_topic\":                msg.payload.hass.topicItemCommandSend,\n            \"payload_on\":                   \"on\",\n            \"payload_off\":                  \"off\",\n            \"state_on\":                     \"on\",\n            \"state_off\":                    \"off\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n    \nif (channelType.includes(\"tank-level\") === true ) {\n        addPayload = {\n            \"icon\":                         \"mdi:water-percent\",\n            \"unit_of_measurement\":          \"%\",\n            \"enabled_by_default\":           \"true\"\n                }\n    }\n\n\nif (channelType.includes(\"temperature\") === true && \n    channelType.includes(\"temperature-setpoints\") === false) {\n        addPayload = {\n            \"device_class\":                 \"temperature\",\n            \"unit_of_measurement\":          \"°F\",\n            \"enabled_by_default\":           \"true\"\n            }\n    }\n    \nif (channelType.includes(\"temperature-setpoints\") === true) {\n        addPayload = {\n            \"enabled_by_default\":           \"false\"\n            }\n    }\n    \n// These sensors are unknown in their purpose, so we create them, but do not enable them unless we want to.\nif (channelType.includes(\"time1\") === true || channelType.includes(\"time2\") === true ) {\n        addPayload = {\n            \"enabled_by_default\":           \"false\"\n                }\n    }\n\n    \ndiscoveryBaseTopic = global.get(\"mqttDiscoveryTopic\") + \"/\" + msg.payload.hass.entityType_ha + \"/\" + msg.thing.hass.UID_ha + \"/\" + msg.payload.hass.id_oc\nmsg.payload.hass.discovery.topic = discoveryBaseTopic + \"/config\"\nmsg.payload.hass.attributes.topic = discoveryBaseTopic + \"/attributes\"\nmsg.payload.hass.discovery.payload = {...discoveryPayload,...addPayload }\n\nmsg1 = {}\nmsg1.topic = msg.payload.hass.discovery.topic\nmsg1.payload = msg.payload.hass.discovery.payload\nmsg1.type = \"entity\"\nreturn [msg1,msg];\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
-        "y": 360,
+        "x": 400,
+        "y": 320,
         "wires": [
             [
-                "a931a9cc1d4dd65c",
-                "76cb4e96636a4978"
+                "2246a7b0e41df251",
+                "eedd8594c925dbf3"
             ],
             [
-                "383233bb6c7129b2"
+                "1baacf69c1df92ac"
             ]
         ]
     },
     {
-        "id": "f27b7e5d610684b8",
+        "id": "d445b1bb9cd4ab81",
         "type": "function",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "4514be5227808dc1",
         "name": "Custom Sensors and Tools",
-        "func": "// ####################### Begin Online Status Details sensor #######################\n// OneControl provides additional information in the availability messages published, and this informaion\n//   is very useful in diagnosing potential connection issues.\n// This sensor displays any additional status details if there are any to report\nmsg1 = {}\nname = msg.thing.label + \" Online Status Details\"\nproperty = \"online_status_details\"\nbaseTopic  =  global.get(\"mqttDiscoveryTopic\") + \"/sensor/\" + msg.thing.hass.UID_ha + \"/\" + property\nmsg1.topic =  baseTopic + \"/config\"\n\nmsg1.payload = {\n    \"name\":                 name,\n    \"object_id\":            global.get(\"namePrecursor\") + name,\n    \"unique_id\":            msg.thing.hass.UID_ha + \" \" + property,\n    \"entity_category\":      \"diagnostic\",\n    \"state_topic\":          msg.thing.hass.availabilityTopic,\n    \"value_template\":       \"{{ value_json.statusDetail }}\",\n    \"availability\":         {\"topic\":                      msg.thing.hass.availabilityTopic,\n                            \t\"payload_available\":        msg.thing.hass.availabilityTopicOn,\n                            \t\"payload_not_available\":    msg.thing.hass.availabilityTopicOff,\n                            \t\"value_template\":           \"{{ value_json.\" + msg.thing.hass.availabilityTopicAttr + \" }}\", \n                                },\n    \"device\":                {\"manufacturer\":       global.get(\"manufacturer\"), \n                                \"via_device\":       global.get(\"via_device\"),\n                                \"identifiers\":      msg.thing.hass.UID_ha, \n                                \"name\":             msg.thing.label, \n                                \"model\":            global.get(\"model\") + \": \" + msg.thing.hass.UID_ha,\n                                \"sw_version\":       global.get(\"sw_version\")\n                                },\n    \"enabled_by_default\":   true\n    } \nmsg1.type = \"entity\"\nnode.send(msg1)\n// ####################### End Online Status Details sensor #######################\n\nreturn[null,msg]\n\n",
+        "func": "// ####################### Begin Online Status Details sensor #######################\n// OneControl provides additional information in the availability messages published, and this informaion\n//   is very useful in diagnosing potential connection issues.\n// This sensor displays any additional status details if there are any to report\nmsg1 = {}\nname = msg.thing.label + \" Online Status Details\"\nproperty = \"online_status_details\"\nbaseTopic  =  global.get(\"mqttDiscoveryTopic\") + \"/sensor/\" + msg.thing.hass.UID_ha + \"/\" + property\nmsg1.topic =  baseTopic + \"/config\"\n\nmsg1.payload = {\n    \"name\":                 name,\n    \"object_id\":            global.get(\"namePrecursor\") + name,\n    \"unique_id\":            msg.thing.hass.UID_ha + \" \" + property,\n    \"entity_category\":      \"diagnostic\",\n    \"state_topic\":          msg.thing.hass.availabilityTopic,\n    \"value_template\":       \"{{ value_json.statusDetail }}\",\n    \"availability\":         {\"topic\":                      msg.thing.hass.availabilityTopic,\n                            \t\"payload_available\":        msg.thing.hass.availabilityTopicOn,\n                            \t\"payload_not_available\":    msg.thing.hass.availabilityTopicOff,\n                            \t\"value_template\":           \"{{ value_json.\" + msg.thing.hass.availabilityTopicAttr + \" }}\", \n                                },\n    \"device\":                {\"manufacturer\":       global.get(\"deviceManufacturer\"), \n                                \"via_device\":       global.get(\"deviceViaDevice\"),\n                                \"identifiers\":      msg.thing.hass.UID_ha, \n                                \"name\":             msg.thing.label, \n                                \"model\":            global.get(\"deviceModel\") + \": \" + msg.thing.hass.UID_ha,\n                                \"sw_version\":       global.get(\"deviceSWVersion\")\n                                },\n    \"enabled_by_default\":   true\n    } \nmsg1.type = \"entity\"\nnode.send(msg1)\n// ####################### End Online Status Details sensor #######################\n\nreturn[null,msg]\n\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
-        "y": 560,
+        "x": 420,
+        "y": 580,
         "wires": [
             [
-                "76cb4e96636a4978"
+                "eedd8594c925dbf3"
             ],
             [
-                "1cf73bb2a7941649"
+                "7c688006afafe03e"
             ]
         ]
     },
     {
-        "id": "27c90a3f24e1b42a",
+        "id": "66b533eb7bb555b6",
+        "type": "catch",
+        "z": "c5bf60a40630c5e3",
+        "g": "4979df7953c906ee",
+        "name": "Capture Errors",
+        "scope": null,
+        "uncaught": false,
+        "x": 720,
+        "y": 60,
+        "wires": [
+            [
+                "879a7280e4ff88f2"
+            ]
+        ]
+    },
+    {
+        "id": "879a7280e4ff88f2",
+        "type": "debug",
+        "z": "c5bf60a40630c5e3",
+        "g": "4979df7953c906ee",
+        "name": "Errors - Full Payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "6fc28ef47b87f702",
         "type": "function",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
         "name": "Value Cleanup",
-        "func": "function capitolizeFirst(string) {\n var output = string.replace(/\\w\\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});\n return output;\n}\n\nif (typeof msg.payload.name !== 'undefined') {\n    if (msg.payload.name.includes(\"-\") === true ){\n        msg.payload.name = msg.payload.name.replace(\"-\",\" \")\n         msg.payload.name = capitolizeFirst(msg.payload.name)\n    }\n}\nreturn msg;",
-        "outputs": 1,
+        "func": "function capitolizeFirst(string) {\n var output = string.replace(/\\w\\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});\n return output;\n}\nif (msg.type == \"entity\") {\n    if (typeof msg.payload.name !== 'undefined') {\n        if (msg.payload.name.includes(\"-\") === true ){\n            msg.payload.name = msg.payload.name.replace(\"-\",\" \")\n             msg.payload.name = capitolizeFirst(msg.payload.name)\n        }\n    }\n}\n\nif (global.get(\"mqttPublish\") == true) {\n    if (global.get(\"mqttDeleteAll\") == true) {\n        msg.payload = null\n        msg.retain = true\n        msg.qos=  1\n        }\n    if (global.get(\"mqttRetain\") == true) {\n        msg.retain = true\n        }\n    switch(msg.type) { \n        case \"entity\":\n            if (global.get(\"mqttRecordsOnly\") == false) {\n                node.send(msg)\n                } \n            break;\n        default:\n            node.send(msg)\n            break;\n        }\n}\n// ############################## Write out entities to file if enabled #####################\nmsg1 = msg\nif(msg1.topic.includes(\"/config\") === true &&\n    global.get(\"filesCreate\") === true && \n    msg1.type == \"entity\") {\n        i = msg1.topic.split(\"/\")\n        name = msg1.payload.object_id.replace(/ /g,\"_\")\n        msg1.filename = global.get(\"filesSaveTo\") + msg1.payload.device.name + \"/\" + i[1] + \"/\" + msg1.payload.name\n        if (global.get(\"filesNoDiscovery\") == true) {\n            delete msg1.payload.device\n            delete msg1.payload.enabled_by_default\n            }\n        return [null,msg1];\n        }\n",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
+        "x": 1060,
         "y": 340,
         "wires": [
             [
-                "77f0d26867bff9b6",
-                "da8a3cd2eedeb6da"
+                "4a241eecd05a027a"
+            ],
+            [
+                "99f937e3894a08b8",
+                "273da8d4173943bb"
             ]
         ]
     },
     {
-        "id": "f03cdaa19db73a7e",
+        "id": "e0aac92236e32259",
         "type": "function",
-        "z": "8e6abf387a414b8b",
-        "g": "18b8fc1c658c9cb9",
+        "z": "c5bf60a40630c5e3",
+        "g": "6858fb2384f7f246",
         "name": "Process Configuration",
-        "func": "/**\n OneControl Auto Discovery into Home Assistant\n \n This process will integrate your Lippert OneControl components into Home Assistance\n\t(http://www.home-assistant.io)\n \n Use this file to set the bahavior of the process of pulling devices from the OneControl system\n*/\n\n\n// You can use this tool for many purposes, and if you are conservative in your approach, you would like to review \n//   the code before connecting it to your environment.\n// By default, the monitoring flow connects to the OneControl cloud gateway as soon as the flow is deployed.  This ensures\n//   that every time a change is made and deployed the connection to the event feed is re-established automatically.  A trigger\n//   node is available for manually kicking off the connection for manual control.\n//     default:\n//          eventsGetStream = true\neventsGetStream = true;\n\n// As this tool starts, it subscribes to the MQTT topics that are used for the processing of commands and events, \n//   and if a command is meant to be sent to OneControl, it will do so automatically.  If you are working to troubleshoot \n//   or review what is happening before sending it to OneControl, you will likely want to prevent this from occuring until you\n//   prepared for it to be done.\n// Note: This will disable the actual transmission to OneControl, but NOT the event processing.  This will allow you to see what would\n//   be sent if/once it is enabled.\n//     default:\n//          eventsSendStream = true\neventsSendStream = true;\n\n\n// When the information is pulled from the OneControl system, you have the option to write the information\n//   to files on the local system, as both YAML and JSON.  These can be used to help troubleshoot, or you can \n//   us the YAML output as the config files for Home Assistant. Set to \"true\" to have the output files written\n//   to disk.  If files exist, they will be overwritten.\n// ** NOTE ** These files are NOT needed for this process to work, and are for troubleshooting/stand alone use.\n//     default:\n//          filesCreate = false\nfilesCreate = false;\n\n// This is where you define the destination for the files if you are using the tool \n//     default: \n//          filesSaveTo = '/config/OneControl/'\nfilesSaveTo = '/config/OneControl/';\n\n// When files are saved, they are saved as YAML and JSON, but include the attributes needed for Discovery, and\n//   cannot be used for static YAML configuration without certain sections removed. Set this to true to remove\n//   the discovery-related sections.\n// ** NOTE ** \n// You will still need to use the \"OneControl - Command and Event Stream\" flow to process events to align with the \n//   MQTT topics that are part of the configuration files\n//     default:\n//          filesNoDiscovery = false\nfilesNoDiscovery = false;\n\n// Often when you make changes, you may need to remove all the entities created.\n//   This option will enable the process to remove all entities created in previous\n//   run AS LONG AS NO OTHER SETTINGS HAVE CHANGED (this depends on the deiscovery\n//   topic to be the same).\n//   Note: sendToMQTT must also be enabled\n//     default:\n//          mqttDeleteAll = false;\nmqttDeleteAll = false;\n\n// Home Assistant requires the definition of the topic used for discovery.  \n// For more info on what is needed, review the Home Assistant documentation here:\n//    https://www.home-assistant.io/docs/mqtt/discovery/\n// This value needs to match what is entered into your configuration.yaml file\n// configuration.yaml example:\n//     mqtt:\n//          discovery:          true\n//          discovery_prefix:   'homeassistant'\n//\n//     default:\n//          mqttDiscoveryTopic = 'homeassistant'\nmqttDiscoveryTopic = 'homeassistant';\n\n// When you initially create the entities in Home Assistant, it can take a long\n//   time before an availability message is published from OneControl, sometimes \n//   upwards of 30 minutes.  This is because OneControl publishes changes in real\n//   time, but non-change status messages much less frequently.  This can be frustrating\n//   when initially creating the entities.\n// Enable this setting to generate an \"online\" message when you do the initial \n//   installation, which will show the entitied as \"online\" immediately.  If the\n//   entities are truly offline, you will not be able to run the discovery process\n//   without an error, so enabling this is low (but not no) risk.  Please note\n//   that this will only occur once at the time the discovery process is run.\n// If you enable this, the device's \"Online Status Details\" sensor value will be\n//   'Initial Discovery' until OneControl publishes an official message.  It is not uncommon\n//   to see the online entity listed as \"Disconnected\" until this first message is received.\n//     default: \n//          mqttInitialAvail = true\nmqttInitialAvail = true;\n\n// When you initially create the entities in Home Assistant, it can take a long\n//   time before a state update is published, marking the Home Assistant entity with\n//   the value of \"Unknown\".  This setting enables a flow that will connect to OneControl\n//   and get the current state and populate it right away.\n//     default: \n//          mqttInitialState = true\nmqttInitialState = true;\n\n// If you do not want to send the configuration to the MQTT server, set this to \"false\"\n//     default: \n//          mqttPublish = false\nmqttPublish = true;\n\n// If you want to run this script to only generate the availability records as well as the diagnostic info,\n//   set this to true.  This is helpful if you need to publish availability info to activate entities that\n//   are still in an unknown state\n//     default: \n//          mqttRecordsOnly = false\nmqttRecordsOnly = false;\n\n// If you want to have MQTT discovery messages retained between restarts, set this option to \"true\"\n// If you do not set this to true, your Home Assistant OneControl entities will be in an error state until you\n//   run the discovery script again.  This is due to how Home Assistant stores entity information.\n//     default: \n//          mqttRetain = true\nmqttRetain = true;\n\n// Part of the discovery output is the definition of the manufacturer the component.\n//     default: \n//          manufacturer = 'Lippert Components'\nmanufacturer = 'Lippert Components';\n\n// Part of the discovery output is the definition of the device that is used to \n//   connect to the individual nodes.\n//     default:\n//          via_device = 'OneControl Gateway';\nvia_device = 'OneControl Gateway';\n\n// Part of the discovery output is the definition of the model the component.\n//     default:\n//          model = 'OneControl';\nmodel = 'OneControl';\n\n// when the Home Assistant entity is created, you can prepend this string to the\n//   entityID: 'sensor.example' would become 'sensor.namePresursor_example'\n//     default:\n//          namePrecursor= 'OneControl '\nnamePrecursor = 'OneControl ';\n\n\n\n/* ############ Do not change anything below this line ############ */\nRelease_Version = '2022.01.18a'\n\nglobal.set(\"eventsGetStream\",eventsGetStream);\nglobal.set(\"eventsSendStream\",eventsSendStream);\n\nglobal.set(\"filesCreate\",filesCreate);\nglobal.set(\"filesSaveTo\",filesSaveTo);\nglobal.set(\"filesNoDiscovery\",filesNoDiscovery);\n\nglobal.set(\"mqttDeleteAll\",mqttDeleteAll);\nglobal.set(\"mqttDiscoveryTopic\",mqttDiscoveryTopic);\nglobal.set(\"mqttInitialAvail\",mqttInitialAvail);\nglobal.set(\"mqttInitialState\",mqttInitialState);\nglobal.set(\"mqttPublish\",mqttPublish);\nglobal.set(\"mqttRecordsOnly\",mqttRecordsOnly);\nglobal.set(\"mqttRetain\",mqttRetain);\n\nglobal.set(\"sw_version\",Release_Version);\nglobal.set(\"manufacturer\",manufacturer);\nglobal.set(\"via_device\",via_device);\nglobal.set(\"model\",model);\nglobal.set(\"namePrecursor\",namePrecursor);\n\n\nreturn msg;\n/*\n * Copyright Robert Perciaccante\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n\n * http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n *\n**/",
+        "func": "/**\n OneControl Auto Discovery into Home Assistant\n \n This process will integrate your Lippert OneControl components into Home Assistance\n\t(http://www.home-assistant.io)\n \n Use this file to set the bahavior of the process of pulling devices from the OneControl system\n*/\n\n\n// You can use this tool for many purposes, and if you are conservative in your approach, you would like to review \n//   the code before connecting it to your environment.\n// By default, the monitoring flow connects to the OneControl cloud gateway as soon as the flow is deployed.  This ensures\n//   that every time a change is made and deployed the connection to the event feed is re-established automatically.  A trigger\n//   node is available for manually kicking off the connection for manual control.\n//     default:\n//          eventsGetStream = true\neventsGetStream = true;\n\n// As this tool starts, it subscribes to the MQTT topics that are used for the processing of commands and events, \n//   and if a command is meant to be sent to OneControl, it will do so automatically.  If you are working to troubleshoot \n//   or review what is happening before sending it to OneControl, you will likely want to prevent this from occuring until you\n//   prepared for it to be done.\n// Note: This will disable the actual transmission to OneControl, but NOT the event processing.  This will allow you to see what would\n//   be sent if/once it is enabled.\n//     default:\n//          eventsSendStream = true\neventsSendStream = true;\n\n\n// When the information is pulled from the OneControl system, you have the option to write the information\n//   to files on the local system, as both YAML and JSON.  These can be used to help troubleshoot, or you can \n//   us the YAML output as the config files for Home Assistant. Set to \"true\" to have the output files written\n//   to disk.  If files exist, they will be overwritten.\n// ** NOTE ** These files are NOT needed for this process to work, and are for troubleshooting/stand alone use.\n//     default:\n//          filesCreate = false\nfilesCreate = true;\n\n// This is where you define the destination for the files if you are using the tool \n//     default: \n//          filesSaveTo = '/config/OneControl/'\nfilesSaveTo = '/config/OneControl/';\n\n// When files are saved, they are saved as YAML and JSON, but include the attributes needed for Discovery, and\n//   cannot be used for static YAML configuration without certain sections removed. Set this to true to remove\n//   the discovery-related sections.\n// ** NOTE ** \n// You will still need to use the \"OneControl - Command and Event Stream\" flow to process events to align with the \n//   MQTT topics that are part of the configuration files\n//     default:\n//          filesNoDiscovery = false\nfilesNoDiscovery = false;\n\n// Often when you make changes, you may need to remove all the entities created.\n//   This option will enable the process to remove all entities created in previous\n//   run AS LONG AS NO OTHER SETTINGS HAVE CHANGED (this depends on the deiscovery\n//   topic to be the same).\n//   Note: sendToMQTT must also be enabled\n//     default:\n//          mqttDeleteAll = false;\nmqttDeleteAll = false;\n\n// Home Assistant requires the definition of the topic used for discovery.  \n// For more info on what is needed, review the Home Assistant documentation here:\n//    https://www.home-assistant.io/docs/mqtt/discovery/\n// This value needs to match what is entered into your configuration.yaml file\n// configuration.yaml example:\n//     mqtt:\n//          discovery:          true\n//          discovery_prefix:   'homeassistant'\n//\n//     default:\n//          mqttDiscoveryTopic = 'homeassistant'\nmqttDiscoveryTopic = 'homeassistant';\n\n// When you initially create the entities in Home Assistant, it can take a long\n//   time before an availability message is published from OneControl, sometimes \n//   upwards of 30 minutes.  This is because OneControl publishes changes in real\n//   time, but non-change status messages much less frequently.  This can be frustrating\n//   when initially creating the entities.\n// Enable this setting to generate an \"online\" message when you do the initial \n//   installation, which will show the entitied as \"online\" immediately.  If the\n//   entities are truly offline, you will not be able to run the discovery process\n//   without an error, so enabling this is low (but not no) risk.  Please note\n//   that this will only occur once at the time the discovery process is run.\n// If you enable this, the device's \"Online Status Details\" sensor value will be\n//   'Initial Discovery' until OneControl publishes an official message.  It is not uncommon\n//   to see the online entity listed as \"Disconnected\" until this first message is received.\n//     default: \n//          mqttInitialAvail = true\nmqttInitialAvail = true;\n\n// When you initially create the entities in Home Assistant, it can take a long\n//   time before a state update is published, marking the Home Assistant entity with\n//   the value of \"Unknown\".  This setting enables a flow that will connect to OneControl\n//   and get the current state and populate it right away.\n//     default: \n//          mqttInitialState = true\nmqttInitialState = true;\n\n// If you do not want to send the configuration to the MQTT server, set this to \"false\"\n//     default: \n//          mqttPublish = false\nmqttPublish = true;\n\n// If you want to run this script to only generate the availability records as well as the diagnostic info,\n//   set this to true.  This is helpful if you need to publish availability info to activate entities that\n//   are still in an unknown state\n//     default: \n//          mqttRecordsOnly = false\nmqttRecordsOnly = false;\n\n// If you want to have MQTT discovery messages retained between restarts, set this option to \"true\"\n// If you do not set this to true, your Home Assistant OneControl entities will be in an error state until you\n//   run the discovery script again.  This is due to how Home Assistant stores entity information.\n//     default: \n//          mqttRetain = true\nmqttRetain = true;\n\n// Part of the discovery output is the definition of the manufacturer the component.\n//     default: \n//          deviceManufacturer = 'Lippert Components'\ndeviceManufacturer = 'Lippert Components';\n\n// Part of the discovery output is the definition of the device that is used to \n//   connect to the individual nodes.\n//     default:\n//          deviceViaDevice = 'OneControl Gateway';\ndeviceViaDevice = 'OneControl Gateway';\n\n// Part of the discovery output is the definition of the model the component.\n//     default:\n//          model = 'OneControl';\nmodel = 'OneControl';\n\n// when the Home Assistant entity is created, you can prepend this string to the\n//   entityID: 'sensor.example' would become 'sensor.namePresursor_example'\n//     default:\n//          namePrecursor= 'OneControl '\nnamePrecursor = 'OneControl ';\n\n\n\n/* ############ Do not change anything below this line ############ */\nRelease_Version = '2022.01.18a'\n\nglobal.set(\"eventsGetStream\",eventsGetStream);\nglobal.set(\"eventsSendStream\",eventsSendStream);\n\nglobal.set(\"filesCreate\",filesCreate);\nglobal.set(\"filesSaveTo\",filesSaveTo);\nglobal.set(\"filesNoDiscovery\",filesNoDiscovery);\n\nglobal.set(\"mqttDeleteAll\",mqttDeleteAll);\nglobal.set(\"mqttDiscoveryTopic\",mqttDiscoveryTopic);\nglobal.set(\"mqttInitialAvail\",mqttInitialAvail);\nglobal.set(\"mqttInitialState\",mqttInitialState);\nglobal.set(\"mqttPublish\",mqttPublish);\nglobal.set(\"mqttRecordsOnly\",mqttRecordsOnly);\nglobal.set(\"mqttRetain\",mqttRetain);\n\n\n\nglobal.set(\"deviceManufacturer\",deviceManufacturer);\nglobal.set(\"deviceSWVersion\",Release_Version);\n\nglobal.set(\"deviceViaDevice\",deviceViaDevice);\nglobal.set(\"deviceModel\",model);\nglobal.set(\"namePrecursor\",namePrecursor);\n\n\nreturn msg;\n/*\n * Copyright Robert Perciaccante\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n\n * http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n *\n**/",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
+        "x": 1260,
         "y": 120,
         "wires": [
             [
-                "f6f8f7cbc6aaa4d0"
+                "aa1ffe397c27678d"
             ]
         ]
     },
     {
-        "id": "82d6b5a3388e1811",
+        "id": "a80200c65e78f34a",
         "type": "inject",
-        "z": "8e6abf387a414b8b",
-        "g": "18b8fc1c658c9cb9",
+        "z": "c5bf60a40630c5e3",
+        "g": "6858fb2384f7f246",
         "name": "Load Config",
         "props": [
             {
@@ -600,19 +718,19 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 1130,
+        "x": 1070,
         "y": 120,
         "wires": [
             [
-                "f03cdaa19db73a7e"
+                "e0aac92236e32259"
             ]
         ]
     },
     {
-        "id": "f6f8f7cbc6aaa4d0",
+        "id": "aa1ffe397c27678d",
         "type": "debug",
-        "z": "8e6abf387a414b8b",
-        "g": "18b8fc1c658c9cb9",
+        "z": "c5bf60a40630c5e3",
+        "g": "6858fb2384f7f246",
         "name": "Debug",
         "active": false,
         "tosidebar": true,
@@ -622,15 +740,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1530,
+        "x": 1450,
         "y": 120,
         "wires": []
     },
     {
-        "id": "8ab71add093f5fed",
+        "id": "888e1201759d2203",
         "type": "debug",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
         "name": "Debug",
         "active": false,
         "tosidebar": true,
@@ -640,49 +758,49 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1510,
-        "y": 460,
+        "x": 1450,
+        "y": 480,
         "wires": []
     },
     {
-        "id": "36f69bf5658c30c8",
+        "id": "273da8d4173943bb",
         "type": "yaml",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
         "property": "payload",
         "name": "",
-        "x": 1290,
-        "y": 340,
+        "x": 1230,
+        "y": 360,
         "wires": [
             [
-                "1dee6757fed39be7"
+                "dffd7703ab060e9f"
             ]
         ]
     },
     {
-        "id": "0c95c75056e37dd7",
+        "id": "11af832c02c64601",
         "type": "file",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
         "name": "",
         "filename": "",
         "appendNewline": false,
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1500,
-        "y": 420,
+        "x": 1440,
+        "y": 440,
         "wires": [
             [
-                "8ab71add093f5fed"
+                "888e1201759d2203"
             ]
         ]
     },
     {
-        "id": "dff71ee4dc87cd32",
+        "id": "9be463bbf9a8f997",
         "type": "function",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
         "name": "JSON Filename",
         "func": "msg.filename = msg.filename +\".json\"\nreturn msg;",
         "outputs": 1,
@@ -690,58 +808,36 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1480,
-        "y": 380,
+        "x": 1420,
+        "y": 400,
         "wires": [
             [
-                "0c95c75056e37dd7"
+                "11af832c02c64601"
             ]
         ]
     },
     {
-        "id": "ddf11174e516b265",
+        "id": "99f937e3894a08b8",
         "type": "json",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
         "name": "",
         "property": "payload",
         "action": "",
         "pretty": true,
-        "x": 1290,
-        "y": 380,
+        "x": 1230,
+        "y": 400,
         "wires": [
             [
-                "dff71ee4dc87cd32"
+                "9be463bbf9a8f997"
             ]
         ]
     },
     {
-        "id": "77f0d26867bff9b6",
+        "id": "dffd7703ab060e9f",
         "type": "function",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
-        "name": "File Options",
-        "func": "// Must be enable in the \"Set Flow Variables\" node\nif(msg.topic.includes(\"/config\") === true) {\n    if (global.get(\"filesCreate\") === true ) {\n        i = msg.topic.split(\"/\")\n        name = msg.payload.object_id.replace(/ /g,\"_\")\n        msg.filename = global.get(\"filesSaveTo\") + msg.payload.device.name + \"/\" + i[1] + \"/\" + msg.payload.name\n        if (global.get(\"filesNoDiscovery\") == true) {\n            delete msg.payload.device\n            delete msg.payload.enabled_by_default\n            }\n        return msg;\n        }\n    }",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1110,
-        "y": 380,
-        "wires": [
-            [
-                "36f69bf5658c30c8",
-                "ddf11174e516b265",
-                "1df02167e886d8de"
-            ]
-        ]
-    },
-    {
-        "id": "1dee6757fed39be7",
-        "type": "function",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
         "name": "YAML Filename",
         "func": "msg.filename = msg.filename +\".yaml\"\nreturn msg;",
         "outputs": 1,
@@ -749,57 +845,19 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1480,
-        "y": 340,
+        "x": 1420,
+        "y": 360,
         "wires": [
             [
-                "0c95c75056e37dd7"
+                "11af832c02c64601"
             ]
         ]
     },
     {
-        "id": "1df02167e886d8de",
+        "id": "6a2e6e770864cdd0",
         "type": "debug",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
-        "name": "Debug",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1290,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "da8a3cd2eedeb6da",
-        "type": "function",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
-        "name": "MQTT Options",
-        "func": "\nif (global.get(\"mqttPublish\") == true) {\n    if (global.get(\"mqttDeleteAll\") == true) {\n        msg.payload = null\n        msg.retain = true\n        msg.qos=  1\n        }\n    if (global.get(\"mqttRetain\") == true) {\n        msg.retain = true\n        }\n    }\n\nswitch(msg.type) { \n    case \"entity\":\n        if (global.get(\"mqttRecordsOnly\") == false) {\n            node.send(msg)\n            } \n        break;\n    default:\n        node.send(msg)\n        break;\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1120,
-        "y": 280,
-        "wires": [
-            [
-                "3a718b6e0ace0463"
-            ]
-        ]
-    },
-    {
-        "id": "7249e717b509d346",
-        "type": "debug",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
         "name": "Debug",
         "active": true,
         "tosidebar": true,
@@ -809,16 +867,16 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1450,
-        "y": 300,
+        "x": 1390,
+        "y": 320,
         "wires": []
     },
     {
-        "id": "5708ec51f06c4fda",
+        "id": "f11ec4beb8586b8f",
         "type": "mqtt out",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
-        "name": "Local MQTT Server",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
+        "name": "",
         "topic": "",
         "qos": "",
         "retain": "",
@@ -828,36 +886,37 @@
         "correl": "",
         "expiry": "",
         "broker": "4410210f.6939c",
-        "x": 1500,
-        "y": 260,
+        "x": 1390,
+        "y": 280,
         "wires": []
     },
     {
-        "id": "0272529bbfc670ef",
+        "id": "3e2a20b42543032b",
         "type": "comment",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
         "name": "Data Publishing",
         "info": "",
-        "x": 1300,
+        "x": 1240,
         "y": 220,
         "wires": []
     },
     {
-        "id": "dcd71d68d5aa19da",
+        "id": "45a56438708b01c9",
         "type": "comment",
-        "z": "8e6abf387a414b8b",
-        "g": "18b8fc1c658c9cb9",
+        "z": "c5bf60a40630c5e3",
+        "g": "6858fb2384f7f246",
         "name": "Load Configuration Options for Process",
         "info": "",
-        "x": 1310,
+        "x": 1230,
         "y": 60,
         "wires": []
     },
     {
-        "id": "777be4f6a6d05f5b",
+        "id": "98f4ba26adf91fe6",
         "type": "function",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "09ec6382357415d1",
         "name": "Normalize Node Records",
         "func": "var msg1 = {}\n\nmsg1.payload = {}\n/* Loop through incoming payload to rename the individual things so they can be better processed later */\n\nfor (var i = 0; i < msg.payload.length; i++) {\n    var thing = {}\n    \n    thingTypeUID = msg.payload[i].thingTypeUID.replace(\"idsmyrv:\",\"\")\n    thingTypeUID = thingTypeUID.replace(\"-thing\",\"\")\n    \n    thingUID = msg.payload[i].UID.replace(\"-thing:\",\"_\")\n    thingUID = thingUID.replace(\"idsmyrv:\",\"\")\n    thingUID = thingUID.replace(/:/g,\"_\")\n    thingUID = thingUID.replace(/-/g,\"_\")\n    \n    /*\n    // This uses the _online channel as source of availability\n    availTopic =        msg.payload[i].UID.replace(/:/g,\"_\")\n    availTopic =        availTopic.replace(/-/g,\"_\") + \"_online\"\n    availTopic =        \"smarthome/items/\" + availTopic + \"/state\"\n    availTopicOn =      \"on\"\n    availTopicOff =     \"off\"\n    availAttr =         \"value\"\n    */\n    \n    // This uses the device online state for availability\n    availTopic =        \"smarthome/things/\" + msg.payload[i].UID + \"/status\"\n    availTopicOn =      \"online\"\n    availTopicOff =     \"offline\"\n    availAttr =         \"status\"\n    \n    \n    label = msg.payload[i].label.replace(\" Thing\",\"\")\n    label = label.replace(\"OneControl \",\"\")\n\n    //thing.hass = {}\n    msg1.thing  =                   msg.payload[i]\n    msg1.thing.hass =                {\"label\":                  label,\n                                    \"thingConfig_OC\":           msg.payload[i].configuration,\n                                    \"UID_oc\":                   msg.payload[i].UID,\n                                    \"UID_ha\":                   thingUID,\n                                    \"thingTypeUID_oc\":          msg.payload[i].thingTypeUID,\n                                    \"thingTypeUID_ha\":          thingTypeUID,\n                                    \"thingChannelCount\":        msg.payload[i].channels.length,\n                                    \"availabilityTopic\":        availTopic,\n                                    \"availabilityTopicOn\":      availTopicOn,\n                                    \"availabilityTopicOff\":     availTopicOff,\n                                    \"availabilityTopicAttr\":    availAttr,\n                                    \"stateTopic\":               global.get(\"mqttDiscoveryTopic\") +\"/binary_sensor/\" + thingUID + \"/status\"\n                                }\n    \n    msg1.payload = msg.payload[i].channels\n    /* Send each thing record as a new message to split up the array and process the things individually */\n    \n    node.send(msg1)\n}",
         "outputs": 1,
@@ -865,21 +924,21 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 200,
+        "x": 430,
+        "y": 100,
         "wires": [
             [
-                "ad4d398839076b38",
-                "db4059ce45011314"
+                "f5a3506e1a122e6b",
+                "8efc57e27bef52e5"
             ]
         ]
     },
     {
-        "id": "3a718b6e0ace0463",
+        "id": "4a241eecd05a027a",
         "type": "delay",
-        "z": "8e6abf387a414b8b",
-        "g": "a6fd6df29feedd1a",
-        "name": "Delay .5s",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
+        "name": "Delay 1/2 sec",
         "pauseType": "delay",
         "timeout": "500",
         "timeoutUnits": "milliseconds",
@@ -892,19 +951,20 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1300,
-        "y": 280,
+        "x": 1240,
+        "y": 300,
         "wires": [
             [
-                "7249e717b509d346",
-                "5708ec51f06c4fda"
+                "6a2e6e770864cdd0",
+                "f11ec4beb8586b8f"
             ]
         ]
     },
     {
-        "id": "98c19a0eb97e1383",
+        "id": "4efa180cc4812cc4",
         "type": "function",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "4514be5227808dc1",
         "name": "Set Initial Availability (If enabled)",
         "func": " \n// ####################### Begin Startup Availability Message Publishing #######################\n// This section is used by the 'startupAvailMsg' option.  When this is set to true, this code will\n//   send a dummy available payload to trigger the availability for the entities created in this tool.\n if (global.get(\"mqttInitialAvail\") === true) {\n        msg1 = {}\n        msg1.payload = '{\"status\":\"' + msg.thing.hass.availabilityTopicOn + '\",\"statusDetail\":\"Initial Discovery\"}'\n        msg1.topic = msg.thing.hass.availabilityTopic\n        msg1.retain = true\n        msg1.qos = 1\n        msg1.type = \"record\"\n    \n    }\n// ####################### End Startup Availability Message Publishing #######################\nreturn [msg1,msg]",
         "outputs": 2,
@@ -912,19 +972,20 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 250,
-        "y": 640,
+        "x": 410,
+        "y": 660,
         "wires": [
             [
-                "76cb4e96636a4978"
+                "eedd8594c925dbf3"
             ],
             []
         ]
     },
     {
-        "id": "1cf73bb2a7941649",
+        "id": "7c688006afafe03e",
         "type": "delay",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "4514be5227808dc1",
         "name": "Meter message rate",
         "pauseType": "delay",
         "timeout": "2",
@@ -938,18 +999,19 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 280,
-        "y": 600,
+        "x": 440,
+        "y": 620,
         "wires": [
             [
-                "98c19a0eb97e1383"
+                "4efa180cc4812cc4"
             ]
         ]
     },
     {
-        "id": "e11a0cb9204d7e90",
+        "id": "ef9ad8391578af6e",
         "type": "http request",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
+        "g": "09ec6382357415d1",
         "name": "Get OneControl Components",
         "method": "GET",
         "ret": "obj",
@@ -960,19 +1022,19 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 250,
-        "y": 160,
+        "x": 410,
+        "y": 60,
         "wires": [
             [
-                "777be4f6a6d05f5b"
+                "98f4ba26adf91fe6"
             ]
         ]
     },
     {
-        "id": "a931a9cc1d4dd65c",
+        "id": "2246a7b0e41df251",
         "type": "function",
-        "z": "8e6abf387a414b8b",
-        "g": "7b7ab0b9bcb6bedd",
+        "z": "c5bf60a40630c5e3",
+        "g": "90c01626219c9b6e",
         "name": "Build State URL",
         "func": "if (global.get(\"mqttInitialState\") == true && \n    global.get(\"mqttDeleteAll\") !== true) {\n    msg1 = {}\n    msg1.url = \"http://192.168.1.4:8080/rest/items/\" + msg.payload.unique_id\n    return msg1\n    }",
         "outputs": 1,
@@ -980,19 +1042,19 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
-        "y": 300,
+        "x": 720,
+        "y": 360,
         "wires": [
             [
-                "41b9ecfb1292c496"
+                "5534c824af950556"
             ]
         ]
     },
     {
-        "id": "41b9ecfb1292c496",
+        "id": "5534c824af950556",
         "type": "http request",
-        "z": "8e6abf387a414b8b",
-        "g": "7b7ab0b9bcb6bedd",
+        "z": "c5bf60a40630c5e3",
+        "g": "90c01626219c9b6e",
         "name": "Get Entity State",
         "method": "GET",
         "ret": "obj",
@@ -1003,141 +1065,133 @@
         "proxy": "",
         "authType": "",
         "senderr": true,
-        "x": 580,
-        "y": 340,
+        "x": 800,
+        "y": 400,
         "wires": [
             [
-                "8b9ad6fcb31bc399"
+                "ddd5b4ca9b2214d1"
             ]
         ]
     },
     {
-        "id": "8b9ad6fcb31bc399",
+        "id": "ddd5b4ca9b2214d1",
         "type": "function",
-        "z": "8e6abf387a414b8b",
-        "g": "7b7ab0b9bcb6bedd",
+        "z": "c5bf60a40630c5e3",
+        "g": "90c01626219c9b6e",
         "name": "Process Results",
-        "func": "function capitolizeFirst(string) {\n var output = string.replace(/\\w\\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});\n return output;\n}\n\nif (msg.statusCode == \"200\") {\n    msg1 = {}\n    msg1.payload = {\"value\": capitolizeFirst(msg.payload.state) }\n    msg1.topic = \"smarthome/items/\" + msg.payload.name + \"/state\"\n    return msg1;\n}\n",
+        "func": "msg1 = {}\n\nfunction capitolizeFirst(string) {\n var output = string.replace(/\\w\\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});\n return output;\n}\n\nfunction roundNum1(i) {\n    i = Number(i)\n    i = i.toFixed(1)\n    i = Number(i)\n    return i\n}\n\nif (msg.statusCode == \"200\") {\n    msg1 = {}\n    if (isNaN(parseInt(msg.payload.state)) == true) {\n            msg1.payload = {\"value\": msg.payload.state.toLowerCase()}\n        } else {\n            msg1.payload = {\"value\": roundNum1(parseFloat(msg.payload.state))}\n        }    \n    msg1.topic = \"smarthome/items/\" + msg.payload.name + \"/state\"\n    return msg1;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
-        "y": 380,
+        "x": 720,
+        "y": 440,
         "wires": [
             [
-                "27c90a3f24e1b42a"
+                "6fc28ef47b87f702"
             ]
         ]
     },
     {
-        "id": "76cb4e96636a4978",
+        "id": "8efc57e27bef52e5",
         "type": "function",
-        "z": "8e6abf387a414b8b",
-        "name": "Flow Hub",
-        "func": "// The only purpose this node serves is to make the flow easier to \n//   understand by cleaning up theconnections between nodes\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 540,
-        "y": 460,
-        "wires": [
-            [
-                "27c90a3f24e1b42a"
-            ]
-        ]
-    },
-    {
-        "id": "db4059ce45011314",
-        "type": "function",
-        "z": "8e6abf387a414b8b",
-        "g": "a87da9b0e0f65281",
+        "z": "c5bf60a40630c5e3",
+        "g": "b07fe501c3da07e1",
         "name": "Create HA Control Entities",
-        "func": "msg1 = {}\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"OneControl Event Restart\",\n\t\"object_id\":\t\t\"OneControl Event Restart\",\n\t\"unique_id\":\t\t\"OneControl Event Restart\",\n\t\"command_topic\":    \"onecontrol/homeassistant/eventsRestartStream/set\",\n\t\"device\":{\n\t\t\"manufacturer\":\t\"Bob Perciaccante - bob@perciaccante.net\",\n\t\t\"via_device\":\t\"Home Assistant MQTT\",\n\t\t\"identifiers\":\t\"Home Assistant OneControl Integration\",\n\t\t\"model\":        \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"name\":\t\t\t\"Home Assistant OneControl Integration Components\"\n   },\n   \"enabled_by_default\":\"true\"\n\n}\nmsg1.topic = \"homeassistant/button/onecontrolintegration/eventrestart/config\"\nnode.send(msg1)\n\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Run OneControl Discovery\",\n\t\"object_id\":\t\t\"Run OneControl Discovery\",\n\t\"unique_id\":\t\t\"Run OneControl Discovery\",\n\t\"command_topic\":    \"onecontrol/homeassistant/discoveryRun/set\",\n\t\"device\":{\n\t\t\"manufacturer\":\t\"Bob Perciaccante - bob@perciaccante.net\",\n\t\t\"via_device\":\t\"Home Assistant MQTT\",\n\t\t\"identifiers\":\t\"Home Assistant OneControl Integration\",\n\t\t\"model\":        \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"name\":\t\t\t\"Home Assistant OneControl Integration Components\"\n   },\n   \"enabled_by_default\":\"true\"\n\n}\nmsg1.topic = \"homeassistant/button/onecontrolintegration/discoveryRun/config\"\nnode.send(msg1)\n\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Remove All Entities\",\n\t\"object_id\":\t\t\"Remove All Entities\",\n\t\"unique_id\":\t\t\"Remove All Entities\",\n\t\"command_topic\":    \"onecontrol/homeassistant/mqttDeleteAll/set\",\n\t\"device\":{\n\t\t\"manufacturer\":\t\"Bob Perciaccante - bob@perciaccante.net\",\n\t\t\"via_device\":\t\"Home Assistant MQTT\",\n\t\t\"identifiers\":\t\"Home Assistant OneControl Integration\",\n\t\t\"model\":        \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"name\":\t\t\t\"Home Assistant OneControl Integration Components\"\n   },\n   \"enabled_by_default\":\"true\",\n\n}\nmsg1.topic = \"homeassistant/button/onecontrolintegration/mqttDeleteAll/config\"\nnode.send(msg1)\n\n\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Pull OneControl Events\",\n\t\"object_id\":\t\t\"Pull OneControl Events\",\n\t\"unique_id\":\t\t\"Pull OneControl Events\",\n\t\"command_topic\":    \"onecontrol/homeassistant/eventsGetStream/set\",\n\t\"state_topic\":      \"onecontrol/homeassistant/eventsGetStream/set\",\n\t\"icon\":             \"mdi:arrow-down-bold\",\n\t\"device\":{\n\t\t\"manufacturer\":\t\"Bob Perciaccante - bob@perciaccante.net\",\n\t\t\"via_device\":\t\"Home Assistant MQTT\",\n\t\t\"identifiers\":\t\"Home Assistant OneControl Integration\",\n\t\t\"model\":        \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"name\":\t\t\t\"Home Assistant OneControl Integration Components\"\n   },\n   \"enabled_by_default\":\"true\",\n   \"retain\":            \"true\"\n\n}\nmsg1.topic = \"homeassistant/switch/onecontrolintegration/eventsGetStream/config\"\nnode.send(msg1)\n\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Push Home Assistant Events\",\n\t\"object_id\":\t\t\"Push Home Assistant Events\",\n\t\"unique_id\":\t\t\"Push Home Assistant Events\",\n\t\"command_topic\":    \"onecontrol/homeassistant/eventsSendStream/set\",\n\t\"state_topic\":      \"onecontrol/homeassistant/eventsSendStream/set\",\n\t\"icon\":             \"mdi:arrow-up-bold\",\n\t\"device\":{\n\t\t\"manufacturer\":\t\"Bob Perciaccante - bob@perciaccante.net\",\n\t\t\"via_device\":\t\"Home Assistant MQTT\",\n\t\t\"identifiers\":\t\"Home Assistant OneControl Integration\",\n\t\t\"model\":        \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"name\":\t\t\t\"Home Assistant OneControl Integration Components\"\n   },\n   \"enabled_by_default\":\"true\",\n   \"retain\":            \"true\"\n\n}\nmsg1.topic = \"homeassistant/switch/onecontrolintegration/eventsSendStream/config\"\nnode.send(msg1)\n\n/*\n\"state_topic\":\t\t\"telgggge/rf_bridge1/RESULT\",\n\t\"value_template\": \t\"{{value_json.RfReceived.Data}}\",\n\t\"command_topic\":    \"test/.tesyt\",\n\neventsGetStream\n*/",
+        "func": "msg1 = {}\n// ####################### Begin Event Restart Button Configuration #######################\n// Create a button in Home Assistant that can be used to restart the event flow in the \n//   event that is needed\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"OneControl Event Restart\",\n\t\"object_id\":\t\t\"OneControl Event Restart\",\n\t\"unique_id\":\t\t\"OneControl Event Restart\",\n\t\"command_topic\":    \"onecontrol/homeassistant/eventsRestartStream/set\",\n\t\"device\":{\n\t\t\"manufacturer\":\t\"Bob Perciaccante - bob@perciaccante.net\",\n\t\t\"via_device\":\t\"Home Assistant MQTT\",\n\t\t\"identifiers\":\t\"Home Assistant OneControl Integration\",\n\t\t\"model\":        \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"name\":\t\t\t\"Home Assistant OneControl Integration Components\"\n        },\n   \"enabled_by_default\":\"true\"\n    }\nmsg1.topic = \"homeassistant/button/onecontrolintegration/eventrestart/config\"\nmsg1.type =  \"entity\"\nnode.send(msg1)\n// ####################### End Event Restart Button Configuration #######################\n\n// ####################### Begin Run Discovery Button Configuration #######################\n// Create a button in Home Assistant that can be used to run the discovery process in the \n//   event that is needed\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Run OneControl Discovery\",\n\t\"object_id\":\t\t\"Run OneControl Discovery\",\n\t\"unique_id\":\t\t\"Run OneControl Discovery\",\n\t\"command_topic\":    \"onecontrol/homeassistant/discoveryRun/set\",\n\t\"device\":{\n\t\t\"manufacturer\":\t\"Bob Perciaccante - bob@perciaccante.net\",\n\t\t\"via_device\":\t\"Home Assistant MQTT\",\n\t\t\"identifiers\":\t\"Home Assistant OneControl Integration\",\n\t\t\"model\":        \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"name\":\t\t\t\"Home Assistant OneControl Integration Components\"\n    },\n   \"enabled_by_default\":\"true\"\n    }\nmsg1.topic = \"homeassistant/button/onecontrolintegration/discoveryRun/config\"\nmsg1.type = \"entity\"\nnode.send(msg1)\n// ####################### End Run Discovery Button Configuration #######################\n\n\n// ####################### Begin Remove All Entities Button Configuration #######################\n// Create a button in Home Assistant that can be used to remove all entities created by the discovery\n//    process except the nodes used to manage the integration\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Remove All Entities\",\n\t\"object_id\":\t\t\"Remove All Entities\",\n\t\"unique_id\":\t\t\"Remove All Entities\",\n\t\"command_topic\":    \"onecontrol/homeassistant/mqttDeleteAll/set\",\n\t\"device\":{\n\t\t\"manufacturer\":\t\"Bob Perciaccante - bob@perciaccante.net\",\n\t\t\"via_device\":\t\"Home Assistant MQTT\",\n\t\t\"identifiers\":\t\"Home Assistant OneControl Integration\",\n\t\t\"model\":        \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"name\":\t\t\t\"Home Assistant OneControl Integration Components\"\n        },\n   \"enabled_by_default\":\"true\"\n    }\nmsg1.topic = \"homeassistant/button/onecontrolintegration/mqttDeleteAll/config\"\nmsg1.type = \"entity\"\nnode.send(msg1)\n// ####################### End Remove All Entities Button Configuration #######################\n\n// ####################### Begin Pull OnweControl Events switch Configuration #######################\n// Create a switch in Home Assistant that can be used to enable or disable the processing of events from\n//   OneControl.\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Pull OneControl Events\",\n\t\"object_id\":\t\t\"Pull OneControl Events\",\n\t\"unique_id\":\t\t\"Pull OneControl Events\",\n\t\"command_topic\":    \"onecontrol/homeassistant/eventsGetStream/set\",\n\t\"state_topic\":      \"onecontrol/homeassistant/eventsGetStream/set\",\n\t\"icon\":             \"mdi:arrow-down-bold\",\n\t\"device\":{\n\t\t\"manufacturer\":\t\"Bob Perciaccante - bob@perciaccante.net\",\n\t\t\"via_device\":\t\"Home Assistant MQTT\",\n\t\t\"identifiers\":\t\"Home Assistant OneControl Integration\",\n\t\t\"model\":        \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"name\":\t\t\t\"Home Assistant OneControl Integration Components\"\n        },\n   \"enabled_by_default\":\"true\",\n   \"retain\":            \"true\"\n}\nmsg1.topic = \"homeassistant/switch/onecontrolintegration/eventsGetStream/config\"\nmsg1.type = \"entity\"\nnode.send(msg1)\n// ####################### End Pull OnweControl Events switch Configuration #######################\n\n// ####################### Begin Push Home Assistant Events switch Configuration #######################\n// Create a switch that enables or disables the processing of events from Home Assistant up to Once Control\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Push Home Assistant Events\",\n\t\"object_id\":\t\t\"Push Home Assistant Events\",\n\t\"unique_id\":\t\t\"Push Home Assistant Events\",\n\t\"command_topic\":    \"onecontrol/homeassistant/eventsSendStream/set\",\n\t\"state_topic\":      \"onecontrol/homeassistant/eventsSendStream/set\",\n\t\"icon\":             \"mdi:arrow-up-bold\",\n\t\"device\":{\n\t\t\"manufacturer\":\t\"Bob Perciaccante - bob@perciaccante.net\",\n\t\t\"via_device\":\t\"Home Assistant MQTT\",\n\t\t\"identifiers\":\t\"Home Assistant OneControl Integration\",\n\t\t\"model\":        \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"name\":\t\t\t\"Home Assistant OneControl Integration Components\"\n        },\n   \"enabled_by_default\":\"true\",\n   \"retain\":            \"true\"\n    }\nmsg1.topic = \"homeassistant/switch/onecontrolintegration/eventsSendStream/config\"\nmsg1.type = \"entity\"\nnode.send(msg1)\n// ####################### End Push Home Assistant Events switch Configuration #######################\n\n// ####################### Send current state of eventsSendStream to Home Assistant #######################\nif (global.get(\"eventsSendStream\") == true) {\n        msg1.payload = \"on\"\n    } else {\n        msg1.payload = \"off\"\n    }\nmsg1.topic = \"onecontrol/homeassistant/eventsSendStream/set\"\nmsg1.type = \"record\"\nnode.send(msg1)\n\n// ####################### Send current state of eventsGetStream to Home Assistant #######################\nif (global.get(\"eventsGetStream\") == true) {\n        msg1.payload = \"on\"\n    } else {\n        msg1.payload = \"off\"\n    }\nmsg1.topic = \"onecontrol/homeassistant/eventsGetStream/set\"\nmsg1.type = \"record\"\nnode.send(msg1)\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 200,
+        "x": 760,
+        "y": 260,
         "wires": [
             [
-                "27c90a3f24e1b42a"
+                "4a241eecd05a027a"
             ]
         ]
     },
     {
-        "id": "e971e7e546474019",
+        "id": "489f1d4567f2e9fe",
         "type": "link in",
-        "z": "8e6abf387a414b8b",
+        "z": "c5bf60a40630c5e3",
         "name": "Trigger Dicovery",
         "links": [
             "9351ecadf4673a99",
-            "0b7382dce12adcf8"
+            "0b7382dce12adcf8",
+            "d6d1322b9d745884",
+            "94ae0ec5e36d0e7b"
         ],
         "x": 55,
-        "y": 120,
-        "wires": [
-            [
-                "e11a0cb9204d7e90"
-            ]
-        ]
-    },
-    {
-        "id": "a56cd6274733226a",
-        "type": "catch",
-        "z": "8e6abf387a414b8b",
-        "name": "Capture Errors",
-        "scope": null,
-        "uncaught": false,
-        "x": 840,
-        "y": 60,
-        "wires": [
-            [
-                "de794b3ce8e3d50d"
-            ]
-        ]
-    },
-    {
-        "id": "de794b3ce8e3d50d",
-        "type": "debug",
-        "z": "8e6abf387a414b8b",
-        "name": "Errors - Full Payload",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
         "y": 100,
-        "wires": []
-    },
-    {
-        "id": "e3534c0270705640",
-        "type": "catch",
-        "z": "bebd174e6f36feb7",
-        "name": "Capture Errors",
-        "scope": null,
-        "uncaught": false,
-        "x": 1720,
-        "y": 40,
         "wires": [
             [
-                "144df794efd9878b"
+                "ef9ad8391578af6e"
             ]
         ]
     },
     {
-        "id": "144df794efd9878b",
+        "id": "d25248e6a91d7fea",
+        "type": "comment",
+        "z": "c5bf60a40630c5e3",
+        "g": "b07fe501c3da07e1",
+        "name": "Important Notes",
+        "info": "The control entities here are created at discovery but not removed during the Delete All process, so that the utilities can be run againfrom the HA interface.",
+        "x": 760,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "670878733f3ed1be",
+        "type": "link in",
+        "z": "c5bf60a40630c5e3",
+        "g": "2ec83346dffc7d94",
+        "name": "",
+        "links": [
+            "eedd8594c925dbf3"
+        ],
+        "x": 1025,
+        "y": 440,
+        "wires": [
+            [
+                "6fc28ef47b87f702"
+            ]
+        ]
+    },
+    {
+        "id": "eedd8594c925dbf3",
+        "type": "link out",
+        "z": "c5bf60a40630c5e3",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "670878733f3ed1be"
+        ],
+        "x": 635,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "2f39f30d0b204f20",
+        "type": "catch",
+        "z": "43b59d10c7fbb603",
+        "name": "Capture Errors",
+        "scope": null,
+        "uncaught": false,
+        "x": 880,
+        "y": 760,
+        "wires": [
+            [
+                "8ee1264c58a23503"
+            ]
+        ]
+    },
+    {
+        "id": "8ee1264c58a23503",
         "type": "debug",
-        "z": "bebd174e6f36feb7",
+        "z": "43b59d10c7fbb603",
         "name": "Errors - Full Payload",
         "active": true,
         "tosidebar": true,
@@ -1147,15 +1201,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1740,
-        "y": 80,
+        "x": 1140,
+        "y": 760,
         "wires": []
     },
     {
-        "id": "d723dcb978780f8d",
+        "id": "8f14976b64bb3146",
         "type": "mqtt in",
-        "z": "bebd174e6f36feb7",
-        "g": "a3e8794105f63343",
+        "z": "43b59d10c7fbb603",
+        "g": "c2cef54b587f0bcb",
         "name": "OneControl MQTT SET messages",
         "topic": "smarthome/items/+/set",
         "qos": "2",
@@ -1169,15 +1223,15 @@
         "y": 360,
         "wires": [
             [
-                "78455e86850fcafe"
+                "5dfeec5f086a1a5d"
             ]
         ]
     },
     {
-        "id": "34bb5230fe4e0d90",
+        "id": "391a9569a63dcb2a",
         "type": "http request",
-        "z": "bebd174e6f36feb7",
-        "g": "a3e8794105f63343",
+        "z": "43b59d10c7fbb603",
+        "g": "c2cef54b587f0bcb",
         "name": "OneControl API Call",
         "method": "POST",
         "ret": "txt",
@@ -1192,15 +1246,15 @@
         "y": 380,
         "wires": [
             [
-                "0414cb77ee04517b"
+                "2b59b7ebf7f8c64f"
             ]
         ]
     },
     {
-        "id": "54a5a5059c138cc8",
+        "id": "d798d4fbbc01f36d",
         "type": "debug",
-        "z": "bebd174e6f36feb7",
-        "g": "a3e8794105f63343",
+        "z": "43b59d10c7fbb603",
+        "g": "c2cef54b587f0bcb",
         "name": "200 Success",
         "active": false,
         "tosidebar": true,
@@ -1215,10 +1269,10 @@
         "wires": []
     },
     {
-        "id": "ada20a47b29e954b",
+        "id": "3e7e3125a5625d70",
         "type": "function",
-        "z": "bebd174e6f36feb7",
-        "g": "a3e8794105f63343",
+        "z": "43b59d10c7fbb603",
+        "g": "c2cef54b587f0bcb",
         "name": "Format Outbound Message",
         "func": "function roundNum0(i) {\n    i = Number(i)\n    i = i.toFixed(0)\n    i = Number(i)\n    return i\n}\n\nvar msg1 = {}\n\nmsg1.item = msg.topic.split(\"/\")\nmsg1.foo = typeof(msg.payload)\nmsg1.headers = {\"Content-Type\": \"text/plain\", \"Accept\": \"application/json\"}\nif (typeof(msg.payload) == \"string\") {\n    msg1.payload = msg.payload.toUpperCase()\n}\n\nif (typeof(msg.payload) == \"number\") {\n    msg1.payload = roundNum0(msg.payload)\n}\nmsg1.url = \"http://192.168.1.4:8080/rest/items/\"+ msg1.item[2]\nreturn [msg,msg1];",
         "outputs": 2,
@@ -1231,15 +1285,15 @@
         "wires": [
             [],
             [
-                "34bb5230fe4e0d90"
+                "391a9569a63dcb2a"
             ]
         ]
     },
     {
-        "id": "9fbcf034be79bec2",
+        "id": "f2bdd5e747c58fb2",
         "type": "function",
-        "z": "bebd174e6f36feb7",
-        "g": "a3e8794105f63343",
+        "z": "43b59d10c7fbb603",
+        "g": "c2cef54b587f0bcb",
         "name": "Outbound Data Format Conversions *",
         "func": "function roundNum0(i) {\n    i = Number(i)\n    i = i.toFixed(0)\n    i = Number(i)\n    return i\n}\n\n// ***** Reformat hvac_mode.  Openhab uses \"heatcool\", and Home Assistant uses \"heat_cool\"\nif (msg.topic.includes(\"/idsmyrv_hvac_thing_\")  === true &&\n        msg.topic.includes(\"_hvac_mode/state\")  === true && \n        msg.payload.includes(\"heat_cool\")  === true){\n        msg.payload= \"heatcool\"\n        }\n\nif (msg.topic.includes(\"idsmyrv_hvac_thing_\")  === true &&\n        msg.topic.includes(\"_heat-source/state\")  === true ){ \n        switch(msg.payload) {\n            case \"Prefer Heatpump\":\n                msg.payload = \"HEATPUMP\"\n                break;\n            case \"Prefer Gas\":\n                msg.payload = \"GAS\"\n                break;\n            }\n        }\n      \n\n// ***** Remove trailing zero from temp setting\nif (msg.topic.includes(\"/idsmyrv_hvac_thing_\")  === true &&\n        msg.topic.includes(\"_temperature/set\")  === true ){\n    msg.payload= roundNum0(msg.payload)\n}\n\nreturn msg;\n/*\n\n\nsmarthome/items/idsmyrv_hvac_thing_0000000DA7271001_hvac_mode/state\n\n\n*/",
         "outputs": 1,
@@ -1251,16 +1305,16 @@
         "y": 380,
         "wires": [
             [
-                "ada20a47b29e954b"
+                "3e7e3125a5625d70"
             ]
         ],
         "info": "This node is used to translate between the two platforms.  In come cases, values need to be in upper case, some lower case, and some different vlaues entirely."
     },
     {
-        "id": "0414cb77ee04517b",
+        "id": "2b59b7ebf7f8c64f",
         "type": "switch",
-        "z": "bebd174e6f36feb7",
-        "g": "a3e8794105f63343",
+        "z": "43b59d10c7fbb603",
+        "g": "c2cef54b587f0bcb",
         "name": "HTTP Status Code",
         "property": "statusCode",
         "propertyType": "msg",
@@ -1281,18 +1335,18 @@
         "y": 360,
         "wires": [
             [
-                "54a5a5059c138cc8"
+                "d798d4fbbc01f36d"
             ],
             [
-                "133d6059c5e1534c"
+                "97ebd9ec3e8a6fde"
             ]
         ]
     },
     {
-        "id": "133d6059c5e1534c",
+        "id": "97ebd9ec3e8a6fde",
         "type": "debug",
-        "z": "bebd174e6f36feb7",
-        "g": "a3e8794105f63343",
+        "z": "43b59d10c7fbb603",
+        "g": "c2cef54b587f0bcb",
         "name": "Others",
         "active": false,
         "tosidebar": true,
@@ -1307,21 +1361,21 @@
         "wires": []
     },
     {
-        "id": "c54df022cab3b975",
+        "id": "948bd492828276bc",
         "type": "comment",
-        "z": "bebd174e6f36feb7",
-        "g": "a3e8794105f63343",
+        "z": "43b59d10c7fbb603",
+        "g": "c2cef54b587f0bcb",
         "name": "This section connects to the local MQTT server and converts messages to commands and updates to OneControl",
         "info": "",
-        "x": 710,
+        "x": 810,
         "y": 280,
         "wires": []
     },
     {
-        "id": "78455e86850fcafe",
+        "id": "5dfeec5f086a1a5d",
         "type": "function",
-        "z": "bebd174e6f36feb7",
-        "g": "a3e8794105f63343",
+        "z": "43b59d10c7fbb603",
+        "g": "c2cef54b587f0bcb",
         "name": "Is Event Send enabled?",
         "func": "if (global.get(\"eventsSendStream\") == true ) {\n    return msg;\n}",
         "outputs": 1,
@@ -1333,15 +1387,15 @@
         "y": 340,
         "wires": [
             [
-                "9fbcf034be79bec2"
+                "f2bdd5e747c58fb2"
             ]
         ]
     },
     {
-        "id": "88b43101190731ae",
+        "id": "285a06fd6b523577",
         "type": "mqtt in",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
         "name": "Home Assistant - Integration Commands",
         "topic": "onecontrol/homeassistant/+/set",
         "qos": "2",
@@ -1352,36 +1406,18 @@
         "rh": 0,
         "inputs": 0,
         "x": 220,
-        "y": 620,
+        "y": 560,
         "wires": [
             [
-                "614bf5c2c9d0fae4"
+                "c5a20be305249658"
             ]
         ]
     },
     {
-        "id": "32102edfeb7cde8b",
-        "type": "debug",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "614bf5c2c9d0fae4",
+        "id": "c5a20be305249658",
         "type": "switch",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
         "name": "Sort by Event action",
         "property": "topic",
         "propertyType": "msg",
@@ -1416,30 +1452,30 @@
         "repair": false,
         "outputs": 5,
         "x": 520,
-        "y": 620,
+        "y": 580,
         "wires": [
             [
-                "6b1cffdd1ac3a644"
+                "0d6b1468c7e8402c"
             ],
             [
-                "303e38879a37d5c8"
+                "68e445fc2b0a42c7"
             ],
             [
-                "4f9894e7349a9c51"
+                "9d3f4ffa65c1772b"
             ],
             [
-                "9f58ea0869cd3b72"
+                "1cf20926d2520c98"
             ],
             [
-                "043e2510a61bec56"
+                "d6d1322b9d745884"
             ]
         ]
     },
     {
-        "id": "6b1cffdd1ac3a644",
+        "id": "0d6b1468c7e8402c",
         "type": "function",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
         "name": "Set \"Events Get Stream\" state",
         "func": "if (msg.payload == \"ON\") {\n    global.set(\"eventsGetStream\",true)\n} else {\n    global.set(\"eventsGetStream\",false)\n}\nreturn msg;",
         "outputs": 1,
@@ -1447,34 +1483,32 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
-        "y": 540,
+        "x": 810,
+        "y": 520,
         "wires": [
-            [
-                "32102edfeb7cde8b"
-            ]
+            []
         ]
     },
     {
-        "id": "9f58ea0869cd3b72",
+        "id": "30a5d1b17151aadd",
         "type": "link out",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
         "name": "Triigger Event Flow Restart",
         "mode": "link",
         "links": [
-            "c3c21463a0689e90"
+            "9f8f72780fcd08cd"
         ],
-        "x": 840,
+        "x": 1120,
         "y": 660,
         "wires": [],
         "l": true
     },
     {
-        "id": "9635476ec67bc324",
+        "id": "affcfc4989bec16b",
         "type": "inject",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
         "name": "Automatic Events Connection",
         "props": [
             {
@@ -1496,15 +1530,15 @@
         "y": 100,
         "wires": [
             [
-                "4dfe5443277609b7"
+                "aa5f06d40fe8cb5a"
             ]
         ]
     },
     {
-        "id": "2bf90924dcc792b4",
+        "id": "ca6fbeb5c26fcf8c",
         "type": "rbe",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
         "name": "Block Repeat Messages",
         "func": "rbe",
         "gap": "",
@@ -1517,15 +1551,15 @@
         "y": 160,
         "wires": [
             [
-                "086c508192ef9f36"
+                "86020bb309d0ae86"
             ]
         ]
     },
     {
-        "id": "4dfe5443277609b7",
+        "id": "aa5f06d40fe8cb5a",
         "type": "sse-client",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
         "name": "Start Event Flow",
         "url": "http://192.168.1.4:8080/rest/events",
         "events": [],
@@ -1539,16 +1573,16 @@
         "y": 140,
         "wires": [
             [
-                "07726f4e3fcaf47e"
+                "5c0b50257b9bbe74"
             ]
         ]
     },
     {
-        "id": "ab8b0a6e8938748a",
+        "id": "c858ec7c0b44668c",
         "type": "mqtt out",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
-        "name": "Local MQTT Server",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
+        "name": "RV - Local",
         "topic": "",
         "qos": "",
         "retain": "false",
@@ -1558,17 +1592,17 @@
         "correl": "",
         "expiry": "",
         "broker": "4410210f.6939c",
-        "x": 1480,
+        "x": 1510,
         "y": 120,
         "wires": []
     },
     {
-        "id": "e6e3670e590acbd3",
+        "id": "73638f0d908217b1",
         "type": "function",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
         "name": "Format Inbound Message",
-        "func": "msg.payload = JSON.parse(msg.payload)\n//msg.payload.payload = JSON.parse(msg.payload.payload)\n\nmsg1 = {}\nmsg1.payload = JSON.parse(msg.payload.payload)\nmsg1.topic = msg.payload.topic\nmsg1.event = msg.event\n\nif (typeof(msg1.payload.value) == \"string\") {\n    msg1.payload.value = msg1.payload.value.toLowerCase()\n}\n\nreturn msg1;\n\n/*\n.toLowerCase()\n//switch(msg1.payload.type) {\n//    case \"String\":\n//        msg1.payload.value = msg1.payload.value.toLowerCase()\n//        break;\n//}\n\n\n*/",
+        "func": "function capitolizeFirst(string) {\n var output = string.replace(/\\w\\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});\n return output;\n}\n\nfunction roundNum1(i) {\n    i = Number(i)\n    i = i.toFixed(1)\n    i = Number(i)\n    return i\n}\n\nmsg.payload = JSON.parse(msg.payload)\n//msg.payload.payload = JSON.parse(msg.payload.payload)\n\nmsg1 = {}\nmsg1.payload = JSON.parse(msg.payload.payload)\nmsg1.topic = msg.payload.topic\nmsg1.event = msg.event\nif (msg1.topic.includes(\"smarthome/things/idsmyrv:\") === true &&\n    msg1.topic.includes(\"/status\") === true) {\n        msg1.payload.status = msg1.payload.status.toLowerCase()\n        msg1.payload.statusDetail = capitolizeFirst(msg1.payload.statusDetail)\n    }\n    \nif (msg1.topic.includes(\"smarthome/items/idsmyrv_\") === true) {\n    if (isNaN(parseInt(msg1.payload.value)) == true) {\n        msg1.payload.value = msg1.payload.value.toLowerCase()\n    } else {\n        msg1.payload.value = roundNum1(parseFloat(msg1.payload.value))\n    }\n}\n\n\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1578,15 +1612,15 @@
         "y": 160,
         "wires": [
             [
-                "47931a79bdf8169a"
+                "e3142aa105a58b6f"
             ]
         ]
     },
     {
-        "id": "f291cfaf4d71c8ed",
+        "id": "b8221c75079a0d4c",
         "type": "comment",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
         "name": "This section connects to the OneControl system and pulls down event and state change info and writes it to MQTT",
         "info": "",
         "x": 810,
@@ -1594,10 +1628,10 @@
         "wires": []
     },
     {
-        "id": "7f9c7ff8385d79cd",
+        "id": "a7a4976dfe29fe86",
         "type": "debug",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
         "name": "Debug",
         "active": false,
         "tosidebar": true,
@@ -1612,10 +1646,10 @@
         "wires": []
     },
     {
-        "id": "086c508192ef9f36",
+        "id": "86020bb309d0ae86",
         "type": "function",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
         "name": "Convert Data",
         "func": "\n\n// ***** Reformat hvac_mode.  Openhab uses \"heatcool\", and Home Assistant uses \"heat_cool\"\nif (msg.topic.includes(\"idsmyrv_hvac_thing_\")  === true &&\n        msg.topic.includes(\"_hvac_mode/state\")  === true && \n        msg.payload.value.includes(\"heatcool\")  === true){\n        msg.payload.value = \"heat_cool\"\n    }\n\nif (msg.topic.includes(\"idsmyrv_hvac_thing_\")  === true &&\n        msg.topic.includes(\"_heat-source/state\")  === true ){ \n        switch(msg.payload.value) {\n            case \"HEATPUMP\":\n                msg.payload.value = \"Prefer Heatpump\"\n                break;\n            case \"GAS\":\n                msg.payload.value = \"Prefer Gas\"\n                break;\n            }\n        }\n        \n/*\n// OneControl uses HSV color codes for RGB light objects, but HA only knows HS.  This will get the \n//  brightness from OneControl, and save it as a flow variable.  When it is up dated by either HA or OneControl,\n//  it is appended to the HS value from HomeAssistant before being sent to OneControl\n if (msg.topic.includes(\"idsmyrv_rgb_light_thing_\")  === true &&\n        msg.topic.includes(\"_hsvcolor/state\")  === true && \n        msg.topic.includes(\"_hsvcolor/statechanged\")  === false && \n        msg.payload.type.includes(\"HSB\")  === true){\n            i = msg.topic.split(\"/\")\n            j = i[2].split(\"_\")\n            msg1 = {}\n            values = msg.payload.value.split(\",\")\n            msg1.payload = values[0]+\",\"+ values[1]\n            msg1.topic = msg.topic\n            msg1.i = j\n            node.send(msg1)\n            msg1.topic = \"smarthome/items/\" + j[0] +\"_\"+ j[1] +\"_\"+ j[2] +\"_\"+j[3] +\"_\"+j[4] +\"_dimmer/ha_state\"\n            msg1.payload = values[2]\n            node.send(msg1)\n            msg = null\n    }\n    */\nif (msg.topic.includes(\"smarthome/things/idsmyrv:\")  === true) {\n    msg.retain = true\n}\n\n// OneControl uses the same topic for the ON/OFF and brightness values for dimmable lights.  To make things cleaner \n//   on our interface, we will split the inbound values and copy them to separate state topics - brightness and switch.\n//   Home Assistant will read the values from these two topics but write to the topic expected by OneControl - dimmer.\n//     Example:\n//       1) Inbound message comes to 'smarthome/items/idsmyrv_light_thing_0000000DA6BB1407_dimmer/state'\n//          Typical payload looks like '{\"type\":\"Percent\",\"value\":\"61\"}' or '{\"type\":\"OnOff\",\"value\":\"off\"}''\n//       2) Node Red splits the contents based on whether the value is a \"type\" is \"Percent\" or \"OnOff\n//       3) \"Percent\" is sent to 'smarthome/items/idsmyrv_light_thing_0000000DA6BB1407_brightness/state'\n//       4) \"OnOff\" is sent to 'smarthome/items/idsmyrv_light_thing_0000000DA6BB1407_switch/state'\nif (msg.topic.includes(\"_dimmer/state\") === true ) {\n    msg1 = {}\n    msg1.payload = msg.payload.value\n    switch (msg.payload.type) {\n        case \"Percent\":\n            msg1.topic = msg.topic.replace(\"_dimmer\",\"_brightness\")\n            node.send(msg1)\n            break;\n        case \"OnOff\":\n            msg1.topic = msg.topic.replace(\"_dimmer\",\"_switch\")\n            node.send(msg1)\n            break;\n        }\n}\n/* \n// OneControl uses the same topic for the ON/OFF and status values for the generator swtich.  To prevent state errors \n//   in Home Assistant, we need to split off the non-OnOff messages to a seperate topic and then build a separate text sensor to \n//   display this information.\n\nif (msg.topic.includes(\"_command/state\") === true &&\n        msg.topic.includes(\"generator\") === true) {\n    msg1 = {}\n    if (msg.payload.type != \"OnOff\") {\n        msg1.topic= msg.topic.replace(\"_command\",\"_status\")\n        msg1.payload = msg.payload.value\n        node.send(msg1)\n    } else {\n        \n}\n*/\nreturn msg\n\n\n",
         "outputs": 1,
@@ -1623,21 +1657,21 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1280,
-        "y": 160,
+        "x": 1320,
+        "y": 140,
         "wires": [
             [
-                "ab8b0a6e8938748a",
-                "7f9c7ff8385d79cd"
+                "c858ec7c0b44668c",
+                "a7a4976dfe29fe86"
             ]
         ],
         "info": "This node is used to translate between the two platforms.  In come cases, values need to be in upper case, some lower case, and some different vlaues entirely."
     },
     {
-        "id": "47931a79bdf8169a",
+        "id": "e3142aa105a58b6f",
         "type": "function",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
         "name": "Raw Data Format Conversions *",
         "func": "function roundNum0(i) {\n    i = Number(i)\n    i = i.toFixed(0)\n    i = Number(i)\n    return i\n}\n\nfunction roundNum1(i) {\n    i = Number(i)\n    i = i.toFixed(1)\n    i = Number(i)\n    return i\n}\n\n// Round amperage to .1\nif (msg.topic.includes(\"smarthome/items/idsmyrv_\")  === true &&\n        msg.topic.includes(\"_current/state\")  === true && \n        msg.payload.type.includes(\"Decimal\")  === true){\n    msg.payload.value = roundNum1(msg.payload.value)\n}\n\nif (msg.topic.includes(\"smarthome/items/idsmyrv_\")  === true &&\n        msg.topic.includes(\"statechanged\")  === true ) {\n            switch(msg.payload.type) {\n                case \"Decimal\":\n                    msg.payload.value = roundNum0(msg.payload.value)\n                    break;\n                default:\n                    msg.payload.value = msg.payload.value.toLowerCase()\n                    break;\n            }\n            switch(msg.payload.oldType) {\n                case \"Decimal\":\n                    msg.payload.oldValue = roundNum0(msg.payload.oldValue)\n                    break;\n                case \"String\":\n                    msg.payload.oldValue = msg.payload.oldValue.toLowerCase()\n                    break;\n            }\n        }\n\n//msg.payload.value = msg.payload.value.toLowerCase()\n\n// Round temperature to .0\nif (msg.topic.includes(\"smarthome/items/idsmyrv_\")  === true &&\n        msg.topic.includes(\"_temperature/state\")  === true && \n        msg.payload.type.includes(\"Decimal\")  === true){\n    msg.payload.value = roundNum0(msg.payload.value)\n}\n\n// Round HS values from HA\n\n\n// Force lowercase status modes\nif (msg.topic.includes(\"smarthome/things/idsmyrv:\")  === true &&\n        msg.topic.includes(\"/status\")  === true &&\n        msg.topic.includes(\"/statuschanged\")  === false) {\n    msg.payload.status = msg.payload.status.toLowerCase()\n    msg.payload.statusDetail = msg.payload.statusDetail.toLowerCase()\n}\n\n\n\n\nreturn msg;\n\n/*\nif (typeof(msg.payload.value) == \"string\") {\n    msg.payload.value = msg.payload.value.toLowerCase()\n}\n\n// Force lowercase statuschanged modes\nif (msg.topic.includes(\"smarthome/things/idsmyrv:\")  === true &&\n        msg.topic.includes(\"/statuschanged\")  === true &&\n        msg.payload.type.includes(\"String\")  === true ) {\n    msg.payload.value = msg.payload.value.toLowerCase()\n    if (msg.payload.oldType === \"String\") {\n       msg.payload.oldValue = msg.payload.oldValue.toLowerCase()\n }\n\nsmarthome/items/idsmyrv_hvac_thing_0000000DA7271001_hvac_mode/state\n\n\n*/",
         "outputs": 1,
@@ -1649,16 +1683,16 @@
         "y": 120,
         "wires": [
             [
-                "2bf90924dcc792b4"
+                "ca6fbeb5c26fcf8c"
             ]
         ],
         "info": "This node is used to round decimal values down to reasonable sizes to minimize the number of state changes as well as \nthe number of MQTT messages that need to be processed.  It is also used to force certain values to lowercase which is needed for compatibility with Home Assistance"
     },
     {
-        "id": "07726f4e3fcaf47e",
+        "id": "5c0b50257b9bbe74",
         "type": "function",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
         "name": "Is Event Get Stream enabled?",
         "func": "if (global.get(\"eventsGetStream\") == true ) {\n    return msg;\n}",
         "outputs": 1,
@@ -1670,15 +1704,15 @@
         "y": 120,
         "wires": [
             [
-                "e6e3670e590acbd3"
+                "73638f0d908217b1"
             ]
         ]
     },
     {
-        "id": "2f4948d4802358cf",
+        "id": "4f9578a7eba52f1d",
         "type": "inject",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
         "name": "Manual Events Connection",
         "props": [
             {
@@ -1700,33 +1734,33 @@
         "y": 180,
         "wires": [
             [
-                "4dfe5443277609b7"
+                "aa5f06d40fe8cb5a"
             ]
         ]
     },
     {
-        "id": "c3c21463a0689e90",
+        "id": "9f8f72780fcd08cd",
         "type": "link in",
-        "z": "bebd174e6f36feb7",
-        "g": "ecee9f73a6c7eaeb",
+        "z": "43b59d10c7fbb603",
+        "g": "6aae06d09c613fad",
         "name": "Triigger Event Flow Restart",
         "links": [
-            "9f58ea0869cd3b72"
+            "30a5d1b17151aadd"
         ],
         "x": 220,
         "y": 140,
         "wires": [
             [
-                "4dfe5443277609b7"
+                "aa5f06d40fe8cb5a"
             ]
         ],
         "l": true
     },
     {
-        "id": "303e38879a37d5c8",
+        "id": "68e445fc2b0a42c7",
         "type": "function",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
         "name": "Set \"Events Send Stream\" state",
         "func": "if (msg.payload == \"ON\") {\n    global.set(\"eventsSendStream\",true)\n} else {\n    global.set(\"eventsSendStream\",false)\n}\nreturn msg;",
         "outputs": 1,
@@ -1734,34 +1768,32 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
-        "y": 580,
+        "x": 810,
+        "y": 560,
         "wires": [
-            [
-                "32102edfeb7cde8b"
-            ]
+            []
         ]
     },
     {
-        "id": "043e2510a61bec56",
+        "id": "d6d1322b9d745884",
         "type": "link out",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
         "name": "Trigger OneControl Discovery",
         "mode": "link",
         "links": [
-            "9c9c77f85d2daadf"
+            "489f1d4567f2e9fe"
         ],
-        "x": 850,
-        "y": 700,
+        "x": 810,
+        "y": 680,
         "wires": [],
         "l": true
     },
     {
-        "id": "4f9894e7349a9c51",
+        "id": "9d3f4ffa65c1772b",
         "type": "function",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
         "name": "Remove All Entities",
         "func": "msg.oldstate = global.get(\"mqttDeleteAll\")\nglobal.set(\"mqttDeleteAll\",true)\nnode.send(msg)\n\nreturn msg;",
         "outputs": 1,
@@ -1769,39 +1801,38 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 620,
+        "x": 770,
+        "y": 600,
         "wires": [
             [
-                "32102edfeb7cde8b",
-                "82998e91a0e08186",
-                "3889bfcac8465872"
+                "94ae0ec5e36d0e7b",
+                "93753410a1771126"
             ]
         ]
     },
     {
-        "id": "82998e91a0e08186",
+        "id": "94ae0ec5e36d0e7b",
         "type": "link out",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
         "name": "Trigger Delete All",
         "mode": "link",
         "links": [
-            "9c9c77f85d2daadf"
+            "489f1d4567f2e9fe"
         ],
-        "x": 1210,
-        "y": 600,
+        "x": 1090,
+        "y": 580,
         "wires": [],
         "l": true
     },
     {
-        "id": "3889bfcac8465872",
+        "id": "93753410a1771126",
         "type": "delay",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
         "name": "",
         "pauseType": "delay",
-        "timeout": "5",
+        "timeout": "10",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -1812,19 +1843,19 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1180,
-        "y": 640,
+        "x": 1060,
+        "y": 620,
         "wires": [
             [
-                "6483a41a450e5313"
+                "8d475c51d06f4ba7"
             ]
         ]
     },
     {
-        "id": "6483a41a450e5313",
+        "id": "8d475c51d06f4ba7",
         "type": "function",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
         "name": "Reset Delete All Entities State",
         "func": "\nglobal.set(\"mqttDeleteAll\",msg.oldstate)\n\nreturn msg;",
         "outputs": 1,
@@ -1832,22 +1863,63 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 640,
+        "x": 1330,
+        "y": 620,
         "wires": [
-            []
+            [
+                "00417d306bc2e61c"
+            ]
         ]
     },
     {
-        "id": "ff6a1f6ca24038cd",
+        "id": "00417d306bc2e61c",
+        "type": "debug",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
+        "name": "Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1510,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "3b970ff7deaf8436",
         "type": "comment",
-        "z": "bebd174e6f36feb7",
-        "g": "3de1fe3c28c62622",
-        "name": "Process commands from the Home Assistant Integration Entities",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
+        "name": "This section process commands sent from the entities created in Home Assistant to manage this integration",
         "info": "",
-        "x": 830,
+        "x": 810,
         "y": 480,
         "wires": []
+    },
+    {
+        "id": "1cf20926d2520c98",
+        "type": "function",
+        "z": "43b59d10c7fbb603",
+        "g": "b81fcae9f8b73e0b",
+        "name": "Discovery All Entities",
+        "func": "msg.oldstate = global.get(\"mqttDeleteAll\")\nglobal.set(\"mqttDeleteAll\",false)\nnode.send(msg)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 640,
+        "wires": [
+            [
+                "93753410a1771126",
+                "30a5d1b17151aadd"
+            ]
+        ]
     },
     {
         "id": "2ab54f412889170c",

@@ -1,7 +1,7 @@
 {
     "name": "GITHUB_HomeAssistant_OneControl_Discovery",
     "description": "Integration of Home Assistant and Lippert OneControl",
-    "version": "2022.01.18a",
+    "version": "2022.01.21b",
     "dependencies": {
         "node-red-contrib-sse-client": "0.2.2",
         "node-red-node-rbe": "0.2.9"
