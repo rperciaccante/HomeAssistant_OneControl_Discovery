@@ -6,6 +6,8 @@ Lippert OneControl and Home Assistant Integration
 This is a project that is designed to utilize Node Red to connect to your Lippert OneControl cloud bridge and download the entities into your Home Assistant instance, allowing you to control most items in your RV.
 
 This has been tested on my 2021 Grand Design Momentum 397TH-R.  Additional samples are always appreciated.
+![image](https://user-images.githubusercontent.com/24508878/151246937-63198e23-45f2-4c41-a7a5-2755e4c0a6b9.png)
+(Very basic dashboard example - see "sample_dash.yaml")
 
 ### Requirements
 - MUST have a network that contains the OneControl Cloud Bridge (even if you are not subscribed to the cloud service)
@@ -44,6 +46,8 @@ with the options before running the tool:
 - Enable/disable automatic sending updates to OneControl
 
 After the initial run, you will be able to control most features from within the Home Assistant interface.  The entities created to manage the integration are located in the Mosquitto Broker integration.  To access these tools, from your Home Assistant console, navigate to "Configuration" -> "Devices and Services" and under the "Mosquitto Broker" integration, you will see a link to devices.  Follow this link to the list of MQTT devices, and click on "Home Assistant OneControl Integration Components".
+![image](https://user-images.githubusercontent.com/24508878/151243556-44dd82a5-d353-4f4e-ae09-89c1cbd065e9.png)
+
 
 ### Limitations:
 - Physical devices such as slides and awnings are NOT currently supported due to the complexity of the integration and the risks associated with the potential for damage.
