@@ -1,0 +1,118 @@
+title: Momentum 397TH-R
+views:
+  - path: default_view
+    title: ''
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: light
+                entity: light.onecontrol_kitchen_ceiling_light_dimmer
+                icon: mdi:light-recessed
+                name: Kitchen
+              - type: light
+                entity: light.onecontrol_kitchen_chandelier_light_dimmer
+                name: Island
+                icon: mdi:ceiling-light-multiple
+              - type: light
+                entity: light.onecontrol_kitchen_counter_light_dimmer
+                name: Counter
+                icon: mdi:light-recessed
+          - type: horizontal-stack
+            cards:
+              - type: light
+                entity: light.onecontrol_kitchen_under_cabinet_light_dimmer
+                name: Kitch. Cabinet
+                icon: mdi:light-recessed
+              - type: light
+                entity: light.onecontrol_porch_light_dimmer
+                name: Porch
+                icon: mdi:light-flood-down
+              - type: light
+                entity: light.onecontrol_flood_light_dimmer
+                name: Flood Light
+                icon: mdi:light-flood-down
+          - type: horizontal-stack
+            cards:
+              - type: gauge
+                entity: sensor.onecontrol_black_tank_tank_level
+                min: 0
+                max: 100
+                needle: true
+                severity:
+                  green: 0
+                  yellow: 33
+                  red: 66
+                name: Black 1
+              - type: gauge
+                entity: sensor.onecontrol_black_tank_2_tank_level
+                min: 0
+                max: 100
+                name: Black 2
+                needle: true
+                severity:
+                  green: 0
+                  yellow: 33
+                  red: 66
+              - type: gauge
+                entity: sensor.onecontrol_grey_tank_tank_level
+                min: 0
+                max: 100
+                name: Grey 1
+                needle: true
+                severity:
+                  green: 0
+                  yellow: 33
+                  red: 66
+              - type: gauge
+                entity: sensor.onecontrol_grey_tank_2_tank_level
+                min: 0
+                max: 100
+                name: Grey 2
+                needle: true
+                severity:
+                  green: 0
+                  yellow: 33
+                  red: 66
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: button
+                tap_action:
+                  action: toggle
+                entity: switch.onecontrol_electric_water_heater_switch
+                icon: mdi:lightning-bolt-circle
+                name: Elec Water Heater
+                show_state: true
+                show_icon: true
+              - type: button
+                tap_action:
+                  action: toggle
+                entity: switch.onecontrol_gas_water_heater_switch
+                icon: mdi:fire-circle
+                name: Gas Water Heater
+              - type: gauge
+                entity: sensor.onecontrol_generator_battery_voltage
+                min: 10
+                max: 15
+                needle: true
+                severity:
+                  green: 12
+                  yellow: 0
+                  red: 14
+                name: House Battery
+                unit: v
+          - type: horizontal-stack
+            cards:
+              - type: thermostat
+                entity: climate.onecontrol_garage_climate_zone
+                name: Garage
+              - type: thermostat
+                entity: climate.onecontrol_main_climate_zone
+                name: Kitchen
+              - type: thermostat
+                entity: climate.onecontrol_bedroom_climate_zone
+                name: Bedroom
