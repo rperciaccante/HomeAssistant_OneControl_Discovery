@@ -26,14 +26,11 @@
         "id": "a2d4a149bd5c14b2",
         "type": "group",
         "z": "fbf3308551f314be",
+        "name": "Connect to your OneControl platform and download entities",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
+            "fill": "#ffffbf",
             "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "label-position": "ne"
         },
         "nodes": [
             "2ab54f412889170c",
@@ -45,7 +42,7 @@
         ],
         "x": 54,
         "y": 59,
-        "w": 812,
+        "w": 802,
         "h": 202
     },
     {
@@ -128,9 +125,9 @@
             "8efc57e27bef52e5",
             "d25248e6a91d7fea"
         ],
-        "x": 614,
+        "x": 624,
         "y": 179,
-        "w": 292,
+        "w": 272,
         "h": 122
     },
     {
@@ -181,9 +178,9 @@
             "98f4ba26adf91fe6",
             "ef9ad8391578af6e"
         ],
-        "x": 254,
+        "x": 264,
         "y": 19,
-        "w": 312,
+        "w": 302,
         "h": 122
     },
     {
@@ -205,7 +202,7 @@
         ],
         "x": 254,
         "y": 159,
-        "w": 305,
+        "w": 299,
         "h": 282
     },
     {
@@ -253,9 +250,7 @@
             "9f8f72780fcd08cd"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1572,
-        "h": 202
+        "y": 19
     },
     {
         "id": "c2cef54b587f0bcb",
@@ -278,9 +273,7 @@
             "5dfeec5f086a1a5d"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1572,
-        "h": 182
+        "y": 239
     },
     {
         "id": "b81fcae9f8b73e0b",
@@ -307,9 +300,7 @@
             "1cf20926d2520c98"
         ],
         "x": 34,
-        "y": 439,
-        "w": 1572,
-        "h": 282
+        "y": 439
     },
     {
         "id": "4410210f.6939c",
@@ -1544,9 +1535,7 @@
         "gap": "",
         "start": "",
         "inout": "out",
-        "septopics": true,
         "property": "payload",
-        "topi": "topic",
         "x": 1030,
         "y": 160,
         "wires": [
