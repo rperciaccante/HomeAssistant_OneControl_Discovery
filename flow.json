@@ -41,7 +41,9 @@
             "3d605545bfab8cd3"
         ],
         "x": 54,
-        "y": 59
+        "y": 59,
+        "w": 802,
+        "h": 202
     },
     {
         "id": "2ec83346dffc7d94",
@@ -106,7 +108,7 @@
             "ddd5b4ca9b2214d1"
         ],
         "x": 614,
-        "y": 319,
+        "y": 239,
         "w": 292,
         "h": 162
     },
@@ -116,17 +118,20 @@
         "z": "c5bf60a40630c5e3",
         "name": "Create Control Entities",
         "style": {
-            "fill": "#e3f3d3",
-            "label": true
+            "fill": "#ffC000",
+            "label": true,
+            "color": "#000000"
         },
         "nodes": [
             "8efc57e27bef52e5",
-            "d25248e6a91d7fea"
+            "d25248e6a91d7fea",
+            "dab9d99d41494c79",
+            "491b0949692ff5c9"
         ],
-        "x": 634,
+        "x": 614,
         "y": 19,
-        "w": 272,
-        "h": 122
+        "w": 292,
+        "h": 202
     },
     {
         "id": "4979df7953c906ee",
@@ -142,7 +147,7 @@
             "879a7280e4ff88f2"
         ],
         "x": 614,
-        "y": 159,
+        "y": 559,
         "w": 292,
         "h": 142
     },
@@ -159,7 +164,7 @@
             "098e7e902113652b"
         ],
         "x": 614,
-        "y": 499,
+        "y": 419,
         "w": 292,
         "h": 82
     },
@@ -174,12 +179,14 @@
         },
         "nodes": [
             "98f4ba26adf91fe6",
-            "ef9ad8391578af6e"
+            "ea1e858d19760df3",
+            "489f1d4567f2e9fe",
+            "bdf45c1455481f97"
         ],
-        "x": 244,
-        "y": 39,
-        "w": 302,
-        "h": 122
+        "x": 254,
+        "y": 19,
+        "w": 292,
+        "h": 162
     },
     {
         "id": "11cee4e8082393f2",
@@ -199,7 +206,7 @@
             "0fb7b59456f85d4b"
         ],
         "x": 254,
-        "y": 179,
+        "y": 199,
         "w": 299,
         "h": 282
     },
@@ -220,7 +227,7 @@
             "7c688006afafe03e"
         ],
         "x": 254,
-        "y": 479,
+        "y": 499,
         "w": 312,
         "h": 242
     },
@@ -248,7 +255,9 @@
             "9f8f72780fcd08cd"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1572,
+        "h": 202
     },
     {
         "id": "c2cef54b587f0bcb",
@@ -271,7 +280,9 @@
             "5dfeec5f086a1a5d"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1572,
+        "h": 182
     },
     {
         "id": "b81fcae9f8b73e0b",
@@ -298,7 +309,9 @@
             "1cf20926d2520c98"
         ],
         "x": 34,
-        "y": 439
+        "y": 439,
+        "w": 1572,
+        "h": 282
     },
     {
         "id": "4410210f.6939c",
@@ -340,7 +353,7 @@
         "stream": false,
         "addname": "foo",
         "x": 410,
-        "y": 220,
+        "y": 240,
         "wires": [
             [
                 "0fb7b59456f85d4b"
@@ -369,7 +382,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 420,
-        "y": 380,
+        "y": 400,
         "wires": [
             [
                 "0b7b92b04bceb755"
@@ -402,7 +415,7 @@
         "to": "",
         "reg": false,
         "x": 420,
-        "y": 420,
+        "y": 440,
         "wires": [
             [
                 "af180c05203f3bf8"
@@ -413,6 +426,7 @@
         "id": "ea1e858d19760df3",
         "type": "inject",
         "z": "c5bf60a40630c5e3",
+        "g": "09ec6382357415d1",
         "name": "Click here to start",
         "props": [
             {
@@ -426,11 +440,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 40,
+        "x": 380,
+        "y": 60,
         "wires": [
             [
-                "ef9ad8391578af6e"
+                "bdf45c1455481f97"
             ]
         ]
     },
@@ -447,7 +461,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 520,
+        "y": 540,
         "wires": [
             [
                 "eedd8594c925dbf3"
@@ -479,7 +493,7 @@
         "repair": false,
         "outputs": 2,
         "x": 410,
-        "y": 560,
+        "y": 580,
         "wires": [
             [
                 "098e7e902113652b",
@@ -503,7 +517,7 @@
         "finalize": "",
         "libs": [],
         "x": 760,
-        "y": 540,
+        "y": 460,
         "wires": [
             [
                 "6fc28ef47b87f702"
@@ -523,7 +537,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 260,
+        "y": 280,
         "wires": [
             [],
             [
@@ -553,7 +567,7 @@
         "repair": false,
         "outputs": 2,
         "x": 410,
-        "y": 300,
+        "y": 320,
         "wires": [
             [],
             [
@@ -574,7 +588,7 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 340,
+        "y": 360,
         "wires": [
             [
                 "2246a7b0e41df251",
@@ -598,7 +612,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 600,
+        "y": 620,
         "wires": [
             [
                 "eedd8594c925dbf3"
@@ -617,7 +631,7 @@
         "scope": null,
         "uncaught": false,
         "x": 720,
-        "y": 200,
+        "y": 600,
         "wires": [
             [
                 "879a7280e4ff88f2"
@@ -639,7 +653,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 760,
-        "y": 260,
+        "y": 660,
         "wires": []
     },
     {
@@ -657,7 +671,9 @@
         "x": 1060,
         "y": 340,
         "wires": [
-            [],
+            [
+                "4a241eecd05a027a"
+            ],
             [
                 "99f937e3894a08b8",
                 "273da8d4173943bb"
@@ -912,11 +928,10 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 120,
+        "y": 140,
         "wires": [
             [
-                "f5a3506e1a122e6b",
-                "8efc57e27bef52e5"
+                "f5a3506e1a122e6b"
             ]
         ]
     },
@@ -960,7 +975,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 680,
+        "y": 700,
         "wires": [
             [
                 "eedd8594c925dbf3"
@@ -987,33 +1002,10 @@
         "allowrate": false,
         "outputs": 1,
         "x": 440,
-        "y": 640,
+        "y": 660,
         "wires": [
             [
                 "4efa180cc4812cc4"
-            ]
-        ]
-    },
-    {
-        "id": "ef9ad8391578af6e",
-        "type": "http request",
-        "z": "c5bf60a40630c5e3",
-        "g": "09ec6382357415d1",
-        "name": "Get OneControl Components",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "http://192.168.1.4:8080/rest/things/",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 390,
-        "y": 80,
-        "wires": [
-            [
-                "98f4ba26adf91fe6"
             ]
         ]
     },
@@ -1030,7 +1022,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 360,
+        "y": 280,
         "wires": [
             [
                 "5534c824af950556"
@@ -1053,7 +1045,7 @@
         "authType": "",
         "senderr": true,
         "x": 800,
-        "y": 400,
+        "y": 320,
         "wires": [
             [
                 "ddd5b4ca9b2214d1"
@@ -1073,7 +1065,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 440,
+        "y": 360,
         "wires": [
             [
                 "6fc28ef47b87f702"
@@ -1085,18 +1077,18 @@
         "type": "function",
         "z": "c5bf60a40630c5e3",
         "g": "b07fe501c3da07e1",
-        "name": "Create HA Control Entities",
+        "name": "Generate HA Control Entities",
         "func": "msg1 = {}\n\nmqttCommon = {\n    \"device\":{\n\t\t\"manufacturer\":\t\"Bob Perciaccante - bob@perciaccante.net\",\n\t\t\"configuration_url\":    \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"via_device\":\t\"Home Assistant MQTT\",\n\t\t\"identifiers\":\t\"Home Assistant OneControl Integration\",\n\t\t//\"model\":        \"https://github.com/rperciaccante/HomeAssistant_OneControl_Discovery\",\n\t\t\"name\":\t\t\t\"Home Assistant OneControl Integration Components\"\n        },\n   \"enabled_by_default\":\"true\",\n   \"retain\":            \"true\",\n   \"qos\":               1\n    }\n\n// ####################### Begin Event Restart Button Configuration #######################\n// Create a button in Home Assistant that can be used to restart the event flow in the \n//   event that is needed\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"OneControl Event Restart\",\n\t\"object_id\":\t\t\"OneControl Event Restart\",\n\t\"unique_id\":\t\t\"OneControl Event Restart\",\n\t\"command_topic\":    \"onecontrol/homeassistant/eventsRestartStream/set\"\n    }\nmsg1.payload = {...msg1.payload,...mqttCommon}\n\nmsg1.topic = \"homeassistant/button/onecontrolintegration/eventrestart/config\"\nmsg1.type =  \"entity\"\nnode.send(msg1)\n// ####################### End Event Restart Button Configuration #######################\n\n// ####################### Begin Run Discovery Button Configuration #######################\n// Create a button in Home Assistant that can be used to run the discovery process in the \n//   event that is needed\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Run OneControl Discovery\",\n\t\"object_id\":\t\t\"Run OneControl Discovery\",\n\t\"unique_id\":\t\t\"Run OneControl Discovery\",\n\t\"command_topic\":    \"onecontrol/homeassistant/discoveryRun/set\"\n    }\nmsg1.payload = {...msg1.payload,...mqttCommon}\nmsg1.topic = \"homeassistant/button/onecontrolintegration/discoveryRun/config\"\nmsg1.type = \"entity\"\nnode.send(msg1)\n// ####################### End Run Discovery Button Configuration #######################\n\n\n// ####################### Begin Remove All Entities Button Configuration #######################\n// Create a button in Home Assistant that can be used to remove all entities created by the discovery\n//    process except the nodes used to manage the integration\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Remove All Entities\",\n\t\"object_id\":\t\t\"Remove All Entities\",\n\t\"unique_id\":\t\t\"Remove All Entities\",\n\t\"command_topic\":    \"onecontrol/homeassistant/mqttDeleteAll/set\"\n    }\nmsg1.payload = {...msg1.payload,...mqttCommon}\nmsg1.topic = \"homeassistant/button/onecontrolintegration/mqttDeleteAll/config\"\nmsg1.type = \"entity\"\nnode.send(msg1)\n// ####################### End Remove All Entities Button Configuration #######################\n\n// ####################### Begin Pull OneControl Events switch Configuration #######################\n// Create a switch in Home Assistant that can be used to enable or disable the processing of events from\n//   OneControl.\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Pull OneControl Events\",\n\t\"object_id\":\t\t\"Pull OneControl Events\",\n\t\"unique_id\":\t\t\"Pull OneControl Events\",\n\t\"command_topic\"     :   \"onecontrol/homeassistant/eventsGetStream/set\",\n\t\"state_topic\"       :   \"onecontrol/homeassistant/eventsGetStream/set\",\n\t\"payload_on\"        :   \"ON\",\n\t\"payload_off\"       :   \"OFF\",\n\t\"state_on\"        :   \"ON\",\n\t\"state_off\"       :   \"OFF\",\n\t\"device_class\"      :   \"switch\",\n\t\"icon\":             \"mdi:arrow-down-bold\"\n    }\nmsg1.payload = {...msg1.payload,...mqttCommon}\nmsg1.topic = \"homeassistant/switch/onecontrolintegration/eventsGetStream/config\"\nmsg1.type = \"entity\"\nnode.send(msg1)\n// ####################### End Pull OneControl Events switch Configuration #######################\n\n// ####################### Begin Push Home Assistant Events switch Configuration #######################\n// Create a switch that enables or disables the processing of events from Home Assistant up to Once Control\nmsg1.payload = {\n\t\"name\":\t\t\t\t\"Push Home Assistant Events\",\n\t\"object_id\":\t\t\"Push Home Assistant Events\",\n\t\"unique_id\":\t\t\"Push Home Assistant Events\",\n\t\"command_topic\"     :   \"onecontrol/homeassistant/eventsSendStream/set\",\n\t\"state_topic\"       :   \"onecontrol/homeassistant/eventsSendStream/set\",\n\t\"payload_on\"        :   \"ON\",\n\t\"payload_off\"       :   \"OFF\",\n\t\"state_on\"        :   \"ON\",\n\t\"state_off\"       :   \"OFF\",\n\t\"device_class\"      :   \"switch\",\n\t\"icon\":             \"mdi:arrow-up-bold\"\n    }\nmsg1.payload = {...msg1.payload,...mqttCommon}\nmsg1.topic = \"homeassistant/switch/onecontrolintegration/eventsSendStream/config\"\nmsg1.type = \"entity\"\nnode.send(msg1)\n// ####################### End Push Home Assistant Events switch Configuration #######################\n\n// ####################### Send current state of eventsSendStream to Home Assistant #######################\nif (global.get(\"eventsSendStream\") == false) {\n        msg1.payload = \"OFF\"\n    } else {\n        msg1.payload = \"ON\"\n    }\nmsg1.topic = \"onecontrol/homeassistant/eventsSendStream/set\"\nmsg1.type = \"record\"\nmsg1.retain = false\nnode.send(msg1)\n\n// ####################### Send current state of eventsGetStream to Home Assistant #######################\nif (global.get(\"eventsGetStream\") == false) {\n        msg1.payload = \"OFF\"\n    } else {\n        msg1.payload = \"ON\"\n    }\nmsg1.topic = \"onecontrol/homeassistant/eventsGetStream/set\"\nmsg1.type = \"record\"\nmsg1.retain = false\nnode.send(msg1)\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 100,
+        "x": 760,
+        "y": 140,
         "wires": [
             [
-                "4a241eecd05a027a"
+                "491b0949692ff5c9"
             ]
         ]
     },
@@ -1104,6 +1096,7 @@
         "id": "489f1d4567f2e9fe",
         "type": "link in",
         "z": "c5bf60a40630c5e3",
+        "g": "09ec6382357415d1",
         "name": "Trigger Dicovery",
         "links": [
             "9351ecadf4673a99",
@@ -1111,11 +1104,11 @@
             "d6d1322b9d745884",
             "94ae0ec5e36d0e7b"
         ],
-        "x": 55,
-        "y": 100,
+        "x": 495,
+        "y": 60,
         "wires": [
             [
-                "ef9ad8391578af6e"
+                "bdf45c1455481f97"
             ]
         ]
     },
@@ -1126,7 +1119,7 @@
         "g": "b07fe501c3da07e1",
         "name": "Important Notes",
         "info": "The control entities here are created at discovery but not removed during the Delete All process, so that the utilities can be run againfrom the HA interface.",
-        "x": 770,
+        "x": 750,
         "y": 60,
         "wires": []
     },
@@ -1157,7 +1150,75 @@
             "670878733f3ed1be"
         ],
         "x": 635,
-        "y": 620,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "bdf45c1455481f97",
+        "type": "http request",
+        "z": "c5bf60a40630c5e3",
+        "g": "09ec6382357415d1",
+        "name": "Get OneControl Components",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://192.168.1.4:8080/rest/things/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 400,
+        "y": 100,
+        "wires": [
+            [
+                "98f4ba26adf91fe6"
+            ]
+        ]
+    },
+    {
+        "id": "dab9d99d41494c79",
+        "type": "inject",
+        "z": "c5bf60a40630c5e3",
+        "g": "b07fe501c3da07e1",
+        "name": "Click here to start",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 740,
+        "y": 100,
+        "wires": [
+            [
+                "8efc57e27bef52e5"
+            ]
+        ]
+    },
+    {
+        "id": "491b0949692ff5c9",
+        "type": "mqtt out",
+        "z": "c5bf60a40630c5e3",
+        "g": "b07fe501c3da07e1",
+        "name": "Create Entites",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4410210f.6939c",
+        "x": 780,
+        "y": 180,
         "wires": []
     },
     {
