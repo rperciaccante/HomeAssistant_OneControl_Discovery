@@ -19,7 +19,7 @@ This has been tested on my 2021 Grand Design Momentum 397TH-R.  Additional sampl
 ### How it Works
 
 #### Downloading and installing
-Download the "flows.json" file.  In your Node Red instance, from the hanburger menu, select "Import" and then "Select a file to import".  Select the "flows.json" file you downloaded, and import.
+Download the "flows.json" file.  In your Node Red instance, from the hamburger menu, select "Import" and then "Select a file to import".  Select the "flows.json" file you downloaded, and import.
 
 #### About the Discovery process
 Please note that there are three tabs in this config:
@@ -42,7 +42,8 @@ with the options before running the tool:
 - Delete all configs from MQTT in HomeAssistant (good for testing and upgrades)
 - Enable/disable automatic connection to OneControl event feed
 - Enable/disable automatic sending updates to OneControl
-After the initial run, you will be able to control most features from within the Home Assistant interface.
+
+After the initial run, you will be able to control most features from within the Home Assistant interface.  The entities created to manage the integration are located in the Mosquitto Broker integration.  To access these tools, from your Home Assistant console, navigate to "Configuration" -> "Devices and Services" and under the "Mosquitto Broker" integration, you will see a link to devices.  Follow this link to the list of MQTT devices, and click on "Home Assistant OneControl Integration Components".
 
 ### Limitations:
 - Physical devices such as slides and awnings are NOT currently supported due to the complexity of the integration and the risks associated with the potential for damage.
