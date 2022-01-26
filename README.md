@@ -1,7 +1,7 @@
 Lippert OneControl and Home Assistant Integration
 =================================================
 
-### About
+### About 
 
 This is a project that is designed to utilize Node Red to connect to your Lippert OneControl cloud bridge and download the entities into your Home Assistant instance, allowing you to control most items in your RV.
 
