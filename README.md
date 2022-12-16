@@ -35,7 +35,7 @@ Please note that there are three tabs in this config:
 - Tools
   - This flow contains useful tools to help in troubleshooting and enhancements.
 
-Inside the Discovery flow, there is a node named "Process Configuration" and it contains a number of tools available to you.  Please familairize yourself
+Inside the Discovery flow, there is a node named "Process Configuration" and it contains a number of tools available to you.  Please familiarize yourself
 with the options before running the tool:
 - Save the configurations generated as YAML and JSON, with or without the MQTT Discovery specific content
 - Opt to NOT send to MQTT, to use the tool simply to generate the config files.  NOTE: You will still need the Monitor flows to handle the messages
@@ -58,7 +58,7 @@ After the initial run, you will be able to control most features from within the
 - Updated to version 2022-01-21b
   - Visual cleanup across all nodes
   - Improving comments in code (more work to come)
-  - Creation of Home Assistant entities that can be used to manage the integration from the HA environment, including automations, etc.  Found under the MQTT integration entities list
+  - Creation of Home Assistant entities that can be used to manage the integration from the HA environment, including automation's, etc.  Found under the MQTT integration entities list
   - Initial values for entities at time of creation are pulled from OneControl and populated to speed state updates
   - Initial values for availability topics pre-populated to speed installation
   - Initial stages of diagnostic feedback in place
