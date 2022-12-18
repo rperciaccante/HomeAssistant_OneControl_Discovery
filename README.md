@@ -26,10 +26,10 @@ This has been tested on the following:
 
 #### Downloading, installing and initial setup
 1. Download the "[flows.json file](flow.json)" file.  In your Node Red instance, from the hamburger menu, select "Import" and then "Select a file to import".  Select the "flows.json" file you downloaded, and import.
-2. Once installed, make sure that the credentials for your MQTT server are correct in the MQTT Out nodes. ![mqtt out node](imgs\mqtt_out_node.png) Select the node, in OneControl Discovery tab -> double click on the node -> click the pencil next to server -> Security Tab -> Enter the HA username and password you want to use for mqtt.
+2. Once installed, make sure that the credentials for your MQTT server are correct in the MQTT Out nodes. ![mqtt out node](imgs/mqtt_out_node.png) Select the node, in OneControl Discovery tab -> double click on the node -> click the pencil next to server -> Security Tab -> Enter the HA username and password you want to use for mqtt.
 3. Deploy the flow
-4. Click on ![Click here](imgs\click_here.png) under "Collect Devices from OneControl"
-5. Click on ![Click here](imgs\click_here.png) under "Create Control Entities"
+4. Click on ![Click here](imgs/click_here.png) under "Collect Devices from OneControl"
+5. Click on ![Click here](imgs/click_here.png) under "Create Control Entities"
 
 
 
@@ -58,7 +58,7 @@ Please familiarize yourself with the options before running the tool:
 ---
 After the initial run, you will be able to control most features from within the Home Assistant interface.  The entities created to manage the integration are located in the Mosquitto Broker integration.  To access these tools, from your Home Assistant console, navigate to "Settings" -> "Devices and Services" then under the "Mosquitto Broker" integration, you will see a link to your devices.  Follow this link to the list of your MQTT devices.
 
-![List of OnceControl devices in mqtt](imgs\mqtt_onecontrol_device_list.png)
+![List of OnceControl devices in mqtt](imgs/mqtt_onecontrol_device_list.png)
 
 You can also click on "Home Assistant OneControl Integration Components" here for some troubleshooting tools.
 
