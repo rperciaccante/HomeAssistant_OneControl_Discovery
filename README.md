@@ -1,4 +1,5 @@
-Lippert OneControl and Home Assistant Integration
+### ***I have traded in my Momentum, and my new Solitude does not have the same integration, so I am unable to continue development until such time as I have access to another environment.***
+Lippert OneControl and Home Assistant Integration 
 =================================================
 
 ### About 
