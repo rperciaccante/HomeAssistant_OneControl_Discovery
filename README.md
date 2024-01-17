@@ -18,7 +18,7 @@ This has been tested on the following:
 ### Requirements
 - **MUST** have a local network that contains the OneControl Cloud Bridge / Connect Anywhere (even if you are not subscribed to the cloud service)
 - Home Assistant installed and attached to the same local network inside your RV.
-- MQTT Discovery must be enabled on your Home Assistant instance: [https://www.home-assistant.io/docs/mqtt/discovery/](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)
+- MQTT Discovery must be enabled on your Home Assistant instance: [https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery/](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)
 - MQTT broker (Flows are pre configured to use the Mosquitto add-on in Home Assistant)
 - Node Red installed as a service / Add-on on same device as your Home Assistant instance (recommend the official Home Assistant add-on)
 - "node-red-contrib-sse-client" node must be installed in Node Red from the hamburger menu -> Manage Pallette -> Install.  Details can be found here - https://flows.nodered.org/node/node-red-contrib-sse-client
